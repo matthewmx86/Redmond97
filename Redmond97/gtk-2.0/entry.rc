@@ -1,0 +1,66 @@
+########################################################################
+# Entry
+########################################################################
+
+style "entry"
+{
+	GtkWidget::interior_focus = 0
+        base[INSENSITIVE] = @bg_color
+	engine "pixmap"
+	{
+### Entry ###
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = NORMAL
+			file = "entry/entry.png"
+			border = {2, 2, 2, 2}
+			stretch	= TRUE
+		}
+
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = INSENSITIVE
+			file = "entry/entry_disabled.png"
+			border = {2, 2, 2, 2}
+			stretch	= TRUE
+		}
+
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = NORMAL
+			file = "entry/entry.png"
+			border = {2, 2, 2, 2}
+			stretch	= TRUE
+		}
+
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = INSENSITIVE
+			file = "entry/entry_disabled.png"
+			border = {2, 2, 2, 2}
+			stretch	= TRUE
+		}
+
+		
+### Focus ###
+		image
+    	{
+			function = FOCUS
+			detail = "entry"
+                        state = ACTIVE
+			file = "entry/entry.png"
+			border = {2, 2, 2, 2}
+			stretch	= TRUE
+    	}
+	}
+}
+
+class "GtkEntry*" style "entry"

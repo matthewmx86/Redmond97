@@ -1,0 +1,12 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+#new-tab-button {
+  visibility: visible !important;
+}
+
+.tabs-newtab-button {
+  visibility: collapse !important;
+}

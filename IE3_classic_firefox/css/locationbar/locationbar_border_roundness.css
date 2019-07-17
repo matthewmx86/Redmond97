@@ -1,0 +1,12 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+.searchbar-textbox, #urlbar {
+  border-radius: 0px !important;
+  border: #828282 1px solid !important;
+  box-shadow: 1px 1px #303030 inset, 1px 1px #ffffff!important;
+  border: #828282 1px solid !important;
+}
+

@@ -1,0 +1,63 @@
+toolbar {
+  padding-top: 6px;
+  padding-bottom: 2px;
+  color: @toolbar_fg_color;
+  background-color: @toolbar_bg_color; 
+  border-top: 1px solid transparent;
+  box-shadow: 0 2px @light_shadow inset, 0 1px shade(@toolbar_bg_color, 0.7) inset;
+  border-bottom: 1px solid @bg_color;
+} 
+
+  toolbar:disabled {
+    color: @theme_disabled_fg_color;
+    background-color: @theme_disabled_bg_color; }
+  toolbar button {
+      margin: 1px;
+  }
+ 
+  toolbar menubar {
+    -GtkToolbar-button-relief: normal; }
+
+.primary-toolbar {
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  color: @toolbar_fg_color;
+  -GtkWidget-window-dragging: true;
+  color: @toolbar_fg_color;
+  background-color: @toolbar_bg_color; 
+  border-top: 1px solid transparent;
+  box-shadow: 0 2px @light_shadow inset, 0 1px shade(@toolbar_bg_color, 0.7) inset;
+}
+
+.floating-bar {
+  border-width: 1px;
+  border-style: solid;
+  border-color: @borders;
+  border-radius: 0px;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color; }
+  .floating-bar.top {
+    border-top-width: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px; }
+  .floating-bar.bottom {
+    border-bottom-width: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px; }
+  .floating-bar.top.left, .floating-bar.bottom.left {
+    border-left-width: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px; }
+  .floating-bar.top.right, .floating-bar.bottom.right {
+    border-right-width: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; }
+
+.overlay-bar {
+  background-color: alpha(@dark_shadow, 0.8);
+  border-radius: 0;
+  padding: 3px 6px;
+  margin: 3px; }
+  .overlay-bar label {
+    color: @tooltip_fg_color; }

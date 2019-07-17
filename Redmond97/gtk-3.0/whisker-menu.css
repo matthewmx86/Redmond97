@@ -1,0 +1,85 @@
+/*  Add menu border */
+#whiskermenu-window border {
+  padding: 1px;
+  padding-right: 2px;
+  border-top: 1px solid @bg_color;
+  border-bottom: 1px solid @borders;
+  border-left: 1px solid @bg_color;
+  border-right: 1px solid @borders;
+  box-shadow: inset 1px 1px @light_shadow, inset -1px -1px shade(@bg_color, 0.7);
+}
+
+/* Adjust Start button padding */
+#whiskermenu-button {
+  margin-left: 2px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  color: @theme_fg_color;
+  border-top: 1px solid @button_bg_color;
+  border-left: 1px solid @button_bg_color;
+  border-right: 1px solid @borders;
+  border-bottom: 1px solid @borders;
+  border-radius: 0px;
+  background-color: @button_bg_color;
+  box-shadow: inset -1px 0 shade(@button_bg_color, 0.65), inset 0 -1px shade(@button_bg_color, 0.65), inset 1px 0 @light_shadow, inset 0 1px @light_shadow; 
+}
+
+
+/* Change active button to checkered button */
+#whiskermenu-button:checked, #whiskermenu-button:active {
+  border: none;
+  box-shadow: none;
+  margin-right: 0px;
+  border-top: 1px solid @borders;
+  border-left: 1px solid @borders;
+  border-bottom: 1px solid @light_shadow;
+  border-right: 1px solid @light_shadow;
+  box-shadow: 1px 1px shade(@button_bg_color, 0.6) inset, -1px -1px @button_bg_color inset;
+  background-image: url("assets/scrollbg.png");
+  color: @toolbar_fg_color;
+  background-color: @button_bg_color;
+}
+
+
+/*    TESTING      */
+#whiskermenu-window scrolledwindow {
+  padding: 1px;
+  border: none;
+  box-shadow: none;
+  background-color: @button_bg_color;
+}
+
+#whiskermenu-window treeview {
+  background-color: @theme_base_color;
+}
+
+#whiskermenu-window treeview:hover {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+#whiskermenu-window treeview:selected {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+#whiskermenu-window button {
+  border-radius: 0;
+}
+
+#whiskermenu-window button:checked {
+  color: @fg_color;
+  border-color: @button_bg_color;
+  background-color: @button_bg_color;
+  box-shadow: inset 1px 1px shade(@button_bg_color, 0.65), inset -1px -1px @light_shadow;
+  background-image: url("assets/scrollbg.png");
+}
+
+/*
+#whiskermenu-window button:hover {
+  background-color: @selected_bg_color;
+  background-image: none;
+  color: @selected_fg_color;
+  box-shadow: none;
+}
+*/

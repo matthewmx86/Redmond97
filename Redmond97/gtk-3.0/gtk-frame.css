@@ -1,0 +1,73 @@
+/* frames and border hacks */
+
+.frame {
+  background: none; }
+
+frame > border {
+  padding: 1px;
+  margin: 0px;
+  border-color: @borders;
+  border: 1px solid shade(@theme_bg_color,0.7);
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-radius: 0px;
+  box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
+}
+
+frame.border-inset > border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.7);
+    box-shadow: 1px 1px @borders inset;
+    border-radius: 0;
+}
+
+frame.border-outset > border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.7);
+    border-bottom: 1px solid @borders;
+    border-right: 1px solid @borders;
+    box-shadow: -1px -1px shade(@bg_color, 0.7) inset;
+    border-radius: 0;
+}
+
+frame.border-groove > border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+}
+
+frame.border-ridge > border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+}
+
+scrolledwindow.frame {
+  background-color: @theme_base_color;
+}
+
+.sidebar list {
+  padding: 1px;
+  border: 1px solid shade(@theme_bg_color,0.7);
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-radius: 0px;
+  box-shadow: 1px 1px shade(@button_bg_color, 0.3) inset, -1px -1px @theme_bg_color inset; 
+}
+
+paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
+paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow {
+  padding: 1px;
+  margin: 0px;
+  border-color: @borders;
+  border: 1px solid shade(@theme_bg_color,0.7);
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-radius: 0px;
+  box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
+  background-color: @theme_base_color;
+}

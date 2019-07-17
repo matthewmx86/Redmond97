@@ -1,0 +1,43 @@
+arrow {
+  color: alpha(currentColor, 0.75);
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  min-height: 17px;
+  min-width: 17px; }
+
+combobox arrow {
+  background-image: url("assets/combo.png");
+  background-position: center;
+  min-height: 14px;
+  min-width: 14px; }
+
+combobox arrow:disabled {
+  background-image: url("assets/combo.png");
+  background-position: center;
+  min-height: 14px;
+  min-width: 14px; }
+
+/* menu arrows */
+menu > arrow, .menu > arrow {
+    padding: 4px;
+    min-width: 16px;
+    min-height: 16px; }
+menu > arrow.top, .menu > arrow.top {
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    menu > arrow.bottom, .menu > arrow.bottom {
+      margin-bottom: -6px;
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+
+   menu menuitem arrow:dir(ltr), .menu menuitem arrow:dir(ltr) {
+      margin-left: 10px;
+      -gtk-icon-source: url("assets/menu-arrow-right.png"); }
+
+expander arrow {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  expander arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+  expander arrow:hover {
+    color: @theme_selected_bg_color; }
+  expander arrow:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }

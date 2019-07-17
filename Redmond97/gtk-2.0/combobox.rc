@@ -1,0 +1,91 @@
+style "color-fix-combo" {
+
+	fg[ACTIVE] =  @fg_color
+  	fg[INSENSITIVE] = shade(0.7,@bg_color)
+  	fg[NORMAL] =  @fg_color
+  	fg[PRELIGHT] = @fg_color
+  	fg[SELECTED] = @fg_color
+
+	text[ACTIVE] = @fg_color
+	text[INSENSITIVE] = shade(0.7,@bg_color)
+	text[NORMAL] = @fg_color
+	text[PRELIGHT] = @fg_color
+	text[SELECTED] = @selected_fg_color
+
+        engine "pixmap" {
+	    image {
+                state = NORMAL
+      		function = ARROW
+      		overlay_file = "combo/arrow.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+	    image {
+                state = PRELIGHT
+      		function = ARROW
+      		overlay_file = "combo/arrow.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+	    image {
+                state = ACTIVE
+      		function = ARROW
+      		overlay_file = "combo/arrow.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+	    image {
+                state = INSENSITIVE
+      		function = ARROW
+      		overlay_file = "combo/arrowdisabled.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+		image 
+		{
+			function = BOX
+			state = NORMAL
+			file = "combo/button.png"
+			border = {5, 5, 5, 5}
+			stretch = TRUE
+
+		}
+## Prelight
+		image 
+		{
+			function = BOX
+			state = PRELIGHT
+			file = "combo/button.png"
+			border = {5, 5, 5, 5}
+			stretch = TRUE
+		}
+
+## Insensitive
+		image 
+		{
+			function = BOX
+			state = INSENSITIVE
+			file = "combo/button.png"
+			border = {5, 5, 5, 5}
+			stretch = TRUE
+		}
+
+## Active
+		image 
+		{
+			function = BOX
+			state = ACTIVE
+			file = "combo/button-pressed.png"
+			border = {5, 5, 5, 5}
+			stretch = TRUE
+		}
+
+
+
+  	}
+}
+
+widget_class "*.<GtkComboBox>.<GtkCellView>"		style "color-fix-combo"
+class "GtkComboBox*" style "color-fix-combo" 
+widget_class "*<GtkComboBox>*" style "color-fix-combo"
+widget_class "*<GtkToggleButton>*" style "color-fix-combo"

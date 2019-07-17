@@ -1,0 +1,55 @@
+separator {
+  -gtk-icon-source: none;
+  min-width: 1px;
+  min-height: 1px;
+  background-color: transparent; }
+  separator:backdrop {
+    background-color: transparent; }
+  button separator {
+    margin: 1px 1px; }
+
+
+  toolbar separator {
+    margin-left: 2px;
+    margin-right: 2px;
+    border: none;
+    box-shadow: 1px 0px @light_shadow;
+    background-color: shade(@toolbar_bg_color, 0.5); }
+  toolbar separator:backdrop {
+    border: none;
+    box-shadow: 1px 0px @light_shadow;
+    background-color: shade(@toolbar_bg_color, 0.5); }
+
+
+  menuitem separator, menu separator {
+    margin: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-width: 1px;
+    border-style: none;
+    box-shadow: 0px 1px @light_shadow;
+    background-color: @borders; }
+  popover separator {
+    border: 0;
+    color: alpha(currentColor, 0.5);
+    background-color: transparent; }
+  combobox separator {
+    border: none; }
+
+  list separator, list separator:backdrop {
+    background: none; }
+
+paned > separator {
+  border: none;
+  color: transparent;
+  min-width: 4px;
+  min-height: 1px;
+  background-color: transparent; }
+  paned > separator:backdrop {
+  min-width: 4px;
+  min-height: 1px;
+  background-color: transparent; }
+  paned > separator:selected {
+  min-width: 4px;
+  min-height: 1px;
+  background-color: transparent; }

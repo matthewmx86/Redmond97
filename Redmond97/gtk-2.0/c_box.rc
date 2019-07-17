@@ -1,0 +1,105 @@
+########################################################################
+# Check boxes
+########################################################################
+
+style "check_box"
+{
+
+
+### Check box ###
+
+	engine "pixmap" 
+	{
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = NORMAL
+			overlay_file = "c_box/checkbox-unchecked.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = NORMAL
+			overlay_file = "c_box/checkbox-checked.png"
+			overlay_stretch = FALSE
+		}
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = PRELIGHT
+			overlay_file = "c_box/checkbox-unchecked.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = PRELIGHT
+			overlay_file = "c_box/checkbox-checked.png"
+			overlay_stretch = FALSE
+		}
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = ACTIVE
+			overlay_file = "c_box/checkbox-unchecked.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = ACTIVE
+			overlay_file = "c_box/checkbox-checked.png"
+			overlay_stretch = FALSE
+		}
+		image 
+		{
+			function = CHECK
+			state = INSENSITIVE
+			shadow = OUT
+			overlay_file = "c_box/checkbox-unchecked-insensitive.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = INSENSITIVE
+			overlay_file = "c_box/checkbox-checked-insensitive.png"
+			overlay_stretch = FALSE
+		}
+
+
+
+		image 
+		{
+			function = OPTION
+			shadow = OUT
+			overlay_file = "c_box/checkbox-unchecked.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = OPTION
+			shadow = IN
+			overlay_file = "c_box/checkbox-checked.png"
+			overlay_stretch = FALSE
+		}
+
+	}
+}
+
+class "GtkCheckButton*" style "check_box"
+class "GtkCheckMenuItem*" style "check_box"
+class "GtkTreeView*" style "check_box"

@@ -1,0 +1,35 @@
+infobar {
+  border: none; }
+
+.info {
+  border-width: 1px;
+  border-style: solid;
+  border-color: shade(@info_bg_color, 0.8);
+  color: @info_fg_color;
+  background-image: none;
+  background-color: @info_bg_color; }
+
+.warning {
+  border-width: 1px;
+  border-style: solid;
+  border-color: shade(@warning_bg_color, 0.8);
+  color: @warning_fg_color;
+  background-image: none;
+  background-color: @warning_bg_color; }
+
+
+.question {
+  border-width: 1px;
+  border-style: solid;
+  border-color: shade(@question_bg_color, 0.8);
+  color: @question_fg_color;
+  background-image: none;
+  background-color: @question_bg_color; }
+
+.error {
+  border-width: 1px;
+  border-style: solid;
+  border-color: shade(@error_bg_color, 0.8);
+  background-color: @error_bg_color;
+  background-image: none;
+  color: @error_fg_color; }

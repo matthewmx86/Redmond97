@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Win3x Standard
+Comment=Windows 3.11
+Version=v1.0.1
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Win3x Standard
+MetacityTheme=Win3x Standard
+ButtonLayout=:minimize,maximize
