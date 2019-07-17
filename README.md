@@ -1,2 +1,2 @@
 # Redmond97
-A WIn9x GTK2/GTK3 theme deveoloped for XFCE4
+A Win9x theme for GTK2/GTK3 deveoloped for XFCE4
