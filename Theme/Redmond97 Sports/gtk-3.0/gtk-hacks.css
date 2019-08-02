@@ -1,0 +1,84 @@
+/* File chooser hack to make the location bar 
+   widget to match the window bg color */
+
+
+filechooser stack {
+   background-color: @theme_bg_color; }
+
+filechooser stack box {
+   background-color: @theme_bg_color; }
+
+filechooser stack button box {
+   background-color: @button_bg_color; }
+
+.horizontal.dialog-actionbox {
+   background-color: @theme_bg_color; }
+
+
+/* Nemo hacks:
+   Add padding below toolbar, hide separators since the 
+   scrolled window frames act as separators, menu items must
+   be reapplied after making separators transparent */
+
+
+.nemo-window sidebar separator {
+   background-color: transparent; }
+
+.nemo-window menu separator {
+   box-shadow: 0 1px @light_shadow;
+   background-color: @dark_shadow; }
+
+.nemo-window menuitem separator {
+   color: @borders;
+   border-style: none;
+   border-width: 0px; }
+
+.nemo-window toolbar {
+   margin-bottom: 2px; }
+
+/* Nemo colors must be specified or drag and drop items 
+   have black text on a black background */
+
+.nemo-window .nemo-window-pane widget.entry:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus {
+   color: @theme_selected_fg_color;
+   background-color: @theme_selected_bg_color; 
+}
+
+
+/* Dialog hacks, fixes white boxes inside of dialog buttons 
+   possably fixed and not needed */
+
+
+dialog stack {
+   background-color: @theme_bg_color;
+}
+
+messagedialog button {
+   margin-bottom: 5px;
+}
+
+messagedialog button box {
+   background-color: @button_bg_color;
+}
+
+
+/* Fix meld scrolled window appearance */
+
+
+.meld-notebook scrolledwindow {
+   margin: 0; }
+
+
+/* Remove bottom black border from header boxes 
+   since the toolbars already have a border */
+
+
+.header-box {
+   margin-top: 0px;
+   border-top: 2px solid;
+   border-bottom: 2px solid;
+   border-right: 2px solid;
+   border-left: 7px solid;
+   border-image: url("assets/toolbar.png");
+   border-image-slice: 2 2 2 7; 
+   background-color: @toolbar_bg_color; }

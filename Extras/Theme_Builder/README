@@ -1,0 +1,9 @@
+Redmond97 theme generator script.
+Use the config file to choose your colors and other options. When the theme is installed it will save your config file in the installed
+theme folder for later reference.
+
+To use the script:
+-Edit theme.conf to set the desired colors. 6 digit and 3 digit hex codes or RGB color codes must be used.
+-Run ./gen_theme.sh to compile and install the theme.
+
+Files are installed in ~/.themes/

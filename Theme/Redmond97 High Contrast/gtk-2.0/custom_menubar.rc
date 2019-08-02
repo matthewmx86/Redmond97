@@ -1,0 +1,9 @@
+style "menubar2"
+{
+  	fg[PRELIGHT] = @selected_fg_color
+  	fg[SELECTED] = @selected_fg_color
+        fg[NORMAL] = @fg_color
+	text[INSENSITIVE] = shade (0.6,@selected_fg_color)
+	bg[SELECTED] = @selected_bg_color
+	bg[PRELIGHT] = @selected_bg_color	
+}
