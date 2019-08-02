@@ -2,7 +2,7 @@
 A Win9x inspired theme for GTK3 and GTK2 developed for XFCE4
 ![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot.png)
 ## About
-The Redmond97 project aims to recreate the nostalgix look of the Win9x desktop for the XFCE4 desktop environment. 
+The Redmond97 project aims to recreate the nostalgic look of the Win9x desktop for the XFCE4 desktop environment. 
 
 ## Extras
 Included with the main theme package are the GTK themes, the Xfce4WM theme, and a Firefox classic IE5 theme.
