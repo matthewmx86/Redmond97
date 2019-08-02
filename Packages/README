@@ -1,1 +1,9 @@
 Tar archives of the Redmond97 Github repository.
+
+md5 verification of archives:
+Redmond97.md5: Redmond97.tar.gz md5 checksum
+theme_builder.md5: theme_builder.tar.gz md5 checksum
+ie3_classic_firefox.md5: ie3_classic_firefox.tar.gz md5 checksum
+
+To check the checksum, download the archive and run md5sum "archive.tar.gz". The checksum should match
+the checksum shown in the md5 file.
