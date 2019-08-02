@@ -61,20 +61,20 @@ scrollbar.horizontal .button {
    box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow; }
 
 scrollbar.horizontal button.down, 
-scrollbar.horizontal .button.bottom {
+scrollbar.horizontal .button.right {
    background-image: url("assets/arrow_right.png"); }
     
 scrollbar.horizontal button.up,
-scrollbar.horizontal .button.top {
+scrollbar.horizontal .button.left {
    background-image: url("assets/arrow_left.png"); }
       
 scrollbar.horizontal button.down:active,
-scrollbar.horizontal .button.down:active {
+scrollbar.horizontal .button.left:active {
    border: 1px solid @dark_shadow;
    box-shadow: none; }
       
 scrollbar.horizontal button.up:active,
-scrollbar.horizontal button.up:active {
+scrollbar.horizontal .button.right:active {
    border: 1px solid @dark_shadow; 
    box-shadow: none; }
 
