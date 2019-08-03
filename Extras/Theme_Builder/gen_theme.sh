@@ -219,12 +219,10 @@ convert -page +0+0 scrollbar_button.png -page +0+0 arrow_up.png -layers flatten 
 convert -page +0+0 scrollbar_button.png -page +0+0 arrow_right.png -layers flatten scroll_right_button.png
 convert -page +0+0 scrollbar_button.png -page +0+0 arrow_down.png -layers flatten scroll_down_button.png
 convert -page +0+0 scrollbar_button.png -page +0+0 arrow_left.png -layers flatten scroll_left_button.png
-rm scrollbar_button.png
 convert -page +0+0 scrollbar_button_active.png -page +0+0 arrow_up.png -layers flatten scroll_up_button_active.png
 convert -page +0+0 scrollbar_button_active.png -page +0+0 arrow_right.png -layers flatten scroll_right_button_active.png
 convert -page +0+0 scrollbar_button_active.png -page +0+0 arrow_down.png -layers flatten scroll_down_button_active.png
 convert -page +0+0 scrollbar_button_active.png -page +0+0 arrow_left.png -layers flatten scroll_left_button_active.png
-rm scrollbar_button.png
 
 #compile tabs
 convert -flip tab.png tab_left.png
@@ -281,6 +279,10 @@ cp switch*.png $gtk3
 cp comboboxbutton.png $gtk3/combobox.png
 cp comboboxbutton_ins.png $gtk3/combobox_disabled.png
 cp comboboxbutton_checked.png $gtk3/combobox_checked.png
+cp scrollbar_button.png $gtk3
+rm scrollbar_button.png
+cp scroll_*_button.png $gtk3
+mv headerbox.png $gtk3
 mv *.png ../../gtk-2.0/assets/
 cd ../../
 }

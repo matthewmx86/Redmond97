@@ -104,12 +104,12 @@ button.flat:disabled {
 /* Combobox button */
 
 
-combobox button {
-  margin: 2px;
+combobox button, button.combo {
+   margin: 2px;
    box-shadow: none;
    outline-color: transparent;
    outline-offset: -1px;
-   background-color: @base_color;
+   background-color: transparent;
    border: solid;
    padding: 0px;
    border-width: 2px 18px 2px 2px;
@@ -122,7 +122,7 @@ combobox button:checked, combobox button:active {
    outline-color: transparent;
    outline-offset: -1px;
    outline-width: 1px;
-   background-color: @base_color;
+   background-color: transparent;
    border: solid;
    padding: 0px;
    border-width: 2px 18px 2px 2px;
@@ -130,8 +130,7 @@ combobox button:checked, combobox button:active {
    border-image-slice: 2 18 2 2; }
 
 combobox button:disabled {
-   background-color: @bg_color; }
-
+   background-color: transparent; }
 
 /* Circular buttons */
 

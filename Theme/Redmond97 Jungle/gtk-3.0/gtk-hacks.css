@@ -78,7 +78,7 @@ messagedialog button box {
    border-top: 2px solid;
    border-bottom: 2px solid;
    border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/toolbar.png");
-   border-image-slice: 2 2 2 7; 
+   border-left: 2px solid;
+   border-image: url("assets/headerbox.png");
+   border-image-slice: 2 2 2 2; 
    background-color: @toolbar_bg_color; }
