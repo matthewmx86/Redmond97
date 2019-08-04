@@ -47,7 +47,7 @@ notebook > stack:not(:only-child) {
    border: 1px solid @borders;
    border-top: 1px solid @light_shadow;
    border-left: 1px solid @light_shadow;
-   padding: 4px;
+   padding: 2px;
    background-color: @notebook_bg_color;
    box-shadow: inset -1px -1px @dark_shadow ;  }
 
@@ -56,7 +56,6 @@ notebook > stack:not(:only-child) {
 
 
 notebook tab {
-   padding: 1px;
    border-style: solid;
    border-radius: 0;
    border-color: transparent;

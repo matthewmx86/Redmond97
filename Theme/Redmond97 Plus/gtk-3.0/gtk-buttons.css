@@ -170,21 +170,18 @@ calendar.button {
 
 notebook button.flat {
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
 
 notebook button.flat:hover {
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
 
 notebook button.flat:active {
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
@@ -202,7 +199,12 @@ notebook tab:checked button:hover, notebook tab:checked button:focus,
 notebook tab:checked button:active, notebook tab:checked button:checked, 
 notebook tab:checked button:active:hover, notebook tab:checked button:checked:hover, 
 notebook tab:checked button:backdrop {
+   min-height: 0;
+   min-width: 0;
+   padding: 0;
+   margin: 0;
    border-color: transparent;
+   border: none;
    background-color: transparent;
    color: @theme_fg_color; }
 
