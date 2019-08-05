@@ -175,7 +175,7 @@ notebook button.flat {
    background-color: transparent; }
 
 notebook button.flat:hover {
-   border-color: transparent;
+   border: none;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
