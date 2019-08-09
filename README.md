@@ -1,6 +1,6 @@
 # Redmond97
 A Win9x inspired theme for GTK3 and GTK2 developed for XFCE4
-![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot.png)
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/desktop.png)
 ## About
 The Redmond97 project aims to recreate the nostalgic look of the Win9x desktop for the XFCE4 desktop environment. 
 
@@ -13,7 +13,7 @@ to compile the Redmond97 theme using custom colors.
 #### Main theme
 The following packages are recommended for full functionality:
 ```
-firefox, xfce4, xfce4-goodies, xfce4-whiskermenu-plugin (included with xfce4-goodies), gtk-engines, gtk-nocsd
+firefox, xfce4, xfce4-goodies, xfce4-whiskermenu-plugin (included with xfce4-goodies), gtk-nocsd
 ```
 
 The theme has been designed for XFCE4 so the XFCE4 desktop environment is highly recommended but not required
@@ -27,7 +27,7 @@ imagemagick, bc, sed, grep, tar
 ```
 
 ## Installation
-#### Main theme
+### Main theme
 Make a .themes directory in your home directory if one doesn't exist and extract the Redmond97.tar.gz archive into 
 the ~/.themes directory.
 ```
@@ -42,6 +42,19 @@ export GTK_OVERLAY_SCROLLING=0
 ```
 You may have to log out and back in for the setting to take effect.
 
+### Xfce4 Panel Configuration
+The main theme includes a GTK2 hack for the system tray and orage clock applet for the xfce4panel to make them appear
+to be inside the same inset frame. (Only applies to GTK2 version of the Xfce4 panel.) In order for the frame to display
+correctly, you must add the two applets in order: "Notification Area" and then "Orage Clock". Your panel layout should look
+like the image below:
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/applet.png)
+Once you have added the applets you will need to deselect the option "Show Frame" for the notification area applet.
+Right click on the notification tray applet and select "Properties":
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/properties.png)
+Uncheck the option "Show Frame" on the dialog window:
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/properties.png)
+The frame borders should now look aligned between the notification area and the Orage Clock applets.
+(Note that there will be a small gap between the two applets this is currently a bug in the theme.)
 
 #### Firefox theme
 You will first need to find your firefox user profile directory. It is usually the one that ends with ".default".
@@ -86,6 +99,7 @@ and I no longer recommend using the GTK2 workaround for this theme.
 3. Troubleshoot Libre-Office issues
 
 ## Screenshots
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot1.png)
 ![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot2.png)
 ![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot3.png)
 ![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot4.png)
