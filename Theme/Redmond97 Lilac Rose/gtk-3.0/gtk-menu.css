@@ -37,7 +37,6 @@ menu menuitem {
     padding-top: 2px;
     padding-bottom: 2px; }
 
-
 combobox menuitem,
 combobox menuitem {
     margin: 1px; }
@@ -66,10 +65,10 @@ toolbar menubar {
 menubar, .menubar {
    -GtkWidget-window-dragging: true;
    margin: 0;
-   padding: 0px;
+   padding: 1px;
    margin-bottom: 0;
    background-color: @toolbar_bg_color; 
-   border-top: 1px solid;
+   border-top: 2px solid;
    border-bottom: 2px solid;
    border-right: 2px solid;
    border-left: 2px solid;
@@ -90,11 +89,11 @@ menubar > menuitem, .menubar > menuitem {
 
 
 menubar > menuitem:hover, .menubar > menuitem:hover {
-   color: @selected_fg_color;
-   border-color: transparent;
-   background-color: @selected_bg_color;
+   color: @menubar_fg_color;
+   border-color: @menubar_bg_color;
+   background-color: @button_bg_color;
    background-image: none;
-   box-shadow: none; }
+   box-shadow: inset 1px 1px @dark_shadow, inset -1px -1px @light_shadow; }
 
 
 /* Menubar item states */

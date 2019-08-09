@@ -11,6 +11,7 @@ tooltip_bg_color:#ffffe1\
 tooltip_fg_color:#10FF00000"
 ### Begin ###
 
+include "paned.rc"
 include "scrollbar.rc" 
 include "scale.rc"
 include "notebook.rc"
@@ -62,18 +63,14 @@ style "default"
 	text[INSENSITIVE] = @disabled_fg_color
 	text[NORMAL] = @text_color
 	text[PRELIGHT] = @selected_fg_color
-	text[SELECTED] = @selected_fg_color
-
-	engine "redmond95" 
-	{
-	}		
+	text[SELECTED] = @selected_fg_color		
 } 
 class "GtkWidget" style "default"
 
 style "tooltips"
 {
-	bg[NORMAL] = @tooltip_bg_color
-	fg[NORMAL] = @tooltip_fg_color
+	bg[NORMAL] = @base_color
+	fg[NORMAL] = @text_color
 }
 
 

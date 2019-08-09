@@ -27,10 +27,15 @@ expander arrow:checked {
 
 
 /* Combobox arrows */
+/* Make arrows transparent as the arrows are currently
+   imbedded in the button image to allow LibreOffice
+   to display dropdown box arrows. */
+
 
 combobox arrow, combobox arrow:disabled {
    color: transparent;
    margin-right: -4px;
+/*   background-image: url("assets/arrow_down.png");*/
    background-position: center;
    min-height: 10px;
    min-width: 10px; }
@@ -43,6 +48,23 @@ combobox arrow:disabled {
 
 
 /* Spin button arrows */
+
+
+spinbutton.horizontal > button.down {
+   color: transparent;
+   background-image: url("assets/arrow_down.png");
+   background-position: center;
+   min-height: 14px;
+   min-width: 14px;
+}
+
+spinbutton.horizontal > button.up {
+   color: transparent;
+   background-image: url("assets/arrow_up.png");
+   background-position: center;
+   min-height: 14px;
+   min-width: 14px;
+}
 
 
 

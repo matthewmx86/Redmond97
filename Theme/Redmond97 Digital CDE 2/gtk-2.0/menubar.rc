@@ -4,7 +4,7 @@
 
 style "menubar"
 {
-        xthickness = 2
+        xthickness = 3
         ythickness = 3
 
 ### Menubar ###
@@ -14,7 +14,7 @@ style "menubar"
 		{
 			function = BOX
 			file = "assets/menubar.png"
-			border = {2, 2, 2, 2}
+			border = {3, 3, 3, 3}
 			stretch = TRUE
 		}
 	}
@@ -40,7 +40,7 @@ style "menu"
 style "combomenu"
 {
         xthickness = 1
-        ythickness = 0
+        ythickness = 1
 ### Menu ###
         engine "pixmap"
         {
@@ -133,7 +133,24 @@ style "menuitem"
 	}
 }
 
+style "menubaritem"
+{
+        fg[PRELIGHT] = @fg_color
+        fg[SELECTED] = @fg_color
+	engine "pixmap"
+	{
+		image
+		{
+			function = BOX
+			file = "assets/toolbar_button_active.png"
+			border = {3, 3, 3, 3}
+			stretch	= TRUE
+		}
+	}
+
+}
 class "GtkMenuItem*" style "menuitem"
 class "GtkImageMenuItem*" style "menuitem"
 class "GtkTearoffMenuItem*" style "menuitem"
 class "GtkItem*" style "menuitem"
+widget_class "*MenuBar.*" style :highest "menubaritem"

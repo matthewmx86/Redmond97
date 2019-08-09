@@ -100,8 +100,8 @@
 @define-color success_color #4ed464;
 @define-color warning_color #FF9900;
 /* Widget colors */
-@define-color tooltip_bg_color #ffffe1;
-@define-color tooltip_fg_color @fg_color;
+@define-color tooltip_bg_color @base_color;
+@define-color tooltip_fg_color @text_color;
 @define-color menu_bg_color @bg_color;
 @define-color menu_fg_color @fg_color;
 /* Defined in gtk-base.css
