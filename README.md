@@ -55,9 +55,10 @@ To fix this you will need to deselect the option "Show Frame" for the notificati
 Right click on the notification tray applet and select "Properties":
 
 ![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/properties.png)
+
 Uncheck the option "Show Frame" on the dialog window:
 
-![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/properties.png)
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/dialog.png)
 
 The frame borders should now look aligned between the notification area and the Orage Clock applets.
 (Note that there will be a small gap between the two applets this is currently a bug in the theme.)
