@@ -27,6 +27,15 @@ imagemagick, bc, sed, grep, tar
 ```
 
 ## Installation
+
+### Downloading theme sources
+There are two ways to get the theme source files. For convenience I always make a tar package of the repository after any updates so you can download
+the archive instead of cloning the whole repository for every update. You can find the archives [here](https://github.com/matthewmx86/Redmond97/tree/master/Packages).
+For those who prefer to clone the repository you can download a copy of the repository by the following command:
+```
+git clone https://github.com/matthewmx86/Redmond97.git
+```
+
 ### Main theme
 Make a .themes directory in your home directory if one doesn't exist and extract the Redmond97.tar.gz archive into 
 the ~/.themes directory.
