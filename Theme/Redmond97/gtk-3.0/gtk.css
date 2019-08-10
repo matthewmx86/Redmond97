@@ -1,12 +1,12 @@
 /* base colors */
-@define-color bg_color #D4D0C8;
+@define-color bg_color #C0C0C0;
 @define-color fg_color #000000;
 @define-color base_color #FFFFFF;
 @define-color text_color #000000;
-@define-color selected_bg_color #0A246A;
+@define-color selected_bg_color #000080;
 @define-color selected_fg_color #FFFFFF;
 @define-color light_shadow #FFFFFF;
-@define-color dark_shadow #94918C;
+@define-color dark_shadow #868686;
 @define-color borders #000000;
 @define-color button_bg_color @bg_color;
 @define-color button_fg_color @fg_color;
@@ -15,7 +15,7 @@
 @define-color menubar_bg_color @bg_color;
 @define-color menubar_fg_color @fg_color;
 @define-color notebook_bg_color @bg_color;
-@define-color disabled_fg_color #A9A6A0;
+@define-color disabled_fg_color #999999;
 /* begin */
 
 
