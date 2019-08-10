@@ -26,7 +26,7 @@ toolbar {
    border-bottom: 0px solid;
    border-right: 2px solid;
    border-left: 2px solid;
-   border-image: url("assets/toolbar.png");
+   border-image: url("assets/headerbox.png");
    border-image-slice: 2 2 2 2; }
 
 toolbar:disabled {
@@ -40,14 +40,14 @@ toolbar:disabled {
    margin-right: 0px;
    border-left: 2px solid;
    border-right: 2px solid;
-   border-bottom: 0px solid;
+   border-bottom: 0;
    border-top: 2px solid;
    color: @toolbar_fg_color;
    -GtkWidget-window-dragging: true;
    color: @toolbar_fg_color;
    background-color: @toolbar_bg_color; 
    border-left: 2px solid;
-   border-image: url("assets/toolbar.png");
+   border-image: url("assets/headerbox.png");
    border-image-slice: 2 2 2 2; }
 
 

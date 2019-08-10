@@ -159,6 +159,27 @@ calendar.button {
    color: @theme_selected_bg_color; }
 
 
+/* Dialog Buttons */
+
+
+messagedialog button:first-child {
+   margin-left: 0; }
+
+messagedialog button:last-child {
+   margin-right: 0; }
+
+messagedialog button {
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 0;
+   padding: 4px 6px;
+   min-width: 20px; }
+
+messagedialog button box {
+   background-color: @button_bg_color; }
+
+
+
 /* Notebook tab buttons */
 
 

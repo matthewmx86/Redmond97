@@ -283,6 +283,7 @@ cp scrollbar_button.png $gtk3
 rm scrollbar_button.png
 cp scroll_*_button.png $gtk3
 mv headerbox.png $gtk3
+cp warning.png $gtk
 mv *.png ../../gtk-2.0/assets/
 cd ../../
 }

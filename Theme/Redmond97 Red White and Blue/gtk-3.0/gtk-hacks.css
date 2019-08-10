@@ -45,23 +45,6 @@ filechooser stack button box {
 }
 
 
-/* Dialog hacks, fixes white boxes inside of dialog buttons 
-   possably fixed and not needed */
-
-
-dialog stack {
-   background-color: @theme_bg_color;
-}
-
-messagedialog button {
-   margin-bottom: 5px;
-}
-
-messagedialog button box {
-   background-color: @button_bg_color;
-}
-
-
 /* Fix meld scrolled window appearance */
 
 
@@ -82,3 +65,11 @@ messagedialog button box {
    border-image: url("assets/headerbox.png");
    border-image-slice: 2 2 2 2; 
    background-color: @toolbar_bg_color; }
+
+
+/* Remove application dialog image icon */
+messagedialog image {
+ margin-left: -1000px;
+}
+
+

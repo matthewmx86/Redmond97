@@ -1,7 +1,13 @@
 /* Progressbar text */
 
 
-progressbar, treeview.view.progressbar {
+progressbar {
+   padding: 0px;
+   border: none;
+   color: mix(@theme_fg_color, @theme_selected_fg_color, 0.5);
+   background-color: transparent; }
+
+treeview.view.progressbar {
    padding: 0px;
    border: none;
    color: mix(@theme_fg_color, @theme_selected_fg_color, 0.5);
