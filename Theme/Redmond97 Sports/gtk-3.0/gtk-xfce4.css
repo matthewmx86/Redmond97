@@ -38,7 +38,7 @@
    border-bottom: 1px solid @light_shadow; }
 
 #XfcePanelWindowWrapper > * > frame > * {
-   margin-top: -2px }
+   margin-top: -1px }
 
 #XfcePanelWindow #launcher-arrow:hover {
    box-shadow: none;
