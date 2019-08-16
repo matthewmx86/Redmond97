@@ -53,6 +53,27 @@ frame.border-ridge > border {
    border-radius: 0; }
 
 
+/* Terminal Emulator Frames */
+terminal-window notebook, VteTerminal, vte-terminal {
+   padding: 1px;
+   border-color: @borders;
+   border: 1px solid @dark_shadow;
+   border-bottom: 1px solid @light_shadow;
+   border-right: 1px solid @light_shadow;
+   border-radius: 0px;
+   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+
+
+#xfce4-terminal-notebook {
+   padding: 1px;
+   border-color: @borders;
+   border: 1px solid @dark_shadow;
+   border-bottom: 1px solid @light_shadow;
+   border-right: 1px solid @light_shadow;
+   border-radius: 0px;
+   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+
+
 /* Hack to make all scrolled window widgets bg color match theme base bg color */
 
 
