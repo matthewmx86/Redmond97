@@ -12,7 +12,7 @@
 /* Adjust Start button padding */
 #whiskermenu-button {
   margin-left: 2px;
-  margin-top: 1px;
+  margin-top: 2px;
   margin-bottom: 2px;
   color: @theme_fg_color;
   border-top: 1px solid @button_bg_color;
