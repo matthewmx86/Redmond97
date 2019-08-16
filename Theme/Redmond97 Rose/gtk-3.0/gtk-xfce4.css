@@ -42,13 +42,13 @@
 
 #XfcePanelWindow #launcher-arrow:hover {
    box-shadow: none;
-   border: none; }
+   border-color: transparent; }
 
 
 #XfcePanelWindow #launcher-arrow:active,
 #XfcePanelWindow #launcher-arrow:checked {
    box-shadow: none;
-   border: none; }
+   border-color: transparent; }
 
 #XfcePanelWindow {
    border-top: @light_shadow 1px solid; }
