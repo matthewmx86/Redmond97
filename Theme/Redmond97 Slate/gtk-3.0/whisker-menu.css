@@ -6,7 +6,7 @@
   border-bottom: 1px solid @borders;
   border-left: 1px solid @bg_color;
   border-right: 1px solid @borders;
-  box-shadow: inset 1px 1px @light_shadow, inset -1px -1px @dark_shadow;
+  box-shadow: inset 1px 1px @light_shadow, -1px -1px @dark_shadow inset;
 }
 
 /* Adjust Start button padding */
@@ -21,8 +21,11 @@
   border-bottom: 1px solid @borders;
   border-radius: 0px;
   background-color: @button_bg_color;
-  box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow; 
-}
+  box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow,
+  0 -2px @light_shadow, 0 -1px @bg_color; }
+
+#whiskermenu-button box > image {
+  margin: 2px; }
 
 
 /* Change active button to checkered button */
@@ -34,7 +37,8 @@
   border-left: 1px solid @borders;
   border-bottom: 1px solid @light_shadow;
   border-right: 1px solid @light_shadow;
-  box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset;
+  box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset,
+  0 -2px @light_shadow, 0 -1px @bg_color;
   background-image: url("assets/scrollbar_trough.png");
   color: @toolbar_fg_color;
   background-color: @button_bg_color;

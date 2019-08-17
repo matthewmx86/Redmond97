@@ -30,15 +30,18 @@
    box-shadow: none; }
 
 #XfcePanelWindowWrapper > * > frame {
-   margin-top: 2px;
+   margin-top: 3px;
    margin-bottom: 2px;
+   padding-right: 3px;
    border-top: 1px solid @dark_shadow;
    border-left: 1px solid @dark_shadow;
    border-right: none;
-   border-bottom: 1px solid @light_shadow; }
+   border-bottom: 1px solid @light_shadow; 
+   box-shadow: 0 -3px @light_shadow, 0 -2px @bg_color; }
 
 #XfcePanelWindowWrapper > * > frame > * {
-   margin-top: -1px }
+   margin-top: -1px; 
+   margin-bottom: 1px; }
 
 #XfcePanelWindow #launcher-arrow:hover {
    box-shadow: none;
@@ -51,5 +54,17 @@
    border-color: transparent; }
 
 #XfcePanelWindow {
+   box-shadow: 0 1px @light_shadow inset;
    border-top: @light_shadow 1px solid; }
+
+#XfcePanelWindow #clock-button,
+#XfcePanelWindow #clock-button:hover,
+#XfcePanelWindow #clock-button:checked {
+   margin-left: -2px;
+   padding-right: 3px;
+   margin-top: 3px;
+   margin-bottom: 2px;
+   border-top: 1px solid @dark_shadow;
+   border-right: 1px solid @light_shadow;
+   border-bottom: 1px solid @light_shadow; }
 
