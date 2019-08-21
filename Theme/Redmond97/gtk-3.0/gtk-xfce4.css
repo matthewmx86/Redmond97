@@ -11,6 +11,7 @@
    margin-top: 3px; }
 
 #XfcePanelWindow button:active, #XfcePanelWindow button:checked {
+   font-weight: bold;
    margin-top: 3px;
    margin-bottom: 2px;
    margin-left: 1px;
@@ -67,4 +68,50 @@
    border-top: 1px solid @dark_shadow;
    border-right: 1px solid @light_shadow;
    border-bottom: 1px solid @light_shadow; }
+
+#applicationmenu-button {
+   font-weight: bold;
+   padding: 4px;
+   margin-left: 4px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   color: @theme_fg_color;
+   border-top: 1px solid @button_bg_color;
+   border-left: 1px solid @button_bg_color;
+   border-right: 1px solid @borders;
+   border-bottom: 1px solid @borders; 
+   border-radius: 0px;
+   background-color: @button_bg_color;
+   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow,
+   0 -2px @light_shadow, 0 -1px @bg_color; }
+
+#applicationmenu-button:checked, #whiskermenu-button:active {
+   border: none;
+   box-shadow: none;
+   margin-right: 1px;
+   border-top: 1px solid @borders;
+   border-left: 1px solid @borders;
+   border-bottom: 1px solid @light_shadow;
+   border-right: 1px solid @light_shadow;
+   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset,
+   0 -2px @light_shadow, 0 -1px @bg_color;
+   background-image: url("assets/scrollbar_trough.png");
+   color: @toolbar_fg_color;
+   background-color: @button_bg_color; }
+
+#applicationmenu-button box {
+   padding: 3px; }
+
+
+XfdesktopIconView .view {
+   color: #fff; 
+   background-color: transparent;
+   text-shadow: 1px 1px #000; }
+
+XfdesktopIconView .view:active {
+   color: #fff; }
+
+XfdesktopIconView:active {
+   color: @selected_bg_color;
+   background-color: @selected_bg_color; }
 

@@ -87,7 +87,7 @@ function verify {
   fi
   if [ $(echo $1 | grep -ci "#") -gt 0 ]; then
     #Filter out invalid hex codes and change 3 digit codes to 6 digit codes
-  verified="$(echo $1 | grep -io [a0-f9] | grep -io [a0-f9] | awk '{ print; count++; if (count==6) exit }' | tr -d "\n")"
+  verified="$(echo $1 | grep -io [a-f0-9] | grep -io [a-f0-9] | awk '{ print; count++; if (count==6) exit }' | tr -d "\n")"
   a=0
   code=$verified
   if [ $(echo $code | wc -c ) -lt 5 ]; then
@@ -100,7 +100,7 @@ function verify {
   fi
 
   #Apply case filter to output. The bc command is case sensative for hex values.
-  verified=$(echo $verified | grep -o [Aa0-Ff9].*)
+  verified=$(echo $verified | grep -o [A-Fa-f0-9].*)
   verified="${verified^^}"
 else
   if [ $(echo $1 | grep -ci ",") -gt 0 ]; then
@@ -179,7 +179,7 @@ disabled_fgcolor="$disabled_hex"
 
 function compile_assets {
 cd images
-for i in $(ls -d */ | grep -o .*[Aa0-Zz9]); do
+for i in $(ls -d */ | grep -o .*[A-Za-z0-9]); do
 cd $i
 if [ $(pwd | grep -ci "ins") -gt 0 ]; then
   convert *base.png -fuzz 15% -fill "#$bgcolor" -opaque "#ff00fa" base.png
@@ -258,7 +258,7 @@ convert assets/progressbar_horiz.png -fuzz 15% -fill "#$selectedbg" -opaque "#ff
 convert assets/progressbar_vert.png -fuzz 15% -fill "#$selectedbg" -opaque "#ff00fa" assets/progressbar_vert.png
 
 #compile whisker menu side image
-convert -size 27x800 gradient:"#$border"-"#$activetitle" assets/menu_side_gradient.png
+convert -size 27x800 gradient:"#$activetitle"-"#$border" assets/menu_side_gradient.png
 convert -rotate -90 assets/menu_side_gradient.png assets/menu_side_gradient.png
 convert -font helvetica-bold -fill "#$basecolor" -pointsize $menu_side_text_size -draw "text $menu_side_text_offset '$menu_side_text'" assets/menu_side_gradient.png assets/menu_side.png
 convert -rotate -90 assets/menu_side.png assets/menu_side.png
