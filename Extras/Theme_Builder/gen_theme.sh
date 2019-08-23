@@ -258,7 +258,9 @@ convert assets/progressbar_horiz.png -fuzz 15% -fill "#$selectedbg" -opaque "#ff
 convert assets/progressbar_vert.png -fuzz 15% -fill "#$selectedbg" -opaque "#ff00fa" assets/progressbar_vert.png
 
 #compile whisker menu side image
-convert -size 27x800 gradient:"#$activetitle"-"#$border" assets/menu_side_gradient.png
+convert -size 27x800 canvas:"#$border" assets/side_canvas.png
+magick -size 27x400 gradient:"#$selectedbg"-"#$border" assets/side_gradient.png
+convert -background none -page +0+0 assets/side_canvas.png -page 0+0 assets/side_gradient.png -layers flatten assets/menu_side_gradient.png
 convert -rotate -90 assets/menu_side_gradient.png assets/menu_side_gradient.png
 convert -font helvetica-bold -fill "#$basecolor" -pointsize $menu_side_text_size -draw "text $menu_side_text_offset '$menu_side_text'" assets/menu_side_gradient.png assets/menu_side.png
 convert -rotate -90 assets/menu_side.png assets/menu_side.png
