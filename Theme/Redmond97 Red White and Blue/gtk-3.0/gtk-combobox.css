@@ -42,3 +42,10 @@ combobox > box {
 combobox button:checked box {
    margin: -1px;
    margin-left: -2px; }
+
+/* Hack for exaile */
+notebook > stack > box > stack > box > box > combobox {
+   margin-top: 4px;
+   margin-bottom: 4px; }
+
+
