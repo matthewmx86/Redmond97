@@ -1,11 +1,11 @@
 # Redmond97
 A Win9x inspired theme for GTK3 and GTK2 developed for XFCE4
-![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/desktop.png)
+![Image Screenshot](https://github.com/matthewmx86/Redmond97/blob/master/Screenshots/Screenshot.png)
 ## About
 The Redmond97 project aims to recreate the nostalgic look of the Win9x desktop for the XFCE4 desktop environment. 
 
 ## Extras
-Included with the main theme package are the GTK themes, the Xfce4WM theme, and a Firefox classic IE3 theme.
+Included with the main theme package are the GTK themes, the Xfce4WM theme, metacity-1 themes and various Firefox IE themes.
 Many color schemes from the Windows 98 Plus! pack are also included. A theme generator script is also available 
 to compile the Redmond97 theme using custom colors.
 
@@ -13,12 +13,11 @@ to compile the Redmond97 theme using custom colors.
 #### Main theme
 The following packages are recommended for full functionality:
 ```
-firefox, xfce4, xfce4-goodies, xfce4-whiskermenu-plugin (included with xfce4-goodies), gtk-nocsd
+firefox, xfce4, xfce4-goodies, xfce4-whiskermenu-plugin (included with xfce4-goodies), gtk-nocsd, marco
 ```
-
 The theme has been designed for XFCE4 so the XFCE4 desktop environment is highly recommended but not required
-for the use of the GTK and Firefox themes. There is no Window Manager theme support for desktop environments
-other than XFCE4 at this time. The theme also includes support for the GTK3 version of Whisker Menu if available.
+for the use of the GTK and Firefox themes. Support for MATE desktop ahas also been included in the theme. 
+To get the titlebar gradients use a window manager such as marco which is included with MATE desktop. 
 
 #### Redmond97 Theme Builder
 For the theme generator the following packages are also required:
@@ -43,7 +42,7 @@ the ~/.themes directory.
 mkdir ~/.themes
 tar -xvzf Redmond97.tar.gz -C ~/.themes/
 ```
-The GTK2/3 and Xfce4WM themes will now be installed.
+The GTK2/3, Xfce4WM and Metacity-1 themes will now be installed.
 It is also recommended to disable GTK overlay scrollbars (autohiding scrollbars in GTK3). The following command
 will disable the overlay scrollbars for the current user:
 ```
@@ -51,7 +50,20 @@ export GTK_OVERLAY_SCROLLING=0
 ```
 You may have to log out and back in for the setting to take effect.
 
-### Xfce4 Panel Configuration
+### Window manager (optional)
+To get the gradient titlebars shown in the screenshots you will need to use a window manager
+that supports metacity-1 themes such as marco. If you are using XFCE4 and want to use the metacity-1 
+themes you can run the following command to replace XFWM4 with marco. (You may need to install marco)
+```
+marco --replace
+```
+To set the marco window manager theme in XFCE4 you can use the gsettings command. For example to use
+the Redmond97 Millennium theme you would type the following:
+```
+gsettings set org.mate.Marco.general theme "Redmond97 Millennium"
+```
+
+### Xfce4 Panel Configuration (GTK2 Panel)
 The main theme includes a GTK2 hack for the system tray and orage clock applet to make them appear to be
 inside the same inset frame (only applies to GTK2 version of the Xfce4 panel). In order for the frames to display
 correctly, you must add the two applets in order: "Notification Area" and then "Orage Clock". Your panel layout should look
@@ -71,6 +83,17 @@ Uncheck the option "Show Frame" on the dialog window:
 
 The frame borders should now look aligned between the notification area and the Orage Clock applets.
 (Note that there will be a small gap between the two applets this is currently a bug in the theme.)
+
+### Xfce4 Panel Configuration (GTK3 Panel)
+The theme includeds a hack to make the clock applet and system tray applet appear inside the same frame. To acheive this
+the right border from the tray applet has been removed and the left border on the clock applet has been removed.
+To display correctly the systemtray applet should be followed by either the xfce4 clock applet or the orage clock
+applet. You will need to uncheck the "show frame" option for the system tray using the exmaple above for the GTK2 panel.
+
+### Application menu
+Both the XFCE4 application menu button and Whisker Menu buttons are styled and either one can be used. The theme styles
+the Whisker Menu window and supports most user configurations, no particular settings are required. In MATE desktop the
+custom menu bar applet has been styled and includes a styled application menu.
 
 #### Firefox theme
 You will first need to find your firefox user profile directory. It is usually the one that ends with ".default".
