@@ -5,7 +5,7 @@ A Win9x inspired theme for GTK3 and GTK2 developed for XFCE4
 The Redmond97 project aims to recreate the nostalgic look of the Win9x desktop for the XFCE4 desktop environment. 
 
 ## Extras
-Included with the main theme package are the GTK themes, the Xfce4WM theme, metacity-1 themes and various Firefox IE themes.
+Included with the main theme package are the GTK themes, the Xfce4WM theme, Metacity-1 themes and various Firefox IE themes.
 Many color schemes from the Windows 98 Plus! pack are also included. A theme generator script is also available 
 to compile the Redmond97 theme using custom colors.
 
@@ -15,9 +15,9 @@ The following packages are recommended for full functionality:
 ```
 firefox, xfce4, xfce4-goodies, xfce4-whiskermenu-plugin (included with xfce4-goodies), gtk-nocsd, marco
 ```
-The theme has been designed for XFCE4 so the XFCE4 desktop environment is highly recommended but not required
-for the use of the GTK and Firefox themes. Support for MATE desktop ahas also been included in the theme. 
-To get the titlebar gradients use a window manager such as marco which is included with MATE desktop. 
+The theme has been designed for XFCE4 but it is not not required
+for the use of the GTK and Firefox themes. Support for MATE desktop has also been added. 
+To get the gradient titlebars use a window manager that supports metacity-1 themes such as marco (included with MATE desktop). 
 
 #### Redmond97 Theme Builder
 For the theme generator the following packages are also required:
