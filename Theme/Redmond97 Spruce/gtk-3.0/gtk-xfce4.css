@@ -6,13 +6,20 @@
    margin: 2px;
    margin-left: 0px; }
 
+#XfcePanelWindow button > box {
+   margin-top: 1px;
+   margin-right: 3px; }
+
+#XfcePanelWindow button box > image {
+   margin-right: -5px; }
+
 #XfcePanelWindowWrapper {
    box-shadow: 0 1px @light_shadow;
    margin-top: 3px; }
 
 #XfcePanelWindow button:active, #XfcePanelWindow button:checked {
    font-weight: bold;
-   margin-top: 3px;
+   margin-top: 2px;
    margin-bottom: 2px;
    margin-left: 1px;
    border: none;
@@ -25,6 +32,7 @@
    background-image: url("assets/scrollbar_trough.png");
    color: @toolbar_fg_color;
    background-color: @button_bg_color; }
+
 
 #XfcePanelWindowWrapper > * > * > * {
    border: none;
@@ -44,15 +52,17 @@
    margin-top: -1px; 
    margin-bottom: 1px; }
 
+#XfcePanelWindow #launcher-arrow, 
 #XfcePanelWindow #launcher-arrow:hover {
-   box-shadow: none;
-   border-color: transparent; }
+   border-radius: 0;
+   margin: 0;
+   margin-top: 1px;
+   padding: 3px; }
 
-
-#XfcePanelWindow #launcher-arrow:active,
-#XfcePanelWindow #launcher-arrow:checked {
-   box-shadow: none;
-   border-color: transparent; }
+#XfcePanelWindow #launcher-arrow:active {
+   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @light_shadow inset;
+   background-image: none;
+   border: transparent solid; }
 
 #XfcePanelWindow {
    box-shadow: 0 1px @light_shadow inset;

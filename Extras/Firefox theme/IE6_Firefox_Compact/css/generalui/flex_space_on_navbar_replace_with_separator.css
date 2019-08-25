@@ -1,0 +1,11 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+#main-window:not([customizing]) #nav-bar toolbarspring {
+  -moz-appearance: separator !important;
+  min-width: 1px !important;
+  max-width: 1px !important;
+  -moz-margin-start: 1px !important;
+}

@@ -1,0 +1,9 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+#nav-bar .toolbarbutton-icon,
+#nav-bar .toolbarbutton-badge-stack {
+  border-radius: 0px !important;
+}

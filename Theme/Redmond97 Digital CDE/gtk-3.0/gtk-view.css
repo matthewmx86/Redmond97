@@ -12,14 +12,13 @@
 
 .view {
    background-color: @base_color;
-   color: @theme_text_color; }
-  .
+   color: @text_color; }
+
 view:not(treeview) {
-   color: @theme_text_color;
-   caret-color: @theme_text_color;
+   color: @text_color;
+   caret-color: @text_color;
    background-color: @theme_base_color;
-   border-radius: 0px;
-}
+   border-radius: 0px; }
 
 .view:disabled {
    color: @theme_disabled_fg_color;

@@ -4,8 +4,8 @@
 
 style "menubar"
 {
-        xthickness = 3
-        ythickness = 3
+        xthickness = 2
+        ythickness = 2
 
 ### Menubar ###
 	engine "pixmap"
@@ -14,7 +14,7 @@ style "menubar"
 		{
 			function = BOX
 			file = "assets/menubar.png"
-			border = {3, 3, 3, 3}
+			border = {2, 2, 2, 2}
 			stretch = TRUE
 		}
 	}

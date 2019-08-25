@@ -258,17 +258,18 @@ convert assets/progressbar_horiz.png -fuzz 15% -fill "#$selectedbg" -opaque "#ff
 convert assets/progressbar_vert.png -fuzz 15% -fill "#$selectedbg" -opaque "#ff00fa" assets/progressbar_vert.png
 
 #compile whisker menu side image
-convert -size 27x800 canvas:"#$border" assets/side_canvas.png
-magick -size 27x400 gradient:"#$selectedbg"-"#$border" assets/side_gradient.png
+convert -size 27x800 canvas:"#$activetitle1" assets/side_canvas.png
+#magick -size 27x400 gradient:"#0803ee"-"#$border" assets/side_gradient.png
+magick -size 27x400 gradient:"#$activetitle"-"#$activetitle1" assets/side_gradient.png
 convert -background none -page +0+0 assets/side_canvas.png -page 0+0 assets/side_gradient.png -layers flatten assets/menu_side_gradient.png
 convert -rotate -90 assets/menu_side_gradient.png assets/menu_side_gradient.png
-convert -font helvetica-bold -fill "#$basecolor" -pointsize $menu_side_text_size -draw "text $menu_side_text_offset '$menu_side_text'" assets/menu_side_gradient.png assets/menu_side.png
+convert -font helvetica-bold -fill "#$activetitletext" -pointsize $menu_side_text_size -draw "text $menu_side_text_offset '$menu_side_text'" assets/menu_side_gradient.png assets/menu_side.png
 convert -rotate -90 assets/menu_side.png assets/menu_side.png
 
 rm assets/menu_side_gradient.png
 
 cd assets
-
+#gtk3 assets
 gtk3="../../gtk-3.0/assets/"
 cp tab*.png $gtk3
 cp menu_side.png $gtk3
@@ -285,7 +286,20 @@ cp scrollbar_button.png $gtk3
 rm scrollbar_button.png
 cp scroll_*_button.png $gtk3
 mv headerbox.png $gtk3
-cp warning.png $gtk
+cp warning.png $gtk3
+mv caja_menu_side.png $gtk3
+#metacity-1 assets
+mv close_normal.png ../../metacity-1/
+mv close_normal_small.png ../../metacity-1/
+mv close_pressed.png ../../metacity-1/
+mv close_pressed_small.png ../../metacity-1/
+mv maximize_normal.png ../../metacity-1/
+mv maximize_pressed.png ../../metacity-1/
+mv minimize_normal.png ../../metacity-1/
+mv minimize_pressed.png ../../metacity-1/
+mv restore_normal.png ../../metacity-1/
+mv restore_pressed.png ../../metacity-1/
+#gtk2 assets
 mv *.png ../../gtk-2.0/assets/
 cd ../../
 }
@@ -293,6 +307,9 @@ cd ../../
 function build_theme_config
 {
 echo "Generating rc and css config files..."
+
+#Theme index
+sed -i 's/Redmond97/Redmond97 '"$Theme_name"'/g' index.theme
 
 #GTK-2.0
 sed -i 's/fg_color:#000/fg_color:'#$fgcolor'/g' base.rc
@@ -314,6 +331,10 @@ sed -i 's/@define-color light_shadow #FFFFFF/@define-color light_shadow '#$highl
 sed -i 's/@define-color disabled_fg_color #EFEFEF/@define-color disabled_fg_color '#$disabled_fgcolor'/g' gtk-base.css
 sed -i 's/@define-color borders #000/@define-color borders '#$border'/g' gtk-base.css
 sed -i 's/@define-color dark_shadow shade(@bg_color, 0.7)/@define-color dark_shadow '#$shadow'/g' gtk-base.css
+sed -i 's/@define-color active_title_color @selected_bg_color/@define-color active_title_color #'$activetitle'/g' gtk-base.css
+sed -i 's/@define-color active_title_color1 @selected_bg_color/@define-color active_title_color1 #'$activetitle1'/g' gtk-base.css
+sed -i 's/@define-color active_title_text @selected_fg_color/@define-color active_title_text #'$activetitletext'/g' gtk-base.css
+
 if [ $(echo "$enable_alternate_menu" | grep -ci "true") -lt 1 ]; then
   sed -i 's/border-left: 23px solid/border-left: '"$menu_side_width"'px solid/g' "gtk-3.0/whisker-menu.css"
 fi
@@ -335,6 +356,22 @@ if [ $(echo "$high_contrast" | grep -ci "true") -gt 0 ]; then
   echo "inactive_hilight_2=#$border" >> themerc
 fi
 
+#metacity-1
+sed -i 's/_activegradient1_/#'$activetitle1'/g' metacity-theme-1.xml
+sed -i 's/_activegradient2_/#'$activetitle'/g' metacity-theme-1.xml
+sed -i 's/_inactivegradient1_/#'$inactivetitle'/g' metacity-theme-1.xml
+sed -i 's/_inactivegradient2_/#'$inactivetitle1'/g' metacity-theme-1.xml
+sed -i 's/Redmond2K/Redmond97 '"$Theme_name"'/g' metacity-theme-1.xml
+sed -i 's/line color=\"#ffffff\"/line color=\"#'$highlight'\"/g' metacity-theme-1.xml 
+sed -i 's/title x=\"3\" y=\"2\" color="gtk:bg\[NORMAL\]\"/title x=\"3\" y=\"2\" color=\"#'$inactivetitletext'\"/g' metacity-theme-1.xml
+sed -i 's/title x=\"3\" y=\"2\" color=\"#ffffff\"/title x=\"3\" y=\"2\" color=\"#'$activetitletext'\"/g' metacity-theme-1.xml
+sed -i 's/404040/'$border'/g' metacity-theme-1.xml
+sed -i 's/808080/'$shadow'/g' metacity-theme-1.xml
+sed -i 's/404040/'$border'/g' metacity-theme-1.xml
+sed -i 's/404040/'$border'/g' metacity-theme-1.xml
+sed -i 's/color=\"gtk:bg\[NORMAL\]\"/color=\"#'$bgcolor'\"/g' metacity-theme-1.xml
+
+
 #Append changes
 cat gtkrc >> base.rc
 rm -rf gtkrc
@@ -343,6 +380,7 @@ cat gtk.css >> gtk-base.css
 rm gtk.css
 mv gtk-base.css gtk-3.0/gtk.css
 mv themerc xfwm4/
+mv metacity-theme-1.xml metacity-1/
 }
 
 function prompt {
@@ -387,7 +425,7 @@ echo "Shadow color: #$shadow, RGB: ${rgb[1]%.*},${rgb[2]%.*},${rgb[3]%.*}"
 hex2rgb $disabled_fgcolor
 echo "Disabled FG color: #$disabled_fgcolor, RGB: ${rgb[1]%.*},${rgb[2]%.*},${rgb[3]%.*}"
 echo "Press enter to continue or ctrl+c to cancel..."
-read $entry
+#read $entry
 build
 }
 
@@ -407,9 +445,11 @@ mkdir ~/.themes/"$theme_name"
 mv gtk-2.0 ~/.themes/"$theme_name"/
 mv gtk-3.0 ~/.themes/"$theme_name"/
 mv xfwm4 ~/.themes/"$theme_name"/
+mv metacity-1 ~/.themes/"$theme_name"/
 cp theme.conf ~/.themes/"$theme_name"/
 mv version ~/.themes/"$theme_name"/
 cp LICENSE ~/.themes/"$theme_name"/
+mv index.theme ~/.themes/"$theme_name"/
 echo "GTK2, GTK3 and XFWM4 themes configured and installed."
 echo "Theme '$theme_name' installed in ~/.themes/$theme_name. You may now select and use your theme."
 }
@@ -433,6 +473,17 @@ inactivetitletext=$(verify $inactivetitletext)
 activetitle=$(verify $activetitle)
 inactivetitle=$(verify $inactivetitle)
 border=$(verify $border)
+if [ -z "$activetitle1" ]; then
+  activetitle1="$border"
+else
+  activetitle1=$(verify $activetitle1)
+fi
+if [ -z "$inactivetitle1" ]; then
+  inactivetitle1="$bgcolor"
+else
+  inactivetitle1=$(verify $inactivetitle1)
+fi
+
 #Convert to rgb for calculations
 hex2rgb $fgcolor
 fgcolor_rgb[1]=${rgb[1]%.*}

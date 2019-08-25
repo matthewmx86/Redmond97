@@ -8,8 +8,8 @@ entry {
    border-right: 1px solid @light_shadow;
    border-radius: 0px;
    box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
-   color: @theme_text_color;
-   caret-color: @theme_text_color;
+   color: @text_color;
+   caret-color: @text_color;
    background-color: @theme_base_color; }
 
 entry:selected, entry:selected:focus, entry selection, entry selection:focus {

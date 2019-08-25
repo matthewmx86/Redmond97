@@ -1,0 +1,101 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+:root {
+  --general_toolbar_color_toolbars: linear-gradient(#cdcac1,#cdcac1);
+  --general_toolbar_color_navbar: linear-gradient(#cdcac1,#cdcac1);
+  --general_toolbar_text_color: inherit;
+  --general_toolbar_text_shadow: transparent;
+}
+
+
+#nav-bar:not(:-moz-lwtheme) {
+  margin-top: -1px !important;/*
+  -moz-appearance: none !important;
+  /* background: var(--general_toolbar_color_navbar, inherit) !important;
+  border: 1px solid #808080 !important;
+  /*margin-right: 1px !important;
+  box-shadow: 1px 1px #fff, 1px 1px #fff inset !important;*/
+  background-image: url("../../image/top.png") !important;
+  background-position: left bottom; 
+  padding-top: 2px !important;
+  padding-bottom: 1px !important;
+        border: 2px solid !important;
+        border-top: 2px solid !important;
+        border-left: 2px solid !important;
+        border-image: url("../../image/toolbar_handle_top.png") !important;
+        border-image-slice: 2 2 2 2 !important;
+}
+
+toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+  -moz-appearance: none !important;
+/*  background: var(--general_toolbar_color_toolbars, inherit) !important; 
+  border: 1px solid #808080 !important;
+  margin-right: 1px !important;
+  border-top: none !important;
+  box-shadow: 1px 1px #fff, 1px 1px #fff inset !important;*/
+  background-image: url("../../image/bottom.png") !important;
+  margin-bottom: 0px !important;
+  padding: 3px !important;
+  padding-top: 5px !important;
+        border: 2px solid !important;
+        border-left: 2px solid !important;
+        border-top: 0px !important;
+        border-image: url("../../image/toolbar_handle_top.png") !important;
+        border-image-slice: 2 2 2 2 !important;
+}
+
+#browser {
+   border: solid !important;
+   padding: 0px !important;
+   margin-top: -1px !important;
+   border-width: 2px 2px 2px 2px !important;
+   border-image: url("../../image/combobox.png") !important;
+   border-image-slice: 2 2 2 2 !important; 
+}
+
+#PersonalToolbar .toolbarbutton-1{
+  margin: 0px !important;
+  min-height: 20px !important; 
+  max-height: 20px !important;
+}
+
+
+
+#main-window:not(:-moz-lwtheme) #PersonalToolbar #bookmarks-menu-button::after,
+#main-window:not(:-moz-lwtheme) toolbar > toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) toolbar #stop-reload-button toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) toolbar #PanelUI-button toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) toolbar > toolbarbutton >.toolbarbutton-badge-stack .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) #nav-bar-customization-target > toolbarbutton > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) #PlacesToolbarItems toolbarbutton > :-moz-any(label,description) {
+  color: var(--general_toolbar_text_color, inherit) !important;
+  text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
+}
+
+/* findbar */
+#main-window :-moz-any(.browserContainer,#viewSource):not(:-moz-lwtheme) :-moz-any(findbar,#FindToolbar) {
+  background: var(--general_toolbar_color_toolbars, inherit) !important;
+}
+
+#main-window[style*='--lwt-header-image']:-moz-lwtheme :-moz-any(.browserContainer,#viewSource) :-moz-any(findbar,#FindToolbar) {
+  background: var(--lwt-header-image) !important;
+  background-position: calc(100vw - 5px) !important;
+}
+
+#main-window[style*='--lwt-header-image']:-moz-lwtheme :-moz-any(.browserContainer,#viewSource) :-moz-any(findbar,#FindToolbar) :-moz-any(.toolbarbutton-icon,.toolbarbutton-text) {
+  color: var(--lwt-text-color) !important;
+  fill: var(--lwt-text-color) !important;
+}
+#main-window[style*='--lwt-header-image']:-moz-lwtheme-brighttext :-moz-any(.browserContainer,#viewSource) :-moz-any(findbar,#FindToolbar) :-moz-any(.toolbarbutton-icon,.toolbarbutton-text) {
+  text-shadow: 1px 1px 1px black !important;
+}
+
+/* fix Firefox + Windows 8.1 + lw-theme bug (occurring without custom code too) */
+@media (-moz-os-version:windows-win8) {
+	#navigator-toolbox:-moz-lwtheme {
+	  border: unset !important;
+	}
+}

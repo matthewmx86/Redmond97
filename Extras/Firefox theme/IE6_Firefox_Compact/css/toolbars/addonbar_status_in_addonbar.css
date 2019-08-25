@@ -1,0 +1,42 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+.browserContainer :-moz-any(statuspanel,#statuspanel) {
+  -moz-box-ordinal-group: 3 !important;
+  position: fixed !important;
+  bottom: 2px !important;
+}
+
+.browserContainer :-moz-any(statuspanel,#statuspanel):-moz-locale-dir(ltr) {
+  left: 0px;
+}
+.browserContainer :-moz-any(statuspanel,#statuspanel):-moz-locale-dir(rtl) {
+  right: 0px;
+}
+
+.browserContainer :-moz-any(statuspanel,#statuspanel) :-moz-any(#statuspanel-label,.statuspanel-label) {
+  -moz-appearance: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+  min-width: 400px !important;
+  width: 400px !important;
+  max-width: 400px !important;
+  color: black !important;
+}
+
+.browserContainer :-moz-any(statuspanel,#statuspanel):-moz-lwtheme-brighttext :-moz-any(#statuspanel-label,.statuspanel-label) {
+  color: white !important;
+}
+
+/* add space for status text on add-on bar */
+#main-window:not([chromehidden*="toolbar"]) #navigator-toolbox > #PersonalToolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+  padding-left: 400px !important;
+}
+
+#main-window:not([chromehidden*="toolbar"]) #navigator-toolbox > #PersonalToolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):-moz-locale-dir(rtl) {
+  padding-right: 400px !important;
+}

@@ -1,0 +1,74 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/***********************************************************/
+/* context menu items and icons instead of just huge icons */
+/***********************************************************/
+#context-sep-navigation,
+:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) .menu-iconic-highlightable-text {
+  display: none !important;
+}
+
+#context-navigation{
+  -moz-box-orient: vertical !important;
+  -moz-appearance:none !important;
+  background:unset !important;
+}
+
+:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image {
+  width: 16px !important;
+  height: 16px !important;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  padding-top: unset !important;
+  padding-bottom: unset !important;
+  -moz-margin-start: 4px !important;
+  -moz-margin-end: 12px !important;
+}
+
+@media (min-resolution: 120dpi) {
+	:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image  {
+	  -moz-margin-end: 8px !important;
+	}
+}
+
+:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) {
+  -moz-appearance: menuitem !important;
+  min-height: unset !important;
+}
+
+:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):after {
+  content: attr(aria-label) !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+#context-navigation > .menuitem-iconic{
+  -moz-box-pack: start !important;
+}
+
+/* fix for German locale */
+#context-bookmarkpage[aria-label*="Lesezeichen"] {
+  -moz-padding-end: 10px !important;
+}
+
+@media (-moz-windows-classic) {
+
+	:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image {
+	  -moz-margin-start: 0px !important;
+	  -moz-margin-end: 2px !important;
+	}
+
+}
+
+/* code for Linux/macOS */
+@media not all and (-moz-os-version: windows-win7) {
+@media not all and (-moz-os-version: windows-win8) {
+@media not all and (-moz-os-version: windows-win10) {
+	:-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image {
+	  -moz-margin-start: 2px !important;
+	  -moz-margin-end: 3px !important;
+	} 
+}}}

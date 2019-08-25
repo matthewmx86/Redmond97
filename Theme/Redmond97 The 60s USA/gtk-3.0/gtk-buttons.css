@@ -1,16 +1,3 @@
-/* Links */
-
-
-button:link > label,
-button:visited > label {
-   text-decoration-line: underline; }
-
-button:link > label,
-button:visited > label, *:link, button:link,
-button:visited {
-   color: @selected_bg_color; }
-
-
 /* General buttons */
 
 
@@ -273,7 +260,7 @@ spinbutton {
   border-radius: 0px;
   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
   background-color: @base_color;
-  color: @theme_text_color; }
+  color: @text_color; }
   
 spinbutton:disabled {
   background-color: @bg_color; }

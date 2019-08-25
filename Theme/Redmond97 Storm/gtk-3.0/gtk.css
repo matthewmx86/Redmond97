@@ -16,6 +16,9 @@
 @define-color menubar_fg_color @fg_color;
 @define-color notebook_bg_color @bg_color;
 @define-color disabled_fg_color #999999;
+@define-color active_title_color #800080;
+@define-color active_title_color1 #000000;
+@define-color active_title_text #FFFFFF;
 /* begin */
 
 
@@ -39,8 +42,8 @@
 @import url("gtk-separators.css");
 @import url("gtk-hacks.css");
 @import url("whisker-menu.css");
-@import url("gtk-mate.css");
 @import url("gtk-xfce4.css");
+@import url("gtk-mate.css");
 
 @define-color disabled_bg_color mix(@fg_color, @bg_color, 0.95);
 /*@define-color disabled_fg_color shade(@bg_color, 0.9);*/

@@ -1,0 +1,97 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/* NOTE  ********************************************************************************/
+/* Variables are set inside '.\config\' folders CSS files, if complete package is used! */
+
+:root {
+  --classic_squared_tabs_tab_height: 14px;
+  --classic_squared_tabs_tab_text_color: black;
+  --classic_squared_tabs_tab_text_shadow: transparent;
+
+  --tab-min-height: var(--classic_squared_tabs_tab_height) !important;
+  --mltabs-newtab-height: calc( var(--classic_squared_tabs_tab_height) + 1px ) !important;
+  --tab-min-height_tnot: calc( var(--classic_squared_tabs_tab_height) - 1px ) !important;
+  --space_below_content: calc( var(--classic_squared_tabs_tab_height) + 1px ) !important;
+}
+
+
+/*
+#TabsToolbar { visibility: collapse !important; }*/
+
+
+ toolbar#TabsToolbar { 
+   max-height: 12px !important;
+   -moz-appearance: none !important; 
+   border-top: 0px !important; 
+   border-bottom: 0px !important; 
+   background-color: inherit !important; 
+} 
+
+
+/* remove default tab colors */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"],
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-background {
+  background: unset !important;
+  border: unset !important;
+}
+
+/*******************************************/
+/**** default themes tab colors [start] ****/
+/*******************************************/
+
+/* black tab text color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
+  color: #000000 !important;
+  text-shadow: 1px 1px 1px var(--classic_squared_tabs_tab_text_shadow) !important;
+}
+
+
+/* selected tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content[selected="true"] {
+   border: 1px solid #a0a0a0 !important;
+   border-bottom: #fff 1px !important;
+   margin-right: -1px;
+   margin-bottom: 1px !important;
+}
+
+/* selected tabs color */
+#TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected]) .tab-content {
+   border: 1 1 1 1 !important;
+   border: 1px solid #a0a0a0 !important;
+   border-bottom: #000000 1px solid !important;
+   margin-left: -1px;
+   margin-right: -1px;
+
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button:hover,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover .tab-content:not([selected="true"])> {
+   border: 1px solid #a0a0a0 !important;
+   border-bottom: #000000 1px solid !important;
+   margin-left:-1px;
+   margin-right: -1px;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
+   border: 1px solid #a0a0a0 !important;
+   border-bottom: #000000 1px solid !important;
+   margin-right: -1px;
+}
+
+#TabsToolbar .tabs-newtab-button {
+   border: 1px solid #a0a0a0 !important;
+   border-bottom: #000000 1px solid !important;
+   margin-right: -1px;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[pending] .tab-content {
+   border: 1px solid #a0a0a0 !important;
+   border-bottom: #000000 1px solid !important;
+   margin-right: -1px;
+}
+

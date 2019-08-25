@@ -61,6 +61,10 @@
 .link {
   color: @selected_bg_color; }
 
+.link > label, .visited > label {
+   text-decoration-line: underline;
+   color: @selected_bg_color; }
+
 
 /* Hide overflow dashed lines around scrolled windows */
 
@@ -91,7 +95,7 @@ calendar {
    border-radius: 0px;
    border-style: solid;
    border-color: @borders;
-   color: @theme_text_color; }
+   color: @text_color; }
  
 calendar.header {
    border: none;
@@ -138,7 +142,7 @@ treeview.view:selected, treeview.view:selected:focus {
 
 
 list {
-   color: @theme_text_color;
+   color: @text_color;
    background-color: @theme_base_color;
    color: @text_color;
    background-color: @theme_base_color; }
