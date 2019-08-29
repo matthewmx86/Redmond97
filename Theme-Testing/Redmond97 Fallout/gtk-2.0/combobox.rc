@@ -1,0 +1,177 @@
+style "color-fix-combo" {
+
+
+        #Button::min-button-length = 3000 
+        xthickness = 0
+        ythickness = 1
+	fg[ACTIVE] =  @fg_color
+  	fg[INSENSITIVE] = @disabled_fg_color
+  	fg[NORMAL] =  @fg_color
+  	fg[PRELIGHT] = @fg_color
+  	fg[SELECTED] = @fg_color
+
+	text[ACTIVE] = @fg_color
+	text[INSENSITIVE] = @disabled_fg_color
+	text[NORMAL] = @fg_color
+	text[PRELIGHT] = @fg_color
+	text[SELECTED] = @selected_fg_color
+
+        engine "pixmap" {
+	    image {
+                state = NORMAL
+      		function = ARROW
+      		overlay_file = "assets/null.png"
+			overlay_border = { 2, 2, 2, 2 }
+			overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+	    image {
+                state = PRELIGHT
+      		function = ARROW
+      		overlay_file = "assets/null.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+	    image {
+                state = ACTIVE
+      		function = ARROW
+      		overlay_file = "assets/null.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+	    image {
+                state = INSENSITIVE
+      		function = ARROW
+      		overlay_file = "assets/null.png"
+      		overlay_stretch = FALSE
+      		arrow_direction = DOWN
+    		   }
+		image 
+		{
+			function = BOX
+			state = NORMAL
+			file = "assets/combobox.png"
+			border = {3, 25, 4, 4}
+			stretch = TRUE
+
+		}
+## Prelight
+		image 
+		{
+			function = BOX
+			state = PRELIGHT
+			file = "assets/combobox.png"
+			border = {3, 25, 4, 4}
+			stretch = TRUE
+		}
+
+## Insensitive
+		image 
+		{
+			function = BOX
+			state = INSENSITIVE
+			file = "assets/combobox_ins.png"
+			border = {3, 25, 4, 4}
+			stretch = TRUE
+		}
+
+## Active
+		image 
+		{
+			function = BOX
+			state = ACTIVE
+			file = "assets/combobox_checked.png"
+			border = {3, 25, 4, 4}
+			stretch = TRUE
+		}
+
+
+
+  	}
+}
+
+
+style "color-fix-combo2" {
+
+        GtkComboBox::has-frame = 1
+        GtkWidget ::focus-padding = 10
+	ythickness = 2
+        xthickness = 1
+	fg[ACTIVE] =  @fg_color
+  	fg[INSENSITIVE] = @disabled_fg_color
+  	fg[NORMAL] =  @fg_color
+  	fg[PRELIGHT] = @fg_color
+  	fg[SELECTED] = @fg_color
+
+	text[ACTIVE] = @fg_color
+	text[INSENSITIVE] = @disabled_fg_color
+	text[NORMAL] = @fg_color
+	text[PRELIGHT] = @fg_color
+	text[SELECTED] = @selected_fg_color
+	engine "pixmap"
+
+	{
+### Entry ###
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = NORMAL
+			file = "assets/entry2.png"
+			border = {2, 0, 2, 2}
+			stretch	= TRUE
+		}
+
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = INSENSITIVE
+			file = "assets/entry2_ins.png"
+			border = {2, 0, 2, 2}
+			stretch	= TRUE
+		}
+
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = NORMAL
+			file = "assets/entry2.png"
+			border = {2, 0, 2, 2}
+			stretch	= TRUE
+		}
+
+		image
+		{
+			function = SHADOW
+			detail = "entry"
+                        state = INSENSITIVE
+			file = "assets/entry2_ins.png"
+			border = {2, 0, 2, 2}
+			stretch	= TRUE
+		}
+
+		
+### Focus ###
+		image
+    	{
+			function = FOCUS
+			detail = "entry"
+			file = "assets/entry2.png"
+			border = {2, 0, 2, 2}
+			stretch	= TRUE
+    	}
+	}
+}
+
+style "color-fix-combo3" {
+ xthickness = 5
+}
+
+widget_class "*.<GtkComboBox>.*" style "color-fix-combo"
+widget_class "*.<GtkComboBox>.<GtkCellView>" style "color-fix-combo"
+class "GtkComboBox*" style "color-fix-combo" 
+widget_class "*<GtkComboBox>*<GtkEntry>*" style "color-fix-combo2"
+widget_class "*<GtkComboBox>*<GtkToggleButtony>*" style "color-fix-combo"
+widget_class "*<PidginStatusBox>*<GtkToggleButton>*" style "color-fix-combo"

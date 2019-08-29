@@ -1,0 +1,156 @@
+########################################################################
+# Menubar
+########################################################################
+
+style "menubar"
+{
+        xthickness = 2
+        ythickness = 2
+
+### Menubar ###
+	engine "pixmap"
+	{
+		image
+		{
+			function = BOX
+			file = "assets/menubar.png"
+			border = {2, 2, 2, 2}
+			stretch = TRUE
+		}
+	}
+}
+
+style "menu"
+{
+        xthickness = 4
+        ythickness = 4
+### Menu ###
+        engine "pixmap"
+        {
+                image
+                {
+                        function = BOX
+                        file = "assets/menu.png"
+                        border = {4, 4, 4, 4}
+                        stretch = TRUE
+                }
+        }
+}
+
+style "combomenu"
+{
+        xthickness = 1
+        ythickness = 1
+### Menu ###
+        engine "pixmap"
+        {
+                image
+                {
+                        function = BOX
+                        file = "assets/combomenu.png"
+                        border = {4, 4, 4, 4}
+                        stretch = TRUE
+                }
+        }
+}
+
+class "GtkMenuBar*"             style "menubar"
+class "GtkMenu" style "menu"
+widget "*.gtk-combobox-popup-menu" style "combomenu"
+
+style "menuitem"
+{
+
+
+### Menu item ###
+	engine "pixmap"
+	{
+		image
+		{
+			function = BOX
+			file = "assets/menuitem.png"
+			border = {3, 3, 3, 3}
+			stretch	= TRUE
+		}
+		
+### H line ###
+		image 
+		{
+			function = HLINE
+	 		file = "assets/h_line.png"
+			border = {0, 0, 0, 0}
+			stretch = TRUE
+		}
+		
+### V line ###	
+		image 
+		{
+			function = VLINE
+	 		file = "assets/v_line.png"
+			border = {0, 0, 0, 0}
+			stretch = TRUE
+		}
+		
+### Arrow UP ###
+		image
+		{
+			function = ARROW
+			overlay_file = "assets/arrow_up.png"
+			overlay_border = {3,3,3,3}
+			overlay_stretch = FALSE
+			arrow_direction	= UP
+		}
+
+### Arrow DOWN ###
+		image
+		{
+			function = ARROW
+			overlay_file = "assets/arrow_down.png"
+			overlay_border = {3,3,3,3}
+			overlay_stretch	= FALSE
+			arrow_direction	= DOWN
+		}
+
+### Arrow LEFT ###
+		image
+		{
+			function = ARROW
+			overlay_file = "assets/arrow_left.png"
+			overlay_border = {3,3,3,3}
+			overlay_stretch	= FALSE
+			arrow_direction	= LEFT
+		}
+
+### Arrow RIGHT ###
+		image
+		{
+			function = ARROW
+			overlay_file = "assets/arrow_right.png"
+			overlay_border = {3,3,3,3}
+			overlay_stretch	= FALSE
+			arrow_direction	= RIGHT
+		}
+	}
+}
+
+style "menubaritem"
+{
+        fg[PRELIGHT] = @fg_color
+        fg[SELECTED] = @fg_color
+	engine "pixmap"
+	{
+		image
+		{
+			function = BOX
+			file = "assets/toolbar_button_active.png"
+			border = {3, 3, 3, 3}
+			stretch	= TRUE
+		}
+	}
+
+}
+class "GtkMenuItem*" style "menuitem"
+class "GtkImageMenuItem*" style "menuitem"
+class "GtkTearoffMenuItem*" style "menuitem"
+class "GtkItem*" style "menuitem"
+widget_class "*MenuBar.*" style :highest "menubaritem"
