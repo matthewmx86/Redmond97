@@ -125,3 +125,20 @@ XfdesktopIconView:active {
    color: @selected_bg_color;
    background-color: @selected_bg_color; }
 
+/* Hack to give the task bar a pseudo handle
+Remove code after this comment to disable the fake handle image.
+Since the task bar name changes based on individual panel layout, support
+up to 24 different positions. */
+
+#tasklist > box, #tasklist-1 > box, #tasklist-2 > box, #tasklist-3 > box, 
+#tasklist-4 > box, #tasklist-5 > box, #tasklist-6 > box, #tasklist-7 > box, 
+#tasklist-8 > box, #tasklist-9 > box, #tasklist-10 > box, #tasklist-11 > box, 
+#tasklist-12 > box, #tasklist-13 > box, #tasklist-14 > box, #tasklist-15 > box, 
+#tasklist-16 > box, #tasklist-17 > box, #tasklist-18 > box, #tasklist-19 > box,
+#tasklist-20 > box, #tasklist-21 > box, #tasklist-22 > box, #tasklist-23 > box, 
+#tasklist-24 > box {
+   border-left: 11px solid;
+   border-image: url("assets/handle.png");
+   border-image-slice: 2 2 2 11;
+}
+
