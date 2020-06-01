@@ -253,7 +253,7 @@ label selection {
 
 /* CSD title bar, in this case it is styled and used as a toolbar */
 
-
+/*
 .titlebar, .titlebar:not(headerbar), headerbar.default-decoration, .csd headerbar.default-decoration, .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar) {
    min-height: 26px;
    margin-bottom: 2px;
@@ -265,3 +265,4 @@ label selection {
    border-left: 0px solid;
    box-shadow: 0px 2px @toolbar_bg_color;
    background-color: @toolbar_bg_color; }
+*/

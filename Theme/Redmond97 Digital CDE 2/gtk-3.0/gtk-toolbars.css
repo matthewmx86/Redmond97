@@ -1,19 +1,15 @@
-/* Toolbars, infobar, overlay bar */
+/* Style GTK CSD headerbar, only if GTK-NOCSD is used,
+   otherwise uncomment the reference in gtk.css for gtk-csd.css
+   to enable GTK client side decorations. */
 
-headerbar, headerbar:not(.titlebar) {
-   padding: 4px 8px;
-   border-width: 0;
-   border-style: solid;
-   border-color: mix(@borders, @headerbar_bg_color, 0.5);
-   border-bottom-width: 1px;
-   box-shadow: 0 0px @borders;
-   color: @headerbar_fg_color;
-   background-color: @headerbar_bg_color; }
+
+/*
+headerbar {
+padding: 5px; }
+*/
 
 
 /* Main toolbars */
-
-
 toolbar {
    padding: 2px;
    margin-top: 0px;
@@ -99,13 +95,10 @@ toolbar:disabled {
 
 
 actionbar {
-padding: 2px;
-
-}
+padding: 2px; }
 
 
 /* Info bar colors */
-
 
 
 infobar {

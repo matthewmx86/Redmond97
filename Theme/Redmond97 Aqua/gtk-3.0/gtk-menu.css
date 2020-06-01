@@ -14,8 +14,7 @@ combobox menu, combox .menu {
     border: 1px solid @borders;
     box-shadow: none;
     background-color: @base_color;
-    padding: 0px;
-}
+    padding: 0px; }
 
 
 /* Force initial font instead of repsecting parent widget font */
@@ -24,15 +23,23 @@ combobox menu, combox .menu {
 .csd popover.touch-selection,
 popover.background.touch-selection, 
 .csd popover.background.touch-selection {
-  font: initial; }
+   font: initial; }
 
 
 /* Adjust padding so selected itmes fit inside menu borders */
 
 
 menu menuitem {
-    margin: 1px;
-    padding: 3px; }
+    margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 4px; }
+
+menu menuitem:first-child {
+    margin-top: 2px }
+
+menu menuitem:last-child {
+    margin-bottom: 2px }
 
 combobox menuitem,
 combobox menuitem {
@@ -113,20 +120,12 @@ menuitem accelerator:disabled {
 /* Hamburger menus */
 
 
-popover {
-   padding: 0; }
-
-popover :focus {
-   outline: none;
-   border: none; }
-
-popover :hover {
-   background-color: @theme_selected_bg_color;
-   color: @theme_selected_fg_color; }
-
-popover :disabled {
-   color: @disabled_fg_color;
-   text-shadow: 1px 1px @light_shadow; }
-
-popover  label {
-   padding: 3px; }
+popover, .csd popover {
+   border-radius: 0;
+   padding: 3px;
+   box-shadow: none;
+   border: 1px solid @borders;
+   border-left: 1px solid @light_shadow;
+   border-top: 1px solid @light_shadow;
+   box-shadow: -1px -1px @bg_color, -1px -1px @dark_shadow inset;
+   background-color: @bg_color; }

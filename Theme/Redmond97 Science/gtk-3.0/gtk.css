@@ -19,6 +19,9 @@
 @define-color active_title_color #008081;
 @define-color active_title_color1 #000000;
 @define-color active_title_text #FFFFFF;
+@define-color inactive_title_color #A1A0A5;
+@define-color inactive_title_color1 #8399B1;
+@define-color inactive_title_text #D4E2F7;
 /* begin */
 
 
@@ -44,6 +47,7 @@
 @import url("whisker-menu.css");
 @import url("gtk-xfce4.css");
 @import url("gtk-mate.css");
+@import url("gtk-csd.css");
 
 @define-color disabled_bg_color mix(@fg_color, @bg_color, 0.95);
 /*@define-color disabled_fg_color shade(@bg_color, 0.9);*/

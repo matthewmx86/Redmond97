@@ -1,8 +1,0 @@
-/* Firefox Quantum userChrome.css tweaks ************************************************/
-/* Github: https://github.com/aris-t2/customcssforfx ************************************/
-/****************************************************************************************/
-
-
-.sidebar-placesTreechildren::-moz-tree-row {
-  min-height: 18px !important;
-}

@@ -66,4 +66,11 @@ spinbutton.vertical entry {
    box-shadow: none; }
 
 
+/* Hamburger menu entry */
+popover entry, popover scrolledwindow {
+   box-shadow: none;
+   background-color: @base_color;
+   border: 1px solid @dark_shadow; }
+
+
 

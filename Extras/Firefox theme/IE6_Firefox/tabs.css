@@ -1,0 +1,96 @@
+#TabsToolbar {
+  display: block !important;
+  position: absolute !important;
+  top: 2px !important;
+  right: 48px !important;
+  max-width: calc(100% - 470px) !important;
+ }
+
+/* remove default tab colors */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"],
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab, .tab-content {
+   border: unset !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"] {
+   border: 1px solid #505050 !important;
+   border-bottom: none !important;
+   padding: 0 !important;
+   margin-left: 0 !important;
+   margin-right: 0px !important;
+   min-width: 175px !important;
+   padding-top: 1px !important;
+   padding-right: 0px !important;
+   padding-left: 2px !important;
+   padding-bottom: 0 !important;
+   border: 2 2 0 2 !important;
+   border-image: url("image/button.png") !important;
+   border-image-width: 2px 2px 0px 2px !important;
+   border-image-slice: 2 2 0 2 !important;
+   margin-right: -1px;
+   margin-left: 0 !important;
+   max-height: 26px !important;
+}
+
+.tab-content {
+   border: unset !important
+   color: #fff !important;
+   background-image: linear-gradient(#ffc5c8, #d4d0c8) !important; }
+
+.tab-content:hover {
+   background-image: linear-gradient(#fac67e, #d4d0c8) !important;
+}
+
+.tab-content[selected="true"] {
+   /*color: #fff !important;*/
+   max-height: 24px !important;
+
+   background-image: linear-gradient(#99bae2, #d4d0c8) !important;
+   /*background-image: linear-gradient(#99bae2, #2c458b) !important;*/
+}
+
+.tab-content[selected="true"]:hover {
+   /*color: #fff !important;*/
+   background-image: linear-gradient(#9fccdf, #d4d0c8) !important;
+}
+
+#tabs-newtab-button {
+   margin-bottom: 0 !important;
+   margin-top: 0 !important;
+   margin-left: 0 !important;
+   margin-right: 2px !important;
+   padding: 0px !important;
+   border: 2 2 0 2 !important;
+   border-image: url("image/button.png") !important;
+   border-image-width: 2px 2px 0px 2px !important;
+   border-image-slice: 2 2 0 2 !important;
+   border-bottom: none !important;
+   max-height: 26px !important;
+}
+
+#tabs-newtab-button:hover {
+   background-image: linear-gradient(#9fccdf, #d4d0c8) !important;
+}
+
+spacer[part=overflow-start-indicator], 
+spacer[part=overflow-end-indicator] {
+  display: none !important; }
+
+.tab-icon-image {
+   margin-top: -1px !important;
+   margin-left: -5px !important;
+   margin-right: 3px !important;
+}
+
+/*
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]) .tab-close-button {
+  visibility: visible !important;
+  display: block !important;
+}
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned])[faviconized="true"] .tab-close-button {
+  visibility: collapse !important;
+  display: none !important;
+}
+
+*/

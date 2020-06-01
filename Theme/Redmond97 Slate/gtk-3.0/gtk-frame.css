@@ -81,14 +81,15 @@ scrolledwindow.frame {
   background-color: @theme_base_color; }
 
 
-/* Hack for scrolled windows to always have borders:
+/* Hack for scrolled windows and sidebars to always have borders:
    Specify border for scrolled window widget directly since the scrolled window does not always
    have a frame. This forces most scrolled windows have a border. Do not reference the scrolled
    window widget directly, use references through parent widgets otherwise Libre-Office will also
    put a border around the menu bar */
 
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
-paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow {
+paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow,
+paned > stack > grid > scrolledwindow, .sidebar {
    padding: 1px;
    border-color: @borders;
    border: 1px solid @dark_shadow;
@@ -98,12 +99,12 @@ paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwin
    box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
 
 
-/* Force sidebars such as places sidebar to have a border */
+/* Remove border from sidebar scrolledwindow, sidebar already has a border. */
+
+.sidebar scrolledwindow {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-shadow: none; }
 
 
-.sidebar list {
-   border: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }

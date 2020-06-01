@@ -379,6 +379,21 @@ toolbar button.flat:disabled {
    color: @disabled_fg_color; }
 
 
+/* Hamburger menu buttons */
+
+
+popover modelbutton:hover {
+   background-color: @theme_selected_bg_color;
+   color: @theme_selected_fg_color; }
+
+popover modelbutton:disabled {
+   color: @disabled_fg_color;
+   text-shadow: 1px 1px @light_shadow; }
+
+popover modelbutton {
+   padding: 4px; }
+
+
 /* Check and radio buttons */
 
 

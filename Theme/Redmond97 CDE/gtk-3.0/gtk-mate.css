@@ -68,10 +68,10 @@
   padding-left: 28px;
   background-color: @button_bg_color;
   border-image: url("assets/caja_menu_side.png");
-  border-image-slice: 5 2 5 33;
-  border-right: 2px solid;
-  border-top: 5px solid;
-  border-bottom: 5px solid;
+  border-image-slice: 1 1 1 33;
+  border-right: 0px solid;
+  border-top: 0px solid;
+  border-bottom: 0px solid;
   border-left: 30px solid; }
 
 .mate-panel-menu-bar menubar > menuitem:first-child menu menu {
@@ -81,6 +81,7 @@
   border-left: 1px solid @bg_color;
   border-right: 1px solid @borders;
   box-shadow: inset 1px 1px @light_shadow, inset -1px -1px @dark_shadow;
+  border-image: none;
   background-color: @theme_bg_color;
   color: @fg_color; }
 
