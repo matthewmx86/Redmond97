@@ -288,6 +288,18 @@ cp scroll_*_button.png $gtk3
 mv headerbox.png $gtk3
 cp warning.png $gtk3
 mv caja_menu_side.png $gtk3
+mv handle.png $gtk3
+mv fm_toolbar.png $gtk3
+cp close_normal.png $gtk3
+cp close_normal_small.png $gtk3
+cp close_pressed.png $gtk3
+cp close_pressed_small.png $gtk3
+cp maximize_normal.png $gtk3
+cp maximize_pressed.png $gtk3
+cp minimize_normal.png $gtk3
+cp minimize_pressed.png $gtk3
+cp restore_normal.png $gtk3
+cp restore_pressed.png $gtk3
 #metacity-1 assets
 mv close_normal.png ../../metacity-1/
 mv close_normal_small.png ../../metacity-1/
@@ -342,6 +354,12 @@ if [ $(echo "$enable_alternate_menu" | grep -ci "true") -gt 0 ]; then
   sed -i 's/whisker-menu.css/whisker-menu2.css/g' "gtk.css"
 fi
 
+if [ $(echo "$csd_style" | grep -ci "1") -gt 0 ]; then
+  mv "gtk-3.0/gtk-nocsd.css" "gtk-3.0/gtk-csd.css"
+else
+  rm "gtk-3.0/gtk-nocsd.css"
+fi
+
 #XFCE4WM
 sed -i 's/active_text_color=#FFFFFF/active_text_color='#$activetitletext'/g' themerc
 sed -i 's/inactive_text_color=#c0c0c0/inactive_text_color='#$inactivetitletext'/g' themerc
@@ -362,7 +380,7 @@ sed -i 's/_activegradient2_/#'$activetitle'/g' metacity-theme-1.xml
 sed -i 's/_inactivegradient1_/#'$inactivetitle'/g' metacity-theme-1.xml
 sed -i 's/_inactivegradient2_/#'$inactivetitle1'/g' metacity-theme-1.xml
 sed -i 's/Redmond2K/Redmond97 '"$Theme_name"'/g' metacity-theme-1.xml
-sed -i 's/line color=\"#ffffff\"/line color=\"#'$highlight'\"/g' metacity-theme-1.xml 
+sed -i 's/line color=\"#ffffff\"/line color=\"#'$highlight'\"/g' metacity-theme-1.xml
 sed -i 's/title x=\"3\" y=\"2\" color="gtk:bg\[NORMAL\]\"/title x=\"3\" y=\"2\" color=\"#'$inactivetitletext'\"/g' metacity-theme-1.xml
 sed -i 's/title x=\"3\" y=\"2\" color=\"#ffffff\"/title x=\"3\" y=\"2\" color=\"#'$activetitletext'\"/g' metacity-theme-1.xml
 sed -i 's/404040/'$border'/g' metacity-theme-1.xml

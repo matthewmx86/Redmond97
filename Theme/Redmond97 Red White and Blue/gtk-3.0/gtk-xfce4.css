@@ -142,3 +142,15 @@ up to 24 different positions. */
    border-image-slice: 2 2 2 11;
 }
 
+/* Hack to give the first launcher icon a pseudo handle */
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow {
+   border-left: 11px solid;
+   border-image: url("assets/handle.png");
+   border-image-slice: 4 4 3 11;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
+   margin-left: 1px;
+   margin-right: 1px;
+}
+

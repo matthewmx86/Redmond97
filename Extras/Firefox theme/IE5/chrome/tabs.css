@@ -1,0 +1,64 @@
+/* remove default tab colors */
+.tab-line {                             /* = light top line in selected tab in Quantum default */
+    display: none !important;
+}
+
+.tab-background {
+   border: transparent !important;
+   background: transparent;
+   color: transparent;
+   opacity: 0.0;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"],
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab, .tab-content {
+   border: unset !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"] {
+   min-height: 24px !important;
+   max-height: 24px !important;
+   padding: 0px !important;
+   border: 0px solid transparent !important;
+   border-right: 1px solid #fff !important;
+   box-shadow: inset -1px 0px #505050 !important;
+}
+
+.tab-content {
+   padding: 0px !important;
+   padding-left: 8px !important;
+   padding-right: 8px !important;
+   border: unset !important
+   /*background-image: linear-gradient(#ffc5c8, #d4d0c8) !important; */
+}
+
+.tab-content:hover {
+   background-image: linear-gradient(#fac67e, #d4d0c8) !important;
+}
+
+.tab-content[selected="true"] {
+   /*color: #fff !important;*/
+   background-image: linear-gradient(#99bae2, #d4d0c8) !important;
+}
+
+.tab-content[selected="true"]:hover {
+   /*color: #fff !important;*/
+   background-image: linear-gradient(#9fccdf, #d4d0c8) !important;
+}
+
+/*
+#tabs-newtab-button {
+   border-right: 1px solid #fff !important;
+   box-shadow: inset -1px 0px #505050 !important;
+}*/
+
+spacer[part=overflow-start-indicator], 
+spacer[part=overflow-end-indicator] {
+  display: none !important; }
+
+.tab-icon-image {
+   margin-top: -1px !important;
+   margin-left: -5px !important;
+   margin-right: 3px !important;
+}

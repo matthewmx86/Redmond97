@@ -1,0 +1,89 @@
+/* remove default tab colors */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"],
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab, .tab-content {
+   border: unset !important;
+   background: unset !important;
+}
+
+.tab-line {                             /* = light top line in selected tab in Quantum default */
+    display: none !important;
+}
+
+.tab-background {
+   border: transparent !important;
+   border-radius: 4px 4px 0 0 !important;
+   border: 1px solid #adc5dd !important;
+   background: transparent;
+   color: transparent;
+   opacity: 0.0;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab, .tab-stack
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"] {
+   --tabs-border-color: transparent !important;
+   background-color: transparent !important;
+   border-bottom: none !important;
+   padding: 0px !important;
+   margin-left: 0px !important;
+   margin-right: -1px !important;
+   /*min-width: 155px !important;*/
+   padding-bottom: 0 !important;
+   max-height: 26px !important;
+}
+
+.tab-content {
+   box-shadow: inset 1px 1px #c3c8cf, inset -1px 0 #c3c8cf, inset 2px 2px #fff, inset -2px 0 #fff !important;
+   border-radius: 3px 5px 0 0 !important;
+   background-image: linear-gradient(#cee4fc, #cee4fc) !important;
+   /*background-image: linear-gradient(#fff, #b1b1b1, #d4d0c8) !important;*/
+   /*box-shadow: inset 1px -3px 3px -4px #000 !important;*/
+   /*background-image: linear-gradient(#ffc5c8, #efc9c8, transparent) !important;*/
+}
+
+.tab-content:hover {
+   background: unset !important;
+   background-image: linear-gradient(#cee4fc, #fff) !important;
+   /*background-image: linear-gradient(#ffd3b8, #ffc5a2, transparent) !important;*/
+}
+
+.tab-content[selected="true"] {
+   /*color: #fff !important;*/
+   box-shadow: inset 1px 1px #c3c8cf, inset -1px 0 #c3c8cf, inset 2px 2px #fff, inset -2px 0 #fff !important;
+   border-radius: 3px 5px 0 0 !important;
+   border: 1px 1px 0 1px solid #c3c8cf !important;
+   background-image: linear-gradient(#cee4fc, #fff) !important;
+   /*background-image: linear-gradient(#fff, #72a1cc, #8fdef2) !important;*/
+   /*background-image: linear-gradient(#99bae2, #2c458b) !important;*/
+}
+
+.tab-content[selected="true"]:hover {
+   background-image: linear-gradient(#cee4fc, #fff) !important;
+}
+
+#tabs-newtab-button {
+   color: transparent !important;
+   box-shadow: inset 1px 1px #c3c8cf, inset -1px 0 #c3c8cf, inset 2px 2px #fff, inset -2px 0 #fff !important;
+   border-radius: 3px 5px 0 0 !important;
+   background-image: linear-gradient(#cee4fc, #cee4fc) !important;
+}
+
+#tabs-newtab-button:hover {
+   background-image: linear-gradient(#9fccdf, transparent) !important;
+}
+
+spacer[part=overflow-start-indicator], 
+spacer[part=overflow-end-indicator] {
+  display: none !important; }
+
+.tab-icon-image {
+   margin-top: -1px !important;
+   margin-left: -5px !important;
+   margin-right: 3px !important;
+}
+
+
+
+
+
+
+

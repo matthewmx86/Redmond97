@@ -1,0 +1,10 @@
+@import "icons.css";
+@import "tabs.css";
+@import "statusbar.css";
+@import "toolbars.css";
+@import "urlbar.css"; 
+
+#main-window {
+   background-color: #d4d0c8 !important;
+   color: #000 !important;
+}
