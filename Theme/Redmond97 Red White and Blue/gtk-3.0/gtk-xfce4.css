@@ -150,7 +150,11 @@ up to 24 different positions. */
 }
 
 #XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
-   margin-left: 1px;
-   margin-right: 1px;
+   margin-left: 2px;
+   margin-right: 2px;
 }
 
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active image {
+   margin-left: 2px;
+   margin-right: 3px;
+}
