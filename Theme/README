@@ -1,1 +1,4 @@
+csd - Use client side decorations (default)
+no-csd - If you installed gtk-nocsd or similar use this package instead.
+
 To install, copy Redmond97 folders into your ~/.themes directory.

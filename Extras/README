@@ -1,2 +1,3 @@
 Theme_Builder - Redmond97 theme builder script to compile theme with custom colors and other options
 Firefox theme - Edited userchrome css and images Firefox theme. Install contents into your Firefox profile directory / chrome folder
+Icons - Modified version of grassmunk's Chicago95 icon theme with Win2K / Win98 icons added. Copy Redmond97 file to your ~/.icons directory.

@@ -1,0 +1,9 @@
+/* Unstyled for GTK no-CSD */
+headerbar {
+  padding: 4px;
+  background-color: @bg_color;
+}
+
+headerbar:backdrop {
+  background-color: @bg_color;
+}

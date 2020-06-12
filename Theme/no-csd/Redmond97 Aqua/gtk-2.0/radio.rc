@@ -1,0 +1,100 @@
+########################################################################
+# Radio buttons 
+########################################################################
+
+style "radio_button"
+{
+### Radio button ###	
+	engine "pixmap" 
+	{
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = NORMAL
+			overlay_file = "assets/radio.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = NORMAL
+			overlay_file = "assets/radio_checked.png"
+			overlay_stretch = FALSE
+		}
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = PRELIGHT
+			overlay_file = "assets/radio.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = PRELIGHT
+			overlay_file = "assets/radio_checked.png"
+			overlay_stretch = FALSE
+		}
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = ACTIVE
+			overlay_file = "assets/radio.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = ACTIVE
+			overlay_file = "assets/radio_checked.png"
+			overlay_stretch = FALSE
+		}
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			state = INSENSITIVE
+			overlay_file = "assets/radio_ins.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			state = INSENSITIVE
+			overlay_file = "assets/radio_ins_checked.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = OPTION
+			shadow = OUT
+			overlay_file = "assets/radio.png"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = OPTION
+			shadow = IN
+			overlay_file = "assets/radio_checked.png"
+			overlay_stretch = FALSE
+		}
+	}
+}
+
+class "GtkRadio*" style "radio_button"
+class "GtkRadioMenuItem*" style "radio_button"
+class "GtkTreeView*" style "radio_button"
+
