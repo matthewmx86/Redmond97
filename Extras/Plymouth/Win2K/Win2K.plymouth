@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Win2K Boot Screen
+Description=Boot screen to simulate Windows 2000 boot animation
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/Win2K
+ScriptFile=/usr/share/plymouth/themes/Win2K/Win2K.script

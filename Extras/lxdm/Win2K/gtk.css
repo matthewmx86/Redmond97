@@ -1,0 +1,61 @@
+#lxdm {
+	background-image: url("wave.png");
+	background-repeat: round;
+}
+
+#bottom_pane {
+        border-top: 1px solid #868686;
+        box-shadow: 0 2px #fff inset, 0 1px #D4D0C8 inset;
+	background-color: #D4D0C8;
+}
+
+#time {
+	font: Sans 12;
+	color: #ffffff;
+}
+
+#prompt {
+        margin-left: 0;
+        margin-top: 3px;
+	font: Sans 14;
+	color: #000000;
+}
+
+#bottom_pane label,
+#bottom_pane GtkLabel {
+	font: Sans 12;
+	color: #000000;
+}
+
+#image1 {
+	margin: 1px;
+        border-image: linear-gradient(to right, #000060, #A1C4E9);
+	border-image-slice: 1;
+        border-top: 20px solid #000060;
+        border-bottom: none;
+        border-bottom: 1px solid #94918C;
+        background-color: #FFFFFF;
+        padding: 2px;
+        margin-bottom: 100px;
+}
+
+#vbox2 {
+        background-color: #D4D0C8;
+	padding: 1px;
+	padding-right: 2px;
+	border-top: 1px solid #D4D0C8;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #D4D0C8;
+	border-right: 1px solid #000000;
+	box-shadow: inset 1px 1px #FFFFFF, -1px -1px #94918C inset;
+        margin-top: 200px;
+        margin-bottom: 250px;
+}
+
+#hbox3 {
+	margin-top: -70px;
+        margin-bottom: 70px;
+}
+
+#sessions_box {
+}
