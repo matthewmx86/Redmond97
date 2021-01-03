@@ -33,7 +33,7 @@
    color: @toolbar_fg_color;
    background-color: @button_bg_color; }
 
-
+/*
 #XfcePanelWindowWrapper > * > * > * {
    border: none;
    box-shadow: none; }
@@ -51,6 +51,7 @@
 #XfcePanelWindowWrapper > * > frame > * {
    margin-top: -1px; 
    margin-bottom: 1px; }
+*/
 
 #XfcePanelWindow #launcher-arrow, 
 #XfcePanelWindow #launcher-arrow:hover {
@@ -158,3 +159,27 @@ up to 24 different positions. */
    margin-left: 2px;
    margin-right: 3px;
 }
+
+#xfce4-notification-plugin {
+   border: 1px solid #000;
+   background-color: #000;
+}
+
+/*System tray box */
+
+#systray-1 > box, #systray-2 > box, #systray-3 > box, #systray-4 > box, #systray-5 > box, #systray-6 > box, #systray-7 > box,
+#systray-8 > box, #systray-9 > box, #systray-10 > box, #systray-11 > box, #systray-12 > box, #systray-13 > box, #systray-14 >box,
+#systray-15 > box, #systray-16 > box, #systray-17 > box, #systray-18 > box, #systray-19 > box, #systray-20 > box, #systray-21 >box {
+   box-shadow: 1px 3px @dark_shadow inset, 0 2px @bg_color inset, 0 -1px @light_shadow inset;
+   margin-top: 0px;
+   padding-top: 0;
+   border-top: 1px solid #fff;
+   border-right: none;
+   padding-bottom: 2px;
+   margin-bottom: 2px;
+}
+/*
+#sn-button {
+margin-top: -3px;
+margin-left: -4px;
+}*/
