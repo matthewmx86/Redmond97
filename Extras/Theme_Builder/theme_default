@@ -1,20 +1,18 @@
 #######################################################
-# Basic theme settings and colors.      	       #
+# Basic theme settings and colors.      	      #
 # Valid color codes are three or six digit hex codes  #
 # and RGB color codes (R,G,B) 0-255,0-255,0-255       #
-# Note: Second titlebar colors optional. Only applies #
-# to metacity-1 and not XFWM4.                        #
 #######################################################
-Theme_name="Millennium"
+Theme_name="Testing"
 
 #Window Text Color:
-fgcolor="#000"
+fgcolor="0,0,0"
 
 #Window background color:
 bgcolor="#d4d0c8"
 
 #Textview background color (such as editors or framed objects):
-basecolor="#fff"
+basecolor="255,255,255"
 
 #Textview text color:
 basefg="#000"
@@ -32,12 +30,10 @@ activetitletext="#fff"
 inactivetitletext="#d4d0c8"
 
 #Active titlebar color
-activetitle="#a1c4e9"
-activetitle1="#000060"
+activetitle="#6f99be"
 
 #Inactive titlebar color:
 inactivetitle="#7d7a73"
-inactivetitle1="#d4d0c8"
 
 # 3D odject border color:
 border="#000"
@@ -46,14 +42,6 @@ border="#000"
 # Advanced settings           #
 ###############################
 
-#######################################################	
-# CSD Style  					      #
-# 0 styles CSD header as a title bar #default         #
-# 1 styles CSD header as a regular toolbar            #
-# Set this to 1 if you disabled CSD decorations.      #
-#######################################################
-
-csd_style="0"
 
 #################################################################
 # Color saturation					        #
@@ -139,26 +127,3 @@ s_B="0"
 ##########################################################################
 
 high_contrast="false"
-
-#####################################################################
-# Whisker menu options                                              #
-# The default setting adds a gradient color bar next to the menu.   #
-# Enable the alternate menu to disable the gradient bar.            #
-#####################################################################
-
-#Set to "true" to disable gradient side bar
-enable_alternate_menu="false"
-
-#Text to display next to the menu
-menu_side_text="Redmond97"
-
-#Width of sidebar gradient in px
-menu_side_width="23"
-
-#Font size of sidebar text
-menu_side_text_size="23"
-
-#Offset of the sidebar text. Format is "px bottom","px left"
-menu_side_text_offset="10,22"
-
-

@@ -1,0 +1,161 @@
+#XfcePanelWindow {
+   padding-top: 2px;
+   border: 0px;
+   border:  none;
+   background-size: 100% 100%;
+   margin: 0px;
+   background-image: url("assets/taskbar.png");
+   padding-bottom: 0px; }
+
+#XfcePanelWindow button, #XfcePanelWindow button:active, #XfcePanelWindow button:hover  {
+   border: none;
+   box-shadow: none; }
+
+#XfcePanelWindow .tasklist button {
+   border: none;
+   box-shadow: none;
+   color: #fff;
+   background-color: transparent;
+   margin-left: 0px;
+   background-image: url("assets/task_button.png");
+   background-size: 100% 100%;
+   background-repeat: no-repeat; }
+
+#XfcePanelWindow .tasklist button > box {
+   margin-top: 1px;
+   margin-right: 3px;
+   margin-left: 3px; }
+
+#XfcePanelWindow button box > image {
+   margin-right: -5px; }
+
+#XfcePanelWindowWrapper {
+
+   background-image: url("assets/taskbar.png");
+ }
+
+#XfcePanelWindow .tasklist button:active, #XfcePanelWindow .tasklist button:checked {
+   font-weight: bold;
+   background-image: url("assets/task_button-active.png");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   border: none;
+   box-shadow: none;
+ }
+
+#XfcePanelWindow .tasklist button:hover {
+   background-image: url("assets/task_button-hover.png");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   border: none;
+   box-shadow: none;
+ }
+
+#XfcePanelWindow #launcher-arrow, 
+#XfcePanelWindow #launcher-arrow:hover,
+#XfcePanelWindow #launcher-arrow:active,
+#XfcePanelWindow #launcher-arrow:checked {
+   border-radius: 0;
+   margin: 0;
+   background-color: transparent;
+   border: none;
+   box-shadow: none;
+   margin-top: 2px;
+   padding: 3px; }
+
+
+#applicationmenu-button {
+   box-shadow: none;
+   border: none; }
+
+
+#applicationmenu-button box {
+   padding: 3px; }
+
+
+#tasklist > box, #tasklist-1 > box, #tasklist-2 > box, #tasklist-3 > box, 
+#tasklist-4 > box, #tasklist-5 > box, #tasklist-6 > box, #tasklist-7 > box, 
+#tasklist-8 > box, #tasklist-9 > box, #tasklist-10 > box, #tasklist-11 > box, 
+#tasklist-12 > box, #tasklist-13 > box, #tasklist-14 > box, #tasklist-15 > box, 
+#tasklist-16 > box, #tasklist-17 > box, #tasklist-18 > box, #tasklist-19 > box,
+#tasklist-20 > box, #tasklist-21 > box, #tasklist-22 > box, #tasklist-23 > box, 
+#tasklist-24 > box {
+   border-left: 8px solid;
+   border-image: url("assets/taskhandle.png");
+   border-image-slice: 0 0 0 7;
+}
+
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow {
+   border-left: 8px solid;
+   border-image: url("assets/taskhandle.png");
+   border-image-slice: 0 0 0 7;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
+   margin-left: 0px;
+   margin-right: 2px;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active image {
+   margin-left: 2px;
+   margin-right: 3px;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active {
+   margin-left: 0px;
+   box-shadow: none;
+   margin-right: -1px;
+}
+
+XfdesktopIconView .view {
+   color: #fff; 
+   background-color: transparent;
+   text-shadow: 1px 1px #000; }
+
+XfdesktopIconView .view:active {
+   color: #fff; }
+
+XfdesktopIconView:active {
+   color: @selected_bg_color;
+   background-color: @selected_bg_color; }
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
+   margin-left: 2px;
+   margin-right: 2px;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active image {
+   margin-left: 2px;
+   margin-right: 3px;
+}
+
+
+/*System tray box */
+
+#systray-1 > box, #systray-2 > box, #systray-3 > box, #systray-4 > box, #systray-5 > box, #systray-6 > box, #systray-7 > box,
+#systray-8 > box, #systray-9 > box, #systray-10 > box, #systray-11 > box, #systray-12 > box, #systray-13 > box, #systray-14 >box,
+#systray-15 > box, #systray-16 > box, #systray-17 > box, #systray-18 > box, #systray-19 > box, #systray-20 > box, #systray-21 >box {
+   border: 0px;
+   border:  none;
+   border-left: 6px solid;
+   border-image: url("assets/tray_border.png");
+   border-image-slice: 0 0 0 6;
+   background-size: 100% 100%;
+   margin-right: -1px;
+   background-size: 100% 100%;
+   background-image: url("assets/tray.png");
+}
+
+#XfcePanelWindow #clock-button,
+#XfcePanelWindow #clock-button:hover,
+#XfcePanelWindow #clock-button:checked {
+   box-shadow: none;
+   color: #fff;
+   background-size: 100% 100%;
+   background-size: 100% 100%;
+   background-image: url("assets/tray.png");
+   border-right: 6px solid;
+   border-left: 2px solid;
+   border-image: url("assets/tray.png");
+   border-image-slice: 0 20 0 20; }

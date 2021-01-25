@@ -33,26 +33,6 @@
    color: @toolbar_fg_color;
    background-color: @button_bg_color; }
 
-/*
-#XfcePanelWindowWrapper > * > * > * {
-   border: none;
-   box-shadow: none; }
-
-#XfcePanelWindowWrapper > * > frame {
-   margin-top: 3px;
-   margin-bottom: 2px;
-   padding-right: 3px;
-   border-top: 1px solid @dark_shadow;
-   border-left: 1px solid @dark_shadow;
-   border-right: none;
-   border-bottom: 1px solid @light_shadow; 
-   box-shadow: 0 -3px @light_shadow, 0 -2px @bg_color; }
-
-#XfcePanelWindowWrapper > * > frame > * {
-   margin-top: -1px; 
-   margin-bottom: 1px; }
-*/
-
 #XfcePanelWindow #launcher-arrow, 
 #XfcePanelWindow #launcher-arrow:hover {
    border-radius: 0;
@@ -76,9 +56,18 @@
    padding-right: 3px;
    margin-top: 3px;
    margin-bottom: 2px;
+   box-shadow: none;
    border-top: 1px solid @dark_shadow;
    border-right: 1px solid @light_shadow;
+   background-image: none;
+   font-weight: normal;
    border-bottom: 1px solid @light_shadow; }
+
+#XfcePanelWindow #clock-button > label {
+  margin-right: 4px;
+  margin-left: 2px;
+  margin-top: 1px;
+}
 
 #applicationmenu-button {
    font-weight: bold;
@@ -112,7 +101,6 @@
 
 #applicationmenu-button box {
    padding: 3px; }
-
 
 XfdesktopIconView .view {
    color: #fff; 
@@ -173,13 +161,10 @@ up to 24 different positions. */
    box-shadow: 1px 3px @dark_shadow inset, 0 2px @bg_color inset, 0 -1px @light_shadow inset;
    margin-top: 0px;
    padding-top: 0;
-   border-top: 1px solid #fff;
+   padding-left: 3px;
+   border-top: 1px solid @light_shadow;
    border-right: none;
    padding-bottom: 2px;
    margin-bottom: 2px;
 }
-/*
-#sn-button {
-margin-top: -3px;
-margin-left: -4px;
-}*/
+

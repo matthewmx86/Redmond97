@@ -1,0 +1,153 @@
+/*  Add menu border */
+
+#whiskermenu-window {
+/*  border-radius: 8px 8px 0px 0px;*/
+  background-color: #4792ef;
+}
+
+#whiskermenu-window border {
+  padding: 1px;
+  border-radius: 1px;
+  border: 1px solid #1a5194;
+  box-shadow: none;
+  box-shadow: 1px 1px #fff inset;
+  padding-right: 2px;/*
+  border-top: 1px solid @bg_color;
+  border-bottom: 1px solid @borders;
+  border-left: 1px solid @bg_color;
+  border-right: 1px solid @borders;
+  box-shadow: inset 1px 1px @light_shadow, -1px -1px @dark_shadow inset;
+border-radius: 8px 8px 0px 0px*/  }
+
+
+#whiskermenu-button {
+   color: transparent;
+   font-weight: bold;
+   background-size: 120px 100%;
+   margin: 0px;
+   border: none;
+   border-radius: 0;
+   min-width: 100px;
+   background-image: url("assets/start.png"); }
+
+#whiskermenu-button:hover {
+  font-weight: bold;
+  background-size: 120px 100%;
+   margin: 0px;
+   border: none;
+   box-shadow: none;
+   border-radius: 0;
+   min-width: 100px;
+   background-image: url("assets/start_hover.png"); }
+
+
+/* Change active button to checkered button */
+#whiskermenu-button:checked, #whiskermenu-button:active {
+  font-weight: bold;
+  background-size: 120px 100%;
+   margin: 0px;
+   border: none;
+   box-shadow: none;
+   border-radius: 0;
+   min-width: 100px;
+   background-image: url("assets/start_active.png"); }
+
+#whiskermenu-button box > image {
+  background-image: none;
+  color: transparent; }
+
+
+#whiskermenu-window scrolledwindow {
+  border-radius: 0px;
+   box-shadow: none;
+   padding: 1px;
+   padding-left: 5px;
+   background-image: linear-gradient(to right, #cde7ff, #ebf2fc);
+   border-left: 1px solid #0f7bff;
+   border-radius: 0px; }
+
+
+#whiskermenu-window stack:first-child > scrolledwindow {
+  border: none;
+  box-shadow: none;
+  padding: 1px;
+  padding-left: 2px;
+  margin-left: 1px;
+  margin-bottom: 0px;
+  margin-right: -5px;
+  border-radius: 0px;}
+
+#whiskermenu-window treeview {
+  background-color: transparent; }
+
+#whiskermenu-window box:first-child > scrolledwindow {
+  margin: 0;
+  margin-right: -6px;
+  box-shadow: none;
+  padding: 1px;
+  padding-left: 3px;
+  padding-right: 20px;
+  border-left: 1px solid #0f7bff;
+  border: none;
+  border-radius: 0px;
+  background-image: linear-gradient(to right, #fff, #fff); }
+
+#whiskermenu-window list {
+  margin: 6px; }
+
+
+#whiskermenu-window treeview:hover {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+#whiskermenu-window treeview:selected {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color; }
+
+#whiskermenu-window button {
+  border-radius: 0; }
+
+#whiskermenu-window box > scrolledwindow button:hover,
+#whiskermenu-window box > scrolledwindow button:checked  {
+  box-shadow: none;
+  border: 1px solid transparent;
+  background-image: none;
+  background-color: @selected_bg_color;
+  color: @selected_fg_color; }
+
+/* Style menu window logout buttons */
+#whiskermenu-window > frame > stack > box.vertical > box.horizontal button.flat {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding: 2px; }
+
+/* Style menu separators */
+#whiskermenu-window separator {
+  min-height: 2px;
+  margin-left: 3px;
+  background-color: @light_shadow;
+  box-shadow: 0 1px @dark_shadow inset; }
+
+/* Add gradient to top of whisker-menu window
+   Note: @active_title_color is not a standard GTK3 reference
+   and is configured in the gtk.css file */
+#whiskermenu-window > frame > stack > box > box:first-child {
+  padding: 6px;
+  padding-left: 1px;
+  padding-right: 3px;
+  margin: 0;
+  margin-left: -1px;
+  margin-right: -3px;
+  text-shadow: 2px 2px 2px #000;
+  color: @active_title_text;
+  background-image: linear-gradient(to bottom, #2b74da, #4792ef); }
+
+#whiskermenu-window entry {
+  border-radius: 0px;
+  border-radius: 1px;
+  border: 0px solid #1a5194;
+  box-shadow: 1px 1px 2px #000;
+  margin: 1px; }
