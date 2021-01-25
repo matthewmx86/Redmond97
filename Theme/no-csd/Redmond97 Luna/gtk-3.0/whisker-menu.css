@@ -2,15 +2,15 @@
 
 #whiskermenu-window {
 /*  border-radius: 8px 8px 0px 0px;*/
-  background-color: #4792ef;
+  background-color: #448fea;
 }
 
 #whiskermenu-window border {
   padding: 1px;
   border-radius: 1px;
-  border: 1px solid #1a5194;
-  box-shadow: none;
-  box-shadow: 1px 1px #fff inset;
+  border: 1px solid #145ace;
+  box-shadow: none;/*
+  box-shadow: 1px 1px #fff inset;*/
   padding-right: 2px;/*
   border-top: 1px solid @bg_color;
   border-bottom: 1px solid @borders;
@@ -23,7 +23,7 @@ border-radius: 8px 8px 0px 0px*/  }
 #whiskermenu-button {
    color: transparent;
    font-weight: bold;
-   background-size: 120px 100%;
+   background-size: 100% 100%;
    margin: 0px;
    border: none;
    border-radius: 0;
@@ -32,7 +32,7 @@ border-radius: 8px 8px 0px 0px*/  }
 
 #whiskermenu-button:hover {
   font-weight: bold;
-  background-size: 120px 100%;
+  background-size: 100% 100%;
    margin: 0px;
    border: none;
    box-shadow: none;
@@ -44,7 +44,7 @@ border-radius: 8px 8px 0px 0px*/  }
 /* Change active button to checkered button */
 #whiskermenu-button:checked, #whiskermenu-button:active {
   font-weight: bold;
-  background-size: 120px 100%;
+  background-size: 100% 100%;
    margin: 0px;
    border: none;
    box-shadow: none;
@@ -61,14 +61,15 @@ border-radius: 8px 8px 0px 0px*/  }
   border-radius: 0px;
    box-shadow: none;
    padding: 1px;
+   margin-right: -5px;
    padding-left: 5px;
    background-image: linear-gradient(to right, #cde7ff, #ebf2fc);
-   border-left: 1px solid #0f7bff;
+   border: 1px solid #1a5194;
    border-radius: 0px; }
 
 
 #whiskermenu-window stack:first-child > scrolledwindow {
-  border: none;
+  border: 1px solid #1a5194;
   box-shadow: none;
   padding: 1px;
   padding-left: 2px;
@@ -82,13 +83,13 @@ border-radius: 8px 8px 0px 0px*/  }
 
 #whiskermenu-window box:first-child > scrolledwindow {
   margin: 0;
-  margin-right: -6px;
+  margin-right: -7px;
+  margin-left: -1px;
   box-shadow: none;
   padding: 1px;
   padding-left: 3px;
   padding-right: 20px;
-  border-left: 1px solid #0f7bff;
-  border: none;
+  border: 1px solid #1a5194;
   border-radius: 0px;
   background-image: linear-gradient(to right, #fff, #fff); }
 
@@ -139,15 +140,18 @@ border-radius: 8px 8px 0px 0px*/  }
   padding-left: 1px;
   padding-right: 3px;
   margin: 0;
-  margin-left: -1px;
-  margin-right: -3px;
+  border-radius: 4px;
+  margin-top: -1px;
+  margin-left: -2px;
+  margin-right: -2px;
   text-shadow: 2px 2px 2px #000;
   color: @active_title_text;
-  background-image: linear-gradient(to bottom, #2b74da, #4792ef); }
+  background-image: linear-gradient(to bottom, #145ace, #448fea); }
 
 #whiskermenu-window entry {
   border-radius: 0px;
   border-radius: 1px;
-  border: 0px solid #1a5194;
-  box-shadow: 1px 1px 2px #000;
-  margin: 1px; }
+  border: 1px solid #1a5194;
+  box-shadow: none;
+  margin-right: -2px; 
+  margin-left: -1px; }
