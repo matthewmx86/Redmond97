@@ -1,5 +1,6 @@
 #XfcePanelWindow {
    padding-top: 2px;
+   background-color: @button_bg_color;
    padding-bottom: 0px; }
 
 #XfcePanelWindow button {
