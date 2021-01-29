@@ -1,8 +1,14 @@
 /* XPM */
 static char * right_inactive_xpm[] = {
-"5 1 4 1",
+"5 5 6 1",
 " 	c None",
-".	c #000000 s inactive_border_color",
-"@	c #D8D8D8 s inactive_color_2",
-"#	c #B2B2B2 s inactive_shadow_2",
-"@@@#."};
+".	c #7586DC",
+"+	c #7587DD",
+"@	c #7382D9",
+"#	c #6D74CD",
+"$	c #4F53BC",
+".+@#$",
+".+@#$",
+".+@#$",
+".+@#$",
+".+@#$"};
