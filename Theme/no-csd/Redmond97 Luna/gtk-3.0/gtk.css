@@ -5,8 +5,9 @@
 @define-color text_color #000000;
 @define-color selected_bg_color #0A246A;
 @define-color selected_fg_color #FFFFFF;
-@define-color light_shadow #FFFFFF;
-@define-color dark_shadow #9B9787;
+@define-color light_shadow #fdfaf3;
+@define-color medium_shadow #d0cab2;
+@define-color dark_shadow #b7b197;
 @define-color borders #000000;
 @define-color button_bg_color @bg_color;
 @define-color button_fg_color @fg_color;

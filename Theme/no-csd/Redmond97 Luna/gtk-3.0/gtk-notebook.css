@@ -69,6 +69,7 @@ notebook tab:checked {
    background-color: @notebook_bg_color; }
   
 notebook > header {
+  background-image: linear-gradient(to right, alpha(#fff, 0.4), alpha(#fff,0.0));
    background-color: @theme_bg_color; }
 
 /* Top tabs */
