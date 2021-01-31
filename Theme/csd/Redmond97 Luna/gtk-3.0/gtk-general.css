@@ -21,6 +21,7 @@
   -gtk-outline-radius: 0; }
 
 .background {
+  background-image: linear-gradient(to right, alpha(#fff, 0.4), alpha(#fff,0.0));
   color: @theme_fg_color;
   background-color: @theme_bg_color; }
 

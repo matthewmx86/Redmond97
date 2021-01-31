@@ -148,20 +148,25 @@ XfdesktopIconView:active {
    background-size: 100% 100%;
    background-image: url("assets/tray.png");
    border-left: 3px solid;
-   padding-left: 4px;
    border-image: url("assets/tray_border.png");
    border-image-slice: 0 0 0 3;
+}
+
+#XfcePanelWindow #clock-button box {
+  box-shadow: none;
+  border: none;
 }
 
 #XfcePanelWindow #clock-button,
 #XfcePanelWindow #clock-button:hover,
 #XfcePanelWindow #clock-button:checked {
    box-shadow: none;
+   border: none;
    color: #fff;
    background-size: 100% 100%;
    background-size: 100% 100%;
    background-image: url("assets/tray.png");
    border-right: 9px solid;
-   border-left: 6px solid;
+   border-left: 8px solid;
    border-image: url("assets/tray.png");
    border-image-slice: 0 20 0 20; }

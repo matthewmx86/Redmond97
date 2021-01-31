@@ -1,24 +1,24 @@
 /*  Add menu border */
 
 #whiskermenu-window {
-/*  border-radius: 8px 8px 0px 0px;*/
-  background-color: #448fea;
+  padding: 0px;
+  border-radius: 0 0 0 0;
+  background-color: #145ace;
+  /*background-image: linear-gradient(to bottom, #418ae0 94%, #2258d4);*/
+  background-image: url("assets/menu_bottom.png") ;
+  background-position: bottom; 
+  background-size: 100% 60px;
 }
 
 #whiskermenu-window border {
-  padding: 1px;
-  border-radius: 1px;
+  border-radius: 0;
+  /*border-image: linear-gradient(to bottom, #7faff2, #418ae0 2%, #145ace);
+  border-image-slice: 1;*/
   border: 1px solid #145ace;
-  box-shadow: none;/*
-  box-shadow: 1px 1px #fff inset;*/
-  padding-right: 2px;/*
-  border-top: 1px solid @bg_color;
-  border-bottom: 1px solid @borders;
-  border-left: 1px solid @bg_color;
-  border-right: 1px solid @borders;
-  box-shadow: inset 1px 1px @light_shadow, -1px -1px @dark_shadow inset;
-border-radius: 8px 8px 0px 0px*/  }
-
+  padding: 0px;
+  /*border-left: 1px solid #145ace;
+  border-right: 1px solid #145ace;*/
+  box-shadow: none; }
 
 #whiskermenu-button {
    color: transparent;
@@ -60,36 +60,44 @@ border-radius: 8px 8px 0px 0px*/  }
 #whiskermenu-window scrolledwindow {
   border-radius: 0px;
    box-shadow: none;
+   min-width: 200px;
    padding: 1px;
-   margin-right: -5px;
+   margin-right: -6px;
+   margin-left: -6px;
    padding-left: 5px;
    background-image: linear-gradient(to right, #cde7ff, #ebf2fc);
-   border: 1px solid #1a5194;
+   border: 1px solid #2982d4;
+   border-top: none;
+   border-bottom: 1px solid #1a5194;
    border-radius: 0px; }
 
 
 #whiskermenu-window stack:first-child > scrolledwindow {
-  border: 1px solid #1a5194;
+  border: 1px solid #2982d4;
+  border-bottom: 1px solid #1a5194;
+  border-top: none;
   box-shadow: none;
   padding: 1px;
   padding-left: 2px;
-  margin-left: 1px;
+  margin-left: -2px;
   margin-bottom: 0px;
-  margin-right: -5px;
   border-radius: 0px;}
 
 #whiskermenu-window treeview {
   background-color: transparent; }
 
+
 #whiskermenu-window box:first-child > scrolledwindow {
   margin: 0;
-  margin-right: -7px;
-  margin-left: -1px;
+  min-width: 200px;
+  margin-right: -2px;
+  margin-left: -3px;
   box-shadow: none;
   padding: 1px;
   padding-left: 3px;
-  padding-right: 20px;
-  border: 1px solid #1a5194;
+  border: 1px solid #2982d4;
+  border-bottom: 1px solid #1a5194;
+  border-top: 1px transparent;
   border-radius: 0px;
   background-image: linear-gradient(to right, #fff, #fff); }
 
@@ -136,22 +144,39 @@ border-radius: 8px 8px 0px 0px*/  }
    Note: @active_title_color is not a standard GTK3 reference
    and is configured in the gtk.css file */
 #whiskermenu-window > frame > stack > box > box:first-child {
-  padding: 6px;
+  padding: 10px;
   padding-left: 1px;
   padding-right: 3px;
   margin: 0;
-  border-radius: 4px;
-  margin-top: -1px;
+  border-radius: 0;
+  margin-top: -2px;
+  margin-bottom: -2px;
   margin-left: -2px;
-  margin-right: -2px;
+  margin-right: -1px;
   text-shadow: 2px 2px 2px #000;
   color: @active_title_text;
-  background-image: linear-gradient(to bottom, #145ace, #448fea); }
+  border-top: none;
+  border-image-source: linear-gradient(to right, #fff, #ff9529 40%, #ff9529 60%, #ebf2fc);
+  border-image-slice: 1;
+  border-bottom: 4px solid;
+  box-shadow: 0 -1px #3a71ac inset, 0 1px #fff;
+  /*background-image: linear-gradient(to bottom, #7faff2, #145ace 4%, #639cf2);*/
+  background-image: url("assets/menu_top.png") ;
+  background-size: 100% 100%;}
 
-#whiskermenu-window entry {
-  border-radius: 0px;
+#whiskermenu-window stack > box > box {/*
+  background-image: url("assets/menu_bottom.png") ;
+  background-size: 100% 100%;*/
+  padding: 1px;
+  padding-right: 5px;
+}
+
+
+#whiskermenu-window:last-child entry {
+  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
   border-radius: 1px;
   border: 1px solid #1a5194;
-  box-shadow: none;
-  margin-right: -2px; 
-  margin-left: -1px; }
+  box-shadow: none; }

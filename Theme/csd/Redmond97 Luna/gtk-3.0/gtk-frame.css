@@ -3,22 +3,28 @@
 
 /* General frames */
 
-
+/*
 frame > border {
   padding: 1px;
   border: 1px solid @dark_shadow;
   border-bottom: 1px solid @light_shadow;
   border-right: 1px solid @light_shadow;
   box-shadow: 1px 1px @light_shadow inset, -1px -1px @dark_shadow inset; } 
-
+*/
 
 /* Status bar border */
 
 
-statusbar frame > border {
+statusbar {
     padding: 0;
-    box-shadow: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: -11px;
+    margin-left: -11px;
+    box-shadow: 0 1px 2px @borders inset;
     border: none; }
+
+
 
 
 /* Styled frames */
@@ -53,7 +59,7 @@ frame.border-ridge > border {
    border-radius: 0; }
 
 
-/* Terminal Emulator Frames */
+/* Terminal Emulator Frames 
 terminal-window notebook, VteTerminal, vte-terminal {
    padding: 1px;
    border-color: @borders;
@@ -63,7 +69,6 @@ terminal-window notebook, VteTerminal, vte-terminal {
    border-radius: 0px;
    box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
 
-
 #xfce4-terminal-notebook {
    padding: 1px;
    border-color: @borders;
@@ -72,7 +77,7 @@ terminal-window notebook, VteTerminal, vte-terminal {
    border-right: 1px solid @light_shadow;
    border-radius: 0px;
    box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
-
+*/
 
 /* Hack to make all scrolled window widgets bg color match theme base bg color */
 
@@ -90,13 +95,7 @@ scrolledwindow.frame {
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
 paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow,
 paned > stack > grid > scrolledwindow, .sidebar {
-   padding: 1px;
-   border-color: @borders;
-   border: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+   border: 1px solid @dark_shadow; }
 
 
 /* Remove border from sidebar scrolledwindow, sidebar already has a border. */

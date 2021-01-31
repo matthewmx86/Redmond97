@@ -2,12 +2,8 @@
 
 entry {
    padding: 3px;
-   border: 1px solid;
-   border-color: @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
+   border: 1px solid @selected_bg_color;
    border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
    color: @text_color;
    caret-color: @text_color;
    background-color: @theme_base_color; }

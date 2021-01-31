@@ -37,37 +37,6 @@ filechooser stack button box {
   padding: 4px;
 }
 
-.nemo-window toolbar {
-   padding: 2px;
-   padding-top: 4px;
-   padding-bottom: 4px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 2px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 2px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
-
-.nemo-window menubar {
-   padding: 0px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 0px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 2px solid;
-   border-bottom: 0px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
 
 /* Nemo colors must be specified or drag and drop items 
    have black text on a black background */
@@ -91,13 +60,12 @@ filechooser stack button box {
 
 .header-box {
    margin-top: 0px;
-   border-top: 2px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 2px solid;
-   border-image: url("assets/headerbox.png");
-   border-image-slice: 2 2 2 2; 
-   background-color: @toolbar_bg_color; }
+   border-top: 1px solid;
+   background-color: transparent; 
+   box-shadow: none;
+   border: none;
+   box-shadow: none;
+   border-bottom: 1px solid @light_shadow;}
 
 
 /* Remove application dialog image icon */
@@ -107,9 +75,7 @@ messagedialog image {
 
 /* caja and thunar various ui hacks */
 .caja-navigation-window > grid > paned > * {
-   border-top: 2px solid;
-   border-image: url("assets/headerbox.png");
-   border-image-slice: 2 2 2 2
+   border-top: 1px solid transparent;
 }
 
 .caja-side-pane treeview {
@@ -123,42 +89,29 @@ messagedialog image {
    background-repeat: no-repeat;
 }
 
+
 .caja-navigation-window toolbar {
-   padding: 2px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 0px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 0px solid;
-   border-bottom: 0px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
+}
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
-   margin: -4px;
-   margin-bottom: -2px;
-   padding: 3px;
-   padding-top: 4px;
-   border-top: 0px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
+   padding: 4px;
+   margin-left: -3px;
+   margin-right: -3px;
+   margin-top: -6px;
+   margin-bottom: -4px;
+   border: none;
+   box-shadow: none;
+   color: @toolbar_fg_color;
+   -GtkWidget-window-dragging: true;
+   background-color: transparent;
+   box-shadow: 0 -1px @dark_shadow inset;
+   border-bottom: 1px solid @light_shadow;
+}
 
 .caja-navigation-window grid > paned > box > notebook widget > box {
-   padding: 1px;
-   border-color: @borders;
-   border: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+}
 
+/*
 .caja-navigation-window statusbar,
 .thunar statusbar {
    border: 1px solid @dark_shadow;
@@ -176,23 +129,7 @@ messagedialog image {
    margin: -3px;
    margin-left: 0px;
 }
-
-.thunar menubar,
-.caja-navigation-window menubar {
-   padding: 0px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 0px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 2px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
-
+*/
 .thunar toolbar {
    padding: 2px;
    margin-top: 0px;
