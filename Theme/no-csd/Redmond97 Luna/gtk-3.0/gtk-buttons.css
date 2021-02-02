@@ -2,7 +2,7 @@
 button {
   padding: 4px;
   padding-top: 2px;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
 	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
 	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset;

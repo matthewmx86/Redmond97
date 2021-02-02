@@ -14,9 +14,15 @@ filechooser stack button box {
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
 
+.nautilus-window .sidebar {
+  margin-top: 2px;
+  border-right: 1px solid @borders; }
+
+/*
 sidebar, .sidebar, places_sidebar {
   background-color: #ff0000;
-}
+  background-image: linear-gradient(45deg, #cde7ff, #ebf2fc); }
+*/
 /* 
  hacks:
    Add padding below toolbar, hide separators since the 

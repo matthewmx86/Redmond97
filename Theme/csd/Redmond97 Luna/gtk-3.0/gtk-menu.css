@@ -5,6 +5,7 @@
     padding: 2px;
     border: 1px solid @borders;
     box-shadow: none;
+    background-image: unset;
     background-color: @base_color;
     color: @fg_color; }
 
