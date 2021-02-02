@@ -82,7 +82,8 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
 
 /* Linked buttons */
 
-.linked button, .linked button:hover, .linked .raised button, .primary-toolbar .linked button {
+.linked button, .linked button:hover, .linked .raised button, .primary-toolbar .linked button,
+.linked button:disabled, .linked button:disabled, .linked .raised button:disabled, .primary-toolbar .linked button:disabled {
   padding: 4px;
   margin-right: 0;
   margin-left: 0;

@@ -22,8 +22,8 @@ toolbar {
 */
    background-image: url("assets/toolbar.png");
    background-size: 100% 100%;
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow; }
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow; }
 
 toolbar:disabled {
    color: @theme_disabled_fg_color;
@@ -40,8 +40,8 @@ toolbar:disabled {
 	linear-gradient(to bottom, @bg_color, @medium_shadow);*/
    background-image: url("assets/toolbar.png");
    background-size: 100% 100%;
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow; }
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow; }
 
 
 /* Floating bar */

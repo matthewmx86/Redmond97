@@ -1,13 +1,9 @@
 /* Entry textbox */
 
 entry {
-   padding: 3px;
-   border: 1px solid;
-   border-color: @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
+   padding: 2px;
+   border: 1px solid @selected_bg_color;
    border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
    color: @text_color;
    caret-color: @text_color;
    background-color: @theme_base_color; }
@@ -34,16 +30,13 @@ entry > image.right {
 
 
 combobox entry {
-   margin-top: 1px;
-   margin-bottom: 1px;
-   box-shadow: none;
    background-color: transparent;
+   padding: 5px;
+   box-shadow: none;
    border: none; }
 
 combobox entry:disabled {
    text-shadow: 1px 1px @light_shadow;
-   margin-top: 1px;
-   margin-bottom: 1px;
    box-shadow: none;
    background-color: transparent;
    border: none; }

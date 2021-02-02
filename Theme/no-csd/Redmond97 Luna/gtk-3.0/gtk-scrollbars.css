@@ -2,169 +2,170 @@
    Note: Firefox uses different scrollbar button names  
    such as .button.up instead of button.top hence the 
    extra scrollbar button references */
+scrollbar.overlay-indicator {
+  opacity: 1; }
+
 
 scrollbar {
-   border-top: 0px solid; 
-   border-bottom: 0px solid;
-   border: none;
-   background-color: @bg_color;
-   background-image: url("assets/scrollbar_trough.png");
-}
-
-scrollbar trough {
-   border: none;
-   border-radius: 0; }
-
-
-scrollbar.overlay-indicator {
-   opacity: 1; }
+  background-color: transparent;
+  border: 0 none transparent;
+  margin: 0;
+  padding: 0; }
   
-
-/* Horizontal scroll bar */
-
+scrollbar.horizontal {
+  background: linear-gradient(to bottom, #eeede5, #fefefb 80%, #fff, #eeede5 calc(100%-1px)); }
 
 scrollbar.horizontal slider {
-   min-width: 45px;
-   min-height: 15px;
-   margin: 0px;
-   border-top: 1px solid @bg_color;
-   border-left: 1px solid @bg_color;
-   border-right: 1px solid @borders;
-   border-bottom: 1px solid @borders;
-   border-radius: 0px;
-   background-clip: padding-box;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow;}
-  
-scrollbar.horizontal button,
-scrollbar.horizontal .button {
-   background-image: url("assets/scrollbar_button.png");
-   background-size: 100% 100%;
-   min-height: 17px;
-   min-width: 17px; 
-   margin: 0px;
-   padding: 0px;
-   background-color: transparent;
-   border: none;
-   box-shadow: none; }
+  border: 5px solid transparent;
+  border-image: url("assets/scrollbar-slider-horz.png");
+  border-image-slice: 5 5 5 5;
+  border-image-repeat: stretch;
+  background: url("assets/handle-horz.png") no-repeat center center, url("assets/slider-bg-horz.png"); }
 
-scrollbar.horizontal button:active,
-scrollbar.horizontal .button:active {
-   min-width: 17px;
-   min-height: 17px;
-   border: 1px solid @dark_shadow; 
-   background-color: @button_bg_color;
-   background-image: none;
-   box-shadow: none; }
+scrollbar.horizontal slider:hover {
+  border-image: url("assets/scrollbar-slider-horz-hover.png");
+  border-image-slice: 5 5 5 5;
+  border-image-repeat: stretch;
+  background: url("assets/handle-horz-hover.png") no-repeat center center, url("assets/slider-bg-horz-hover.png"); }
 
-scrollbar.horizontal button.down:active,
-scrollbar.horizontal .button.right:active {
-   min-height: 15px;
-   min-width: 15px;
-   -gtk-icon-source: none;
-   background-image: url("assets/arrow_right.png"); }
+scrollbar.horizontal slider:hover:active {
+  border-image: url("assets/scrollbar-slider-horz-active.png");
+  border-image-slice: 5 5 5 5;
+  border-image-repeat: stretch;
+  background: url("assets/handle-horz-active.png") no-repeat center center, url("assets/slider-bg-horz-active.png"); }
 
-scrollbar.horizontal button.up:active,
-scrollbar.horizontal .button.left:active {
-   min-height: 15px;
-   min-width: 15px;
-   -gtk-icon-source: none;
-   background-image: url("assets/arrow_left.png"); }
-
-scrollbar.horizontal button.down {
-   -gtk-icon-source: url("assets/arrow_right.png"); }
-
-scrollbar.horizontal .button.right {
-   -gtk-icon-source: none;
-   background-image: url("assets/scroll_right_button.png"); }
-
-scrollbar.horizontal button.up {
-   -gtk-icon-source: url("assets/arrow_left.png"); }
-
-scrollbar.horizontal .button.left {
-   -gtk-icon-source: none;
-   background-image: url("assets/scroll_left_button.png"); }
-
-/* Vertical scrollbar */
-
+scrollbar.vertical {
+  background: linear-gradient(to right, #eeede5, #fefefb 80%, #fff, #eeede5 calc(100%-1px)); }
 
 scrollbar.vertical slider {
-   min-width: 15px;
-   min-height: 45px;
-   margin: 0px;
-   border-top: 1px solid @bg_color;
-   border-left: 1px solid @bg_color;
-   border-right: 1px solid @borders;
-   border-bottom: 1px solid @borders;
-   border-radius: 0px;
-   background-clip: padding-box;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow; }
+  border: 5px solid transparent;
+  border-image: url("assets/scrollbar-slider-vert.png");
+  border-image-slice: 5 5 5 5;
+  border-image-repeat: stretch;
+  background: url("assets/handle-vert.png") no-repeat center center, url("assets/slider-bg-vert.png"); }
 
-/* Specify buttons for LibreOffice */
+scrollbar.vertical slider:hover {
+  border-image: url("assets/scrollbar-slider-vert-hover.png");
+  border-image-slice: 5 5 5 5;
+  border-image-repeat: stretch;
+  background: url("assets/handle-vert-hover.png") no-repeat center center, url("assets/slider-bg-vert-hover.png"); }
+scrollbar.vertical slider:hover:active {
+  border-image: url("assets/scrollbar-slider-vert-active.png");
+  border-image-slice: 5 5 5 5;
+  border-image-repeat: stretch;
+  background: url("assets/handle-vert-active.png") no-repeat center center, url("assets/slider-bg-vert-active.png"); }
+ 
+scrollbar.horizontal slider {
+  min-width: 8px;
+  min-height: 7px; }
+
+scrollbar.vertical slider {
+  min-width: 7px;
+  min-height: 8px; }
+
+scrollbar.fine-tune slider {
+  margin: 1px;
+  min-width: 5px;
+  min-height: 5px; }
+
+scrollbar button:active, scrollbar button:hover, scrollbar button:disabled, scrollbar button {
+  padding: 0;
+  min-width: 17px;
+  min-height: 17px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -gtk-icon-source: none; }
+  
+scrollbar.horizontal button.up,
+scrollbar.horizontal .button.left {
+  background: url("assets/left-stepper.png"); }
+
+scrollbar.horizontal button.up:hover,
+scrollbar.horizontal .button.left:hover {
+  background: url("assets/left-stepper-hover.png"); }
+
+scrollbar.horizontal button.up:hover:active,
+scrollbar.horizontal .button.left:active {
+  background: url("assets/left-stepper-active.png"); }
+
+scrollbar.horizontal button.down,
+scrollbar.horizontal .button.right {
+  background: url("assets/right-stepper.png"); }
+
+scrollbar.horizontal button.down:hover,
+scrollbar.horizontal .button.right:hover {
+  background: url("assets/right-stepper-hover.png"); }
+ 
+scrollbar.horizontal button.down:hover:active,
+scrollbar.horizontal .button.right:hover {
+  background: url("assets/right-stepper-active.png"); }
+
+scrollbar.vertical button.up, 
+scrollbar.vertical .button.up {
+  background: url("assets/top-stepper.png"); }
+
+scrollbar.vertical button.up:hover, 
+scrollbar.vertical .button.up:hover {
+  background: url("assets/top-stepper-hover.png"); }
+
+scrollbar.vertical button.up:hover:active, 
+scrollbar.vertical .button.up:hover {
+  background: url("assets/top-stepper-active.png"); }
+
+scrollbar.vertical button.down, 
+scrollbar.vertical .button.down {
+  background: url("assets/bottom-stepper.png"); }
+
+scrollbar.vertical button.down:hover, 
+scrollbar.vertical .button.down:hover {
+  -gtk-icon-source: none;
+  background: url("assets/bottom-stepper-hover.png"); }
+
+scrollbar.vertical button.down:hover:active,
+scrollbar.vertical .button.down:hover {
+  background: url("assets/bottom-stepper-active.png"); }
+  
+ /* Specify buttons for LibreOffice */
 
 scrollbar.vertical button,
-scrollbar.vertical .button {
-   background-image: url("assets/scrollbar_button.png");
-   background-size: 100% 100%;
-   min-height: 17px;
-   min-width: 17px; 
-   margin: 0px;
-   padding: 0px;
-   border: none;
-   background-color: @button_bg_color;
-   box-shadow: none; }
-
+scrollbar.vertical .button,
+scrollbar.horizontal button,
+scrollbar.horizontal .button {
+  background-image: url("assets/stepper.png");
+  background-size: 100% 100%;
+  min-height: 17px;
+  min-width: 17px; 
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-shadow: none; }
 
 scrollbar.vertical button:active,
-scrollbar.vertical .button:active {
-   min-width: 17px;
-   min-height: 17px;
-   border: 1px solid @dark_shadow; 
-   background-color: @button_bg_color;
-   background-image: none;
-   box-shadow: none; }
+scrollbar.vertical .button:active,
+scrollbar.horizontal button:active,
+scrollbar.horizontal .button:active {
+  background-image: url("assets/stepper-active.png");
+  background-size: 100% 100%;
+  min-height: 17px;
+  min-width: 17px; 
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-shadow: none; }
+  
+scrollbar.vertical button:hover,
+scrollbar.vertical .button:hover,
+scrollbar.horizontal button:hover,
+scrollbar.horizontal .button:hover {
+  background-image: url("assets/stepper-hover.png");
+  background-size: 100% 100%;
+  min-height: 17px;
+  min-width: 17px; 
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-shadow: none; }
 
 /* End LibreOffice support */
 
-
-/* Note: There are redundent entries and image files due to the workaround
-   for LibreOffice scrollbar buttons causing issues with my original Firefox 
-   scrollbarbutton fix */
-
-scrollbar.vertical button.down:active,
-scrollbar.vertical .button.bottom:active {
-   min-height: 15px;
-   min-width: 15px;
-   -gtk-icon-source: none;
-   background-image: url("assets/arrow_down.png"); }
-
-scrollbar.vertical button.up:active,
-scrollbar.vertical .button.top:active {
-   min-height: 15px;
-   min-width: 15px;
-   -gtk-icon-source: none;
-   background-image: url("assets/arrow_up.png"); }
-
-scrollbar.vertical button.down {
-   -gtk-icon-source: url("assets/arrow_down.png"); }
-
-scrollbar.vertical .button.bottom {
-   -gtk-icon-source: none;
-   background-image: url("assets/scroll_down_button.png"); }
-
-scrollbar.vertical button.up {
-   -gtk-icon-source: url("assets/arrow_up.png"); }
-
-scrollbar.vertical .button.top {
-   -gtk-icon-source: none;
-   background-image: url("assets/scroll_up_button.png");
-}
-  
-
-/* Mystery */
-
-
-treeview scrollbar.vertical {
-   border-top: 1px solid @borders;
-   margin-top: -1px; }

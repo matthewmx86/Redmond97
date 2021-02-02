@@ -11,32 +11,37 @@ padding: 5px; }
 
 /* Main toolbars */
 toolbar {
-   padding: 2px;
+   padding: 4px;
    margin: 0;
    color: @toolbar_fg_color;
    background-color: @toolbar_bg_color; 
    box-shadow: none;
-   border: none;
-   background-image: linear-gradient(to right, alpha(#fff, 0.4), alpha(#fff,0.0)),
+   border: none;/*
+   background-image: linear-gradient(to right, rgba(255,255,255, 0.4), rgba(255,255,255,0.0)),
 	linear-gradient(to bottom, @bg_color, @medium_shadow);
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow; }
+*/
+   background-image: url("assets/toolbar.png");
+   background-size: 100% 100%;
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow; }
 
 toolbar:disabled {
    color: @theme_disabled_fg_color;
    background-color: @theme_disabled_bg_color; }
 
 .primary-toolbar {
-   padding: 2px;
+   padding: 4px;
    margin: 0;
    border: none;
    box-shadow: none;
    color: @toolbar_fg_color;
-   -GtkWidget-window-dragging: true;
-   background-image: linear-gradient(to right, alpha(#fff, 0.4), alpha(#fff,0.0)),
-	linear-gradient(to bottom, @bg_color, @medium_shadow);
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow; }
+   -GtkWidget-window-dragging: true;/*
+   background-image: linear-gradient(to right, rgba(255,255,255, 0.4), rgba(255,255,255,0.0)),
+	linear-gradient(to bottom, @bg_color, @medium_shadow);*/
+   background-image: url("assets/toolbar.png");
+   background-size: 100% 100%;
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow; }
 
 
 /* Floating bar */

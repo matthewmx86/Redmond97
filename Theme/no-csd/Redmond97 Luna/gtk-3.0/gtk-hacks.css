@@ -13,14 +13,18 @@ filechooser stack button box {
 
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
-
-
-/* Nemo hacks:
+/*
+sidebar, .sidebar, places_sidebar {
+  background-color: #ff0000;
+}
+*/
+/*
+ hacks:
    Add padding below toolbar, hide separators since the 
    scrolled window frames act as separators, menu items must
    be reapplied after making separators transparent */
 
-
+/*
 .nemo-window sidebar separator {
    background-color: transparent; }
 
@@ -36,7 +40,7 @@ filechooser stack button box {
 .nemo-window toolbar button {
   padding: 4px;
 }
-
+*/
 
 /* Nemo colors must be specified or drag and drop items 
    have black text on a black background */
@@ -64,8 +68,8 @@ filechooser stack button box {
    background-color: transparent; 
    box-shadow: none;
    border: none;
-   box-shadow: none;
-   border-bottom: 1px solid @light_shadow;}
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow;}
 
 
 /* Remove application dialog image icon */
@@ -94,7 +98,8 @@ messagedialog image {
 }
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
-   padding: 4px;
+   padding-top: 6px;
+   padding-bottom: 3px;
    margin-left: -3px;
    margin-right: -3px;
    margin-top: -6px;
@@ -104,14 +109,14 @@ messagedialog image {
    color: @toolbar_fg_color;
    -GtkWidget-window-dragging: true;
    background-color: transparent;
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow;
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow;
 }
 
 .caja-navigation-window grid > paned > box > notebook widget > box {
 }
 
-
+/*
 .caja-navigation-window statusbar,
 .thunar statusbar {
    border: 1px solid @dark_shadow;
@@ -144,18 +149,19 @@ messagedialog image {
    border-left: 7px solid;
    border-image: url("assets/fm_toolbar.png");
    border-image-slice: 2 2 2 7; }
+*/
 
 .thunar entry {
-   margin: 4px; }
-
+   margin: 4px;
+}
 
 /* Fix thunar scrolled window borders */
-.thunar scrolledwindow {
-   border: none;
-   padding: 2px;
-   border-radius: 0px;
-   box-shadow: 2px 2px @borders inset, 1px 1px @dark_shadow inset, 
-              -2px -2px @theme_bg_color inset, -1px -1px @light_shadow inset; }
+.thunar scrolledwindow:first-child {
+   margin-top: 2px; }
+
+.thunar scrolledwindow:last-child {
+   margin-top: 0;
+   padding: 2px; }
 
 #GeanyMenubar {
    padding: 0px;

@@ -97,3 +97,23 @@
    box-shadow: none;
 }
 
+#clock-applet-button, #clock-applet-button:checked, #clock-applet-button:active, #clock-applet-button:hover {
+/*
+   margin-top: 1px;
+   margin-bottom: 1px;
+   border-top: 1px solid @dark_shadow;
+   border-left: 1px solid @dark_shadow;
+   border-right: 1px solid @light_shadow;
+   border-bottom: 1px solid @light_shadow;
+*/
+}
+
+
+#PanelPlug {
+/*
+   border-top: 1px solid @dark_shadow;
+   border-left: 1px solid @dark_shadow;
+   border-right: 1px solid @light_shadow;
+   border-bottom: 1px solid @light_shadow;
+*/
+}

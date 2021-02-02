@@ -1,13 +1,11 @@
 /* Menu borders and colors */
 
-.menu, menu {
+.menu, menu, .csd menu {
+    border: unset;
     padding: 2px;
-    border-top: 1px solid @bg_color;
-    border-bottom: 1px solid @borders;
-    border-left: 1px solid @bg_color;
-    border-right: 1px solid @borders;
-    box-shadow: inset 1px 1px @light_shadow, inset -1px -1px @dark_shadow;
-    background-color: @theme_bg_color;
+    border: 1px solid @borders;
+    box-shadow: none;
+    background-color: @base_color;
     color: @fg_color; }
 
 combobox menu, combox .menu {
@@ -70,15 +68,12 @@ menubar, .menubar {
    -GtkWidget-window-dragging: true;
    margin: 0;
    padding: 1px;
-   margin: 0;
    color: @toolbar_fg_color;
    background-color: @toolbar_bg_color; 
-   background-image: linear-gradient(to right, alpha(#fff, 0.4) 65%, alpha(#fff,0.0)),
-	linear-gradient(to bottom, @bg_color, @medium_shadow);
+   background-image: url("assets/toolbar.png");
+   background-size: 100% 100%;
    box-shadow: none;
-   border: none;
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow; }
+   border: none; }
 
 menubar > menuitem, .menubar > menuitem {
    margin: 0px;

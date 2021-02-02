@@ -1,7 +1,7 @@
 separator, separator:backdrop {
   -gtk-icon-source: none;
-  min-width: 1px;
-  min-height: 1px;
+  min-width: 0;
+  min-height: 0;
 
 /* Make window separators transparent this avoids 
    apps displaying separators under toolbar boarders 
@@ -13,18 +13,15 @@ separator, separator:backdrop {
 paned > separator {
   border: none;
   color: transparent;
-  min-width: 3px;
-  min-height: 1px;
+  margin-right: -4px;
+  margin-left: -4px;
+  padding: 0;
   background-color: transparent; }
 
 paned > separator:backdrop {
-  min-width: 3px;
-  min-height: 1px;
   background-color: transparent; }
   
 paned > separator:selected {
-  min-width: 3px;
-  min-height: 1px;
   background-color: transparent; }
 
 button separator {

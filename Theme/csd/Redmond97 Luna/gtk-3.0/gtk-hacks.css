@@ -13,8 +13,11 @@ filechooser stack button box {
 
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
-
-
+/*
+sidebar, .sidebar, places_sidebar {
+  background-color: #ff0000;
+*/
+}
 /* 
  hacks:
    Add padding below toolbar, hide separators since the 
@@ -65,8 +68,8 @@ filechooser stack button box {
    background-color: transparent; 
    box-shadow: none;
    border: none;
-   box-shadow: none;
-   border-bottom: 1px solid @light_shadow;}
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow;}
 
 
 /* Remove application dialog image icon */
@@ -95,18 +98,19 @@ messagedialog image {
 }
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
-   padding: 4px;
+   padding-top: 6px;
+   padding-bottom: 3px;
    margin-left: -3px;
    margin-right: -3px;
-   margin-top: -6px;
+   margin-top: -4px;
    margin-bottom: -4px;
    border: none;
    box-shadow: none;
    color: @toolbar_fg_color;
    -GtkWidget-window-dragging: true;
    background-color: transparent;
-   box-shadow: 0 -1px @dark_shadow inset;
-   border-bottom: 1px solid @light_shadow;
+   box-shadow: 0 1px @light_shadow inset;
+   border-top: 1px solid @dark_shadow;
 }
 
 .caja-navigation-window grid > paned > box > notebook widget > box {

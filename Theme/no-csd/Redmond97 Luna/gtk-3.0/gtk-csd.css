@@ -1,11 +1,13 @@
-/* Unstyled for GTK no-CSD */
 headerbar {
   padding: 4px;
-  background-image: linear-gradient(to right, alpha(#fff, 0.4), alpha(#fff,0.0));
-  background-color: @bg_color;
+  background-color: transparent;
 }
 
 headerbar:backdrop {
-  background-image: linear-gradient(to right, alpha(#fff, 0.4), alpha(#fff,0.0));
-  background-color: @bg_color;
+  background-color: transparent;
+}
+
+.titlebar {
+  background-image: url("assets/toolbar.png");
+  background-size: 100% 100%;
 }
