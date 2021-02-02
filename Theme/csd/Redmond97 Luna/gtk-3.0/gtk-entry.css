@@ -1,7 +1,7 @@
 /* Entry textbox */
 
 entry {
-   padding: 3px;
+   padding: 2px;
    border: 1px solid @selected_bg_color;
    border-radius: 0px;
    color: @text_color;
@@ -30,16 +30,13 @@ entry > image.right {
 
 
 combobox entry {
-   margin-top: 1px;
-   margin-bottom: 1px;
-   box-shadow: none;
    background-color: transparent;
+   padding: 5px;
+   box-shadow: none;
    border: none; }
 
 combobox entry:disabled {
    text-shadow: 1px 1px @light_shadow;
-   margin-top: 1px;
-   margin-bottom: 1px;
    box-shadow: none;
    background-color: transparent;
    border: none; }

@@ -1,13 +1,22 @@
 /* Unstyled for GTK no-CSD */
+
+.csd decoration {
+  border: 5px solid transparent;
+  border-image: url("assets/border.png");
+  border-image-slice: 5 5 5 5;
+   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
 decoration {
-  border: 5px solid #ff0000;
+  border: 0px solid transparent;
   border-image: url("assets/border.png");
   border-image-slice: 5 5 5 5;
   background-color: @bg_color;
-  border-radius: 5px 5px 0 0;
 }
 
 .titlebar {
+  color: @selected_fg_color;
+  font-weight: bold;
   padding-top: 0px;
   padding-bottom: 2px;
   background-image: linear-gradient(to bottom, #005cea, #0058ee 40%, #0058ee, #2379fa 90%, #0060fa );
@@ -27,11 +36,6 @@ headerbar entry{
    box-shadow: none;
    border: 1px solid #c4bfa9;
 }
-
-.titlebar {
-  color: @selected_fg_color;
-  font-weight: bold;
- }
 
 .titlebutton, .titlebutton:hover, .titlebutton:active {
   color: transparent;

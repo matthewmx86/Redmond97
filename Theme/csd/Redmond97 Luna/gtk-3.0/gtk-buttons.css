@@ -1,48 +1,20 @@
 /* General buttons */
-
-/*
 button {
-   padding: 4px 6px 4px 6px;
-   border-radius: 0px;
-   color: @button_fg_color;
-   border-top: 1px solid @button_bg_color;
-   border-left: 1px solid @button_bg_color;
-   border-right: 1px solid @borders;
-   border-bottom: 1px solid @borders;
-   border-radius: 0px;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow;
-   outline-offset: -4px; }*/
-
-button {
-  padding: 4px 4px;
-  box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
-	0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
+  padding: 4px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset;
   border-style: solid;
   border-width: 1px;
   border-radius: 3px;
   color: @fg_color;
-  border-color: shade(@selected_bg_color,1.6);
-  background-color: shade(@bg_color,1.15);
-}
+  border-color: shade(@selected_bg_color,1.3);
+  background-color: shade(@bg_color,1.18); }
 
 button label {
-  background-color: transparent;
-}
-
-button:active {
-   color: @theme_fg_color;
-   box-shadow: 1px 1px @dark_shadow inset;
-   border-color: @borders;
-   background-color: @button_bg_color;
-}
-
-button:checked {
-   color: @theme_fg_color;
-   box-shadow: 1px 1px @dark_shadow inset;
-   border-color: @borders;
-   background-color: @button_bg_color;
-}
+  background-color: transparent; }
 
 button:checked:disabled {
    color: @disabled_fg_color;
@@ -54,99 +26,161 @@ button:disabled {
    text-shadow: 1px 1px @light_shadow;
    color: @disabled_fg_color }
 
-
-.linked button:first-child {
-border-radius: 3px 0 0 3px;
-margin-left: 0;
-margin-right:-1px;
-}
-
-.linked button:last-child {
-border-radius: 0 3px 3px 0;
-border-right: 1px solid shade(@selected_bg_color,1.6);
+ button:focus {
   box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
-	0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
-margin-left: 0;
-margin-right:0;
-}
+      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85),
+      0 -2px alpha(shade(@selected_bg_color,1.2), 0.4) inset,
+      0 0 0 2px alpha(shade(@selected_bg_color,2.7), 0.4) inset;
+  outline: none; }
+  
+ button:hover {
+  box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+     -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85),
+     0 -2px alpha(#ffad30, 0.6) inset,
+     0 0 0 2px alpha(#ffb600, 0.6) inset; }
+ 
+ button:active, button:checked {
+   background-color: shade(@bg_color,1.05);
+   box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85);
+   outline: none; }
 
-.linked button {
- box-shadow: 0px 1px shade(@bg_color,1.4), 
-     0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
-border-radius: 0;
-border-right: none;
-margin-left: 0;
-margin-right: -1px;}
+/* Flat buttons / toolbar buttons */
 
-/* General flat buttons */
-
-
-button.flat {
+button.flat, toolbar button, toolbar button.flat, .primary-toolbar button, .raised button {
+   border-radius: 3px;
+   padding: 4px;
+   margin: 1px;
+   border: 1px solid;
    border-color: transparent;
-   border-radius: 2px;
    color: @theme_fg_color;
    box-shadow: none;
    background-color: transparent; }
 
-button.flat:hover {
-   color: @toolbar_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px -1px @dark_shadow, inset 1px 1px @light_shadow; }
-
-button.flat:active {
+button.flat:hover, .primary-toolbar:hover, toolbar button:hover, toolbar button.flat:hover {
    color: @button_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   background-image: none;
-   box-shadow: inset 1px 1px @dark_shadow, inset -1px -1px @light_shadow; }
+   border: 1px solid @dark_shadow;
+   box-shadow: 1px 1px 1px @dark_shadow, 0px -2px 2px @medium_shadow inset;
+   background-color: shade(@bg_color, 1.0);
+   background-image: linear-gradient(to bottom, alpha(@light_shadow,0.7), alpha(@light_shadow,0.5) 40%, alpha(@light_shadow,0.5) 80%, alpha(@light_shadow, 0.2)) ;}
 
-button.flat:checked {
-   border-top: 1px solid @dark_shadow;
-   border-left: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   box-shadow: -1px -1px @button_bg_color inset;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @button_fg_color;
-   background-color: @button_bg_color; }
+button.flat:active, button.flat:checked, .raised button:checked, .raised button:active,
+.primary-toolbar button:active, .primary-toolbar .raised button:active, .primary-toolbar button:checked, 
+.primary-toolbar .raised button:checked, toolbar button:checked, toolbar button:active, toolbar button.flat:checked, 
+toolbar button.flat:active {
+   box-shadow: 1px 1px 2px @dark_shadow inset;
+   border: 1px solid shade(@dark_shadow, 0.9);
+   background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
 
-button.flat:disabled {
+button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
+.primary-toolbar .raised button:active, .primary-toolbar button:disabled, toolbar button:disabled, toolbar button.flat:disabled {
    text-shadow: 1px 1px @light_shadow;
    border-color: transparent;
-   border-radius: 2px;
    color: @disabled_fg_color;
    box-shadow: none;
    background-color: transparent; }
+
+/* Linked buttons */
+
+.linked button, .linked button:hover, .linked .raised button, .primary-toolbar .linked button {
+  padding: 4px;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 1px solid shade(@selected_bg_color,1.3);
+  background-color: shade(@bg_color,1.18); 
+  box-shadow: 0px 1px shade(@bg_color,1.4), 
+    0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
+  border-radius: 0;
+  border-right: none; }
+
+.linked button:first-child, .linked .raised button:first-child, .primary-toolbar .linked button:first-child {
+  border-radius: 3px 0 0 3px;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.linked button:last-child, .linked .raised button:last-child, .primary-toolbar .linked button:last-child {
+  border-radius: 0 3px 3px 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-right: 1px solid shade(@selected_bg_color,1.6);
+  box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+	0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset; }
+
+.linked button:only-child, .linked .raised button:only-child, .primary-toolbar .linked button:only-child {
+  border-radius: 3px;
+}
+
+.linked button:checked, .linked button:active, .primary-toolbar .linked button:checked, .primary-toolbar .linked button:active {
+  margin-left: 0px;
+  margin-right: -1px;
+  background-color: shade(@bg_color,1.05);
+  box-shadow: unset;
+  box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4), 0 -1px shade(@bg_color,0.85);
+  border: 1px solid shade(@selected_bg_color,1.3);
+}
+
+.linked button:last-child:checked, .linked button:last-child:active, .primary-toolbar .linked button:last-child:checked,
+.primary-toolbar .linked button:last-child:active {
+  margin-right: 0px;
+}
+
+.linked button:hover, .linked button:hover, .primary-toolbar .linked button:hover, .primary-toolbar .linked button:hover {
+  box-shadow: 0 0 0 2px alpha(#ffb600, 0.6) inset; }
+
+/* General flat buttons */
+
 
 
 /* Combobox button */
 
 
 combobox button {
-  margin: 2px;
-   box-shadow: none;
-   outline-color: transparent;
-   outline-offset: -1px;
-   background-color: transparent;
-   border: solid;
-   padding: 0px;
-   border-width: 2px 18px 2px 2px;
-   border-image: url("assets/combobox.png");
-   border-image-slice: 2 18 2 2; }
+color: @fg_color;
+min-width: 17px;
+padding: 4px;
+border: none;
+box-shadow: unset;
+background-color: transparent;
+}
+
+combobox button:checked {
+min-width: 17px;
+padding: 4px;
+margin-left: 2px;
+}
+
+combobox:nth-child(1) .linked button, combobox:nth-child(2) .linked button {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: url("assets/bottom-stepper.png");
+  background-size: 17px calc(100%-5px);
+  background-position: calc(100% - 2px) 2px;
+  background-repeat: no-repeat;
+}
+
+combobox:nth-child(1) .linked button:hover {
+  background-image: url("assets/bottom-stepper-hover.png");
+  background-size: 17px calc(100%-5px);
+  background-position: calc(100% - 2px) 2px;
+  background-repeat: no-repeat;
+}
+
+combobox:nth-child(1) .linked button:checked {
+  background-image: url("assets/bottom-stepper-active.png");
+  background-size: 17px calc(100%-5px);
+  background-position: calc(100% - 2px) 2px;
+  background-repeat: no-repeat;
+}
 
 combobox button:checked, combobox button:active {
-   margin: 2px;
-   box-shadow: none;
-   outline-color: transparent;
-   outline-offset: -1px;
-   outline-width: 1px;
-   background-color: transparent;
-   border: solid;
-   padding: 0px;
-   border-width: 2px 18px 2px 2px;
-   border-image: url("assets/combobox_checked.png");
-   border-image-slice: 2 18 2 2; }
+padding: 4px;
+margin-top: 1px;
+padding-left: 4px;
+padding-right: 4px;
+min-width: 17px; }
 
 combobox button:disabled {
    background-color: transparent; }
@@ -162,17 +196,6 @@ button.circular, button.circular-button {
    padding: 2px 6px;
    border-radius: 50%;
    -gtk-outline-radius: 50%; }
-
-
-/* Linked buttons */
-
-
-.linked button, .linked .raised button {
-   margin-left: 1px; }
-
-.vertical.linked button {
-   margin-left: 1px; }
-
 
 /* Misc buttons */
 
@@ -265,10 +288,8 @@ treeview header button {
     margin: 0px;
     background-image: linear-gradient(to bottom, #ded9c2, #ded9c2 90%, @dark_shadow); }
 
-treeview header button, treeview header button:active, treeview header button:focus, treeview header button:active:focus {
-}
-
-treeview header button:hover, treeview header button:active:hover, treeview header button:hover:focus, treeview header button:active:hover:focus {
+treeview header button:hover, treeview header button:active:hover {
+   box-shadow: 0 -2px #ffc83c inset, 1px 0 @light_shadow inset;
 }
 
 treeview header:last-child button {
@@ -289,15 +310,10 @@ button.sidebar-button:not(:hover):not(:active) > image {
 
 
 spinbutton {
-  padding: 1px;
-  border-color: @borders;
-  border: 1px solid @dark_shadow;
-  border-bottom: 1px solid @light_shadow;
-  border-right: 1px solid @light_shadow;
-  border-radius: 0px;
-  box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
   background-color: @base_color;
-  color: @text_color; }
+  border: 1px solid @selected_bg_color;
+  border-radius: 0px;
+ }
   
 spinbutton:disabled {
   background-color: @bg_color; }
@@ -315,105 +331,16 @@ spinbutton button:disabled:backdrop {
 spinbutton.horizontal > button.down,
 spinbutton.horizontal > button.up {
    color: transparent;
+   margin-right: -1px;
+   box-shadow: 0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
+   border-radius: 0;
+   margin-top: -1px;
+   margin-bottom: -1px;
    padding: 0px; }
 
 spinbutton.vertical > button.up,
 spinbutton.vertical > button.down {
 }
-
-
-/* Toolbar buttons */ 
-
-
-toolbar button {
-   margin: 1px; }
-
-toolbar button.flat {
-   outline-color: transparent;
-   margin: 0px;
-   border: transparent 1px solid;
-   border-radius: 0px;
-   color: @button_fg_color;
-   box-shadow: none;
-   background-color: transparent; }
- 
-toolbar button.flat:hover {
-   color: @button_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px -1px @dark_shadow, inset 1px 1px @light_shadow; }
-   
-toolbar button.flat:active {
-   color: @button_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   background-image: none;
-   box-shadow: inset 1px 1px @dark_shadow, inset -1px -1px @light_shadow; }
-
-toolbar button.flat:checked {
-   border-top: 1px solid @dark_shadow;
-   border-left: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   box-shadow: -1px -1px @button_bg_color inset;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @button_fg_color;
-   background-color: @button_bg_color; }
-
-toolbar button.flat:disabled {
-   border-color: transparent;
-   border-radius: 2px;
-   color: @disabled_fg_color;
-   box-shadow: none;
-   background-color: transparent; }
-
-.primary-toolbar button {
-   outline-color: transparent;
-   border: 1px solid transparent;
-   border-radius: 0px;
-   color: @button_fg_color;
-   box-shadow: none; }
-
-.primary-toolbar .raised button {
-   border-color: transparent;
-   border-radius: 0px;
-   color: @button_fg_color;
-   box-shadow: none;
-}
-
-.primary-toolbar button:active, .primary-toolbar .raised button:hover {
-   color: @button_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   background-image: none;
-   box-shadow: inset 1px 1px @light_shadow, inset -1px -1px @dark_shadow; }
-
-.primary-toolbar button:active, .primary-toolbar .raised button:active {
-   color: @button_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   background-image: none;
-   box-shadow: inset 1px 1px @dark_shadow, inset -1px -1px @light_shadow; }
- 
-.primary-toolbar button:checked, .primary-toolbar .raised button:checked {
-   border-top: 1px solid @dark_shadow;
-   border-left: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   box-shadow: -1px -1px @button_bg_color inset;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @button_fg_color;
-   background-color: @button_bg_color; }
-
-.primary-toolbar button:checked:disabled, .primary-toolbar .raised button:checked:disabled {
-   border-color: transparent;
-   border-radius: 0px;
-   color: @disabled_fg_color;
-   box-shadow: none;
-}
-
-.primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
-   color: @disabled_fg_color; }
 
 
 /* Hamburger menu buttons */
@@ -431,58 +358,399 @@ popover modelbutton {
    padding: 4px; }
 
 
-/* Check and radio buttons */
+/* Check and radio buttons WARNING: borrowed from another theme, messy layout */
 
 
-check, radio, check:disabled, radio:disabled {
-   margin: 4px;
-   border-style: none;
-   background-color: transparent; }
+radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png")); }
 
-checkbutton.text-button :disabled, radiobutton.text-button :disabled {
-   color: @disabled_fg_color;
-   text-shadow: 1px 1px @light_shadow;
-   outline-offset: 0; }
+.view radio:selected,
+row:selected radio {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-unchecked.png"); }
+  .view radio:selected:backdrop,
+  row:selected radio:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png")); }
 
-check, .check {
-   -gtk-icon-source: url("assets/c_box.png"); }
+radio:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover.png")); }
 
-check:disabled, .check:disabled {
-   -gtk-icon-source: url("assets/c_box_ins.png"); }
+.view radio:hover:selected,
+row:selected radio:hover {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-unchecked-hover.png"); }
+  .view radio:hover:selected:backdrop,
+  row:selected radio:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover.png")); }
 
-check:active, check:checked, .check:active, .check:checked {
-   -gtk-icon-source: url("assets/c_box_checked.png"); }
+radio:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-active.png")); }
 
-check:active:disabled, check:checked:disabled, .check:active:disabled, .check:checked:disabled {
-   -gtk-icon-source: url("assets/c_box_ins_checked.png"); }
+.view radio:active:selected,
+row:selected radio:active {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-unchecked-active.png"); }
+  .view radio:active:selected:backdrop,
+  row:selected radio:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-active.png")); }
 
-check:indeterminate, .check:indeterminate {
-   -gtk-icon-source: url("assets/c_box_mixed.png"); }
-    
-check:indeterminate:disabled, .check:indeterminate:disabled {
-   -gtk-icon-source: url("assets/c_box_ins_mixed.png"); }
+radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png")); }
 
-radio, .radio {
-   -gtk-icon-source: url("assets/radio.png"); }
+.view radio:disabled:selected,
+row:selected radio:disabled {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-unchecked-insensitive.png"); }
+  .view radio:disabled:selected:backdrop,
+  row:selected radio:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png")); }
 
-radio:disabled, .radio:disabled {
-   -gtk-icon-source: url("assets/radio_ins.png"); }
+radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png")); }
 
-radio:active, radio:checked, .radio:active, .radio:checked {
-   -gtk-icon-source: url("assets/radio_checked.png"); }
+.view radio:indeterminate:selected,
+row:selected radio:indeterminate {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-mixed.png"); }
+  .view radio:indeterminate:selected:backdrop,
+  row:selected radio:indeterminate:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png")); }
 
-radio:active:disabled, radio:checked:disabled, .radio:active:disabled, .radio:checked:disabled {
-   -gtk-icon-source: url("assets/radio_ins_checked.png"); }
+radio:indeterminate:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover.png")); }
 
-radio:indeterminate, .radio:indeterminate {
-   -gtk-icon-source: url("assets/radio_mixed.png"); }
+.view radio:indeterminate:hover:selected,
+row:selected radio:indeterminate:hover {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-mixed-hover.png"); }
+  .view radio:indeterminate:hover:selected:backdrop,
+  row:selected radio:indeterminate:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover.png")); }
 
-radio:indeterminate:disabled, .radio:indeterminate:disabled {
-   -gtk-icon-source: url("assets/radio_ins_mixed.png"); }
+radio:indeterminate:selected {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active.png")); }
 
-menuitem check, menuitem radio {
-   min-height: 16px;
-   min-width: 16px; }
+.view radio:indeterminate:selected:selected,
+row:selected radio:indeterminate:selected {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-mixed-active.png"); }
+  .view radio:indeterminate:selected:selected:backdrop,
+  row:selected radio:indeterminate:selected:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active.png")); }
+
+radio:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png")); }
+
+.view radio:indeterminate:disabled:selected,
+row:selected radio:indeterminate:disabled {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-mixed-insensitive.png"); }
+  .view radio:indeterminate:disabled:selected:backdrop,
+  row:selected radio:indeterminate:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png")); }
+
+radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png")); }
+
+.view radio:checked:selected,
+row:selected radio:checked {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-checked.png"); }
+  .view radio:checked:selected:backdrop,
+  row:selected radio:checked:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png")); }
+
+radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png")); }
+
+.view radio:checked:disabled:selected,
+row:selected radio:checked:disabled {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-checked-insensitive.png"); }
+  .view radio:checked:disabled:selected:backdrop,
+  row:selected radio:checked:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png")); }
+
+radio:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover.png")); }
+
+.view radio:checked:hover:selected,
+row:selected radio:checked:hover {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-checked-hover.png"); }
+  .view radio:checked:hover:selected:backdrop,
+  row:selected radio:checked:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover.png")); }
+
+radio:checked:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active.png")); }
+
+.view radio:checked:active:selected,
+row:selected radio:checked:active {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/radio-checked-active.png"); }
+  .view radio:checked:active:selected:backdrop,
+  row:selected radio:checked:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active.png")); }
+
+menu menuitem radio {
+  -gtk-icon-shadow: none; }
+  menu menuitem radio:hover, menu menuitem radio:disabled, menu menuitem radio {
+    -gtk-icon-source: none; }
+  menu menuitem radio:active, menu menuitem radio:checked {
+    -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-checked.png")); }
+    menu menuitem radio:active:hover, menu menuitem radio:checked:hover {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-checked-hover.png")); }
+    menu menuitem radio:active:disabled, menu menuitem radio:checked:disabled {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-checked-insensitive.png")); }
+  menu menuitem radio:indeterminate {
+    -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-mixed.png")); }
+    menu menuitem radio:indeterminate:hover {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-mixed-hover.png")); }
+    menu menuitem radio:indeterminate:disabled {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-mixed-insensitive.png")); }
+      
+/* End check / radui buttons */
+
+.view.content-view.check:not(list),
+.content-view .tile check:not(list) {
+  -gtk-icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"));
+  background-color: transparent;
+  min-width: 41px;
+  min-height: 41px;
+  background-image: none;
+  transition: none;
+  box-shadow: none;
+  border-width: 0; }
+
+.view.content-view.check:hover:not(list),
+.content-view .tile check:hover:not(list) {
+  -gtk-icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-hover-selectionmode.png"));
+  background-color: transparent;
+  min-width: 41px;
+  min-height: 41px;
+  background-image: none;
+  transition: none;
+  box-shadow: none;
+  border-width: 0; }
+
+.view.content-view.check:active:not(list),
+.content-view .tile check:active:not(list) {
+  -gtk-icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-active-selectionmode.png"));
+  background-color: transparent;
+  min-width: 41px;
+  min-height: 41px;
+  background-image: none;
+  transition: none;
+  box-shadow: none;
+  border-width: 0; }
+
+.view.content-view.check:checked:not(list),
+.content-view .tile check:checked:not(list) {
+  -gtk-icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode.png"));
+  background-color: transparent;
+  min-width: 41px;
+  min-height: 41px;
+  background-image: none;
+  transition: none;
+  box-shadow: none;
+  border-width: 0; }
+
+.view.content-view.check:checked:hover:not(list),
+.content-view .tile check:checked:hover:not(list) {
+  -gtk-icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-selectionmode.png"));
+  background-color: transparent;
+  min-width: 41px;
+  min-height: 41px;
+  background-image: none;
+  transition: none;
+  box-shadow: none;
+  border-width: 0; }
+
+.view.content-view.check:checked:active:not(list),
+.content-view .tile check:checked:active:not(list) {
+  -gtk-icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active-selectionmode.png"));
+  background-color: transparent;
+  min-width: 41px;
+  min-height: 41px;
+  background-image: none;
+  transition: none;
+  box-shadow: none;
+  border-width: 0; }
+
+checkbutton.text-button, radiobutton.text-button {
+  padding: 2px 0;
+  outline-offset: 0; }
+  checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-button label:not(:only-child):first-child {
+    margin-left: 4px; }
+  checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child {
+    margin-right: 4px; }
+
+check,
+radio {
+  margin: 0 4px;
+  min-height: 16px;
+  min-width: 16px; }
+  check:only-child,
+  radio:only-child {
+    margin: 0; }
+
+check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png")); }
+
+.view check:selected,
+row:selected check {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-unchecked.png"); }
+  .view check:selected:backdrop,
+  row:selected check:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png")); }
+
+check:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.png")); }
+
+.view check:hover:selected,
+row:selected check:hover {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-unchecked-hover.png"); }
+  .view check:hover:selected:backdrop,
+  row:selected check:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.png")); }
+
+check:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-active.png")); }
+
+.view check:active:selected,
+row:selected check:active {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-unchecked-active.png"); }
+  .view check:active:selected:backdrop,
+  row:selected check:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-active.png")); }
+
+check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png")); }
+
+.view check:disabled:selected,
+row:selected check:disabled {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-unchecked-insensitive.png"); }
+  .view check:disabled:selected:backdrop,
+  row:selected check:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png")); }
+
+check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png")); }
+
+.view check:indeterminate:selected,
+row:selected check:indeterminate {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-mixed.png"); }
+  .view check:indeterminate:selected:backdrop,
+  row:selected check:indeterminate:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png")); }
+
+check:indeterminate:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover.png")); }
+
+.view check:indeterminate:hover:selected,
+row:selected check:indeterminate:hover {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-mixed-hover.png"); }
+  .view check:indeterminate:hover:selected:backdrop,
+  row:selected check:indeterminate:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover.png")); }
+
+check:indeterminate:selected {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-active.png")); }
+
+.view check:indeterminate:selected:selected,
+row:selected check:indeterminate:selected {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-mixed-active.png"); }
+  .view check:indeterminate:selected:selected:backdrop,
+  row:selected check:indeterminate:selected:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-active.png")); }
+
+check:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png")); }
+
+.view check:indeterminate:disabled:selected,
+row:selected check:indeterminate:disabled {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-mixed-insensitive.png"); }
+  .view check:indeterminate:disabled:selected:backdrop,
+  row:selected check:indeterminate:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png")); }
+
+check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png")); }
+
+.view check:checked:selected,
+row:selected check:checked {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-checked.png"); }
+  .view check:checked:selected:backdrop,
+  row:selected check:checked:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png")); }
+
+check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png")); }
+
+.view check:checked:disabled:selected,
+row:selected check:checked:disabled {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-checked-insensitive.png"); }
+  .view check:checked:disabled:selected:backdrop,
+  row:selected check:checked:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png")); }
+
+check:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover.png")); }
+
+.view check:checked:hover:selected,
+row:selected check:checked:hover {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-checked-hover.png"); }
+  .view check:checked:hover:selected:backdrop,
+  row:selected check:checked:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover.png")); }
+
+check:checked:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active.png")); }
+
+.view check:checked:active:selected,
+row:selected check:checked:active {
+  -gtk-icon-source: none;
+  background-image: linear-gradient(to bottom, alpha(#1466C9, 0.85), alpha(#1466C9, 0.85)), url("assets/checkbox-checked-active.png"); }
+  .view check:checked:active:selected:backdrop,
+  row:selected check:checked:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active.png")); }
+
+menu menuitem check {
+  -gtk-icon-shadow: none; }
+  menu menuitem check:hover, menu menuitem check:disabled, menu menuitem check {
+    -gtk-icon-source: none; }
+  menu menuitem check:active, menu menuitem check:checked {
+    -gtk-icon-source: -gtk-scaled(url("assets/menu-check-checked.png")); }
+    menu menuitem check:active:hover, menu menuitem check:checked:hover {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-check-checked-hover.png")); }
+    menu menuitem check:active:disabled, menu menuitem check:checked:disabled {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-check-checked-insensitive.png")); }
+  menu menuitem check:indeterminate {
+    -gtk-icon-source: -gtk-scaled(url("assets/menu-check-mixed.png")); }
+    menu menuitem check:indeterminate:hover {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-check-mixed-hover.png")); }
+    menu menuitem check:indeterminate:disabled {
+      -gtk-icon-source: -gtk-scaled(url("assets/menu-check-mixed-insensitive.png")); }
+
+
 
 view.content-view check:hover, view.content-view check:disabled, view.content-view check:selected {
    background-color: transparent; }

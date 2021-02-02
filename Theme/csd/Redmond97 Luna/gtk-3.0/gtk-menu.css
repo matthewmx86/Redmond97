@@ -1,6 +1,7 @@
 /* Menu borders and colors */
 
-.menu, menu {
+.menu, menu, .csd menu {
+    border: unset;
     padding: 2px;
     border-top: 1px solid @bg_color;
     border-bottom: 1px solid @borders;
@@ -73,8 +74,8 @@ menubar, .menubar {
    margin: 0;
    color: @toolbar_fg_color;
    background-color: @toolbar_bg_color; 
-   background-image: linear-gradient(to right, alpha(#fff, 0.4) 65%, alpha(#fff,0.0)),
-	linear-gradient(to bottom, @bg_color, @medium_shadow);
+   background-image: url("assets/toolbar.png");
+   background-size: 100% 100%;
    box-shadow: none;
    border: none;
    box-shadow: 0 -1px @dark_shadow inset;

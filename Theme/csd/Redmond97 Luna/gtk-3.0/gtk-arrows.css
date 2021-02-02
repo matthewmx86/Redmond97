@@ -49,7 +49,7 @@ combobox arrow:disabled {
 
 /* Spin button arrows */
 
-
+/*
 spinbutton.horizontal > button.down {
    color: transparent;
    background-image: url("assets/arrow_down.png");
@@ -66,7 +66,7 @@ spinbutton.horizontal > button.up {
    min-width: 14px;
 }
 
-
+*/
 
 /* Menu arrows */
 
