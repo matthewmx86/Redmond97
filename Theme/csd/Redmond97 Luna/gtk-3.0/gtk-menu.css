@@ -29,15 +29,7 @@ popover.background.touch-selection,
 
 menu menuitem {
     margin: 0;
-    margin-left: 2px;
-    margin-right: 2px;
     padding: 4px; }
-
-menu menuitem:first-child {
-    margin-top: 2px }
-
-menu menuitem:last-child {
-    margin-bottom: 2px }
 
 combobox menuitem,
 combobox menuitem {
@@ -87,11 +79,11 @@ menubar > menuitem, .menubar > menuitem {
 
 
 menubar > menuitem:hover, .menubar > menuitem:hover {
-   color: @menubar_fg_color;
-   border-color: @menubar_bg_color;
-   background-color: @button_bg_color;
+   color: @selected_fg_color;
+   border: none;
+   background-color: @selected_bg_color;
    background-image: none;
-   box-shadow: inset 1px 1px @dark_shadow, inset -1px -1px @light_shadow; }
+   box-shadow: none; }
 
 
 /* Menubar item states */

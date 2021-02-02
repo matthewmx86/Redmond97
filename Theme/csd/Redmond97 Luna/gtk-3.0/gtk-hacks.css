@@ -13,10 +13,9 @@ filechooser stack button box {
 
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
-/*
+
 sidebar, .sidebar, places_sidebar {
   background-color: #ff0000;
-*/
 }
 /* 
  hacks:
@@ -98,6 +97,7 @@ messagedialog image {
 }
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
+   padding: 4px;
    padding-top: 6px;
    padding-bottom: 3px;
    margin-left: -3px;

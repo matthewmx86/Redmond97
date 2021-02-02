@@ -2,11 +2,16 @@
 
 entry {
    padding: 2px;
-   border: 1px solid @selected_bg_color;
+   border: 1px solid shade(@selected_bg_color, 0.7);
    border-radius: 0px;
    color: @text_color;
    caret-color: @text_color;
    background-color: @theme_base_color; }
+
+.linked entry {
+   margin-top: 1px;
+   margin-bottom: 1px;
+   margin-right: -1px; }
 
 entry:selected, entry:selected:focus, entry selection, entry selection:focus {
    color: @theme_selected_fg_color;

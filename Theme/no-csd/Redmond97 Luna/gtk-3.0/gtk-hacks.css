@@ -13,12 +13,11 @@ filechooser stack button box {
 
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
-/*
+
 sidebar, .sidebar, places_sidebar {
   background-color: #ff0000;
 }
-*/
-/*
+/* 
  hacks:
    Add padding below toolbar, hide separators since the 
    scrolled window frames act as separators, menu items must
@@ -98,11 +97,12 @@ messagedialog image {
 }
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
+   padding: 4px;
    padding-top: 6px;
    padding-bottom: 3px;
    margin-left: -3px;
    margin-right: -3px;
-   margin-top: -6px;
+   margin-top: -4px;
    margin-bottom: -4px;
    border: none;
    box-shadow: none;

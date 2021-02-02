@@ -3,7 +3,7 @@ combobox {
    background-color: @base_color;
    border-radius: 0;
    box-shadow: none;
-   border: 1px solid @selected_bg_color; }
+   border: 1px solid shade(@selected_bg_color, 0.7); }
 
 combobox:disabled {
    background-color: @bg_color;

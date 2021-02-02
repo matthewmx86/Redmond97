@@ -1,7 +1,7 @@
 /* General buttons */
 button {
   padding: 4px;
-  padding-top: 3px;
+  padding-top: 2px;
   padding-bottom: 2px;
   box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
 	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
@@ -10,7 +10,7 @@ button {
   border-width: 1px;
   border-radius: 3px;
   color: @fg_color;
-  border-color: shade(@selected_bg_color,1.3);
+  border-color: shade(@selected_bg_color,0.7);
   background-color: shade(@bg_color,1.18); }
 
 button label {
@@ -29,15 +29,15 @@ button:disabled {
  button:focus {
   box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
       -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85),
-      0 -2px alpha(shade(@selected_bg_color,1.2), 0.4) inset,
-      0 0 0 2px alpha(shade(@selected_bg_color,2.7), 0.4) inset;
+      0 0 0 2px shade(@selected_bg_color,1.7) inset,
+      0 -2px shade(@selected_bg_color,0.9) inset;
   outline: none; }
   
  button:hover {
   box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85),
-     0 -2px alpha(#ffad30, 0.6) inset,
-     0 0 0 2px alpha(#ffb600, 0.6) inset; }
+     0 0 0 2px #fcca69 inset,
+     0 -2px #c07f00 inset; }
  
  button:active, button:checked {
    background-color: shade(@bg_color,1.05);
@@ -60,7 +60,7 @@ button.flat, toolbar button, toolbar button.flat, .primary-toolbar button, .rais
 button.flat:hover, .primary-toolbar:hover, toolbar button:hover, toolbar button.flat:hover {
    color: @button_fg_color;
    border: 1px solid @dark_shadow;
-   box-shadow: 1px 1px 1px @dark_shadow, 0px -2px 2px @medium_shadow inset;
+   box-shadow: 1px 1px 1px @medium_shadow, 0px -2px 2px @medium_shadow inset;
    background-color: shade(@bg_color, 1.0);
    background-image: linear-gradient(to bottom, alpha(@light_shadow,0.7), alpha(@light_shadow,0.5) 40%, alpha(@light_shadow,0.5) 80%, alpha(@light_shadow, 0.2)) ;}
 
@@ -89,7 +89,7 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
   margin-left: 0;
   padding-left: 4px;
   padding-right: 4px;
-  border: 1px solid shade(@selected_bg_color,1.3);
+  border: 1px solid shade(@selected_bg_color, 0.7);
   background-color: shade(@bg_color,1.18); 
   box-shadow: 0px 1px shade(@bg_color,1.4), 
     0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
@@ -105,7 +105,7 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
   border-radius: 0 3px 3px 0;
   margin-left: 0px;
   margin-right: 0px;
-  border-right: 1px solid shade(@selected_bg_color,1.6);
+  border: 1px solid shade(@selected_bg_color, 0.7);
   box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
 	0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset; }
 
@@ -119,7 +119,7 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
   background-color: shade(@bg_color,1.05);
   box-shadow: unset;
   box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4), 0 -1px shade(@bg_color,0.85);
-  border: 1px solid shade(@selected_bg_color,1.3);
+  border: 1px solid shade(@selected_bg_color, 0.7);
 }
 
 .linked button:last-child:checked, .linked button:last-child:active, .primary-toolbar .linked button:last-child:checked,
@@ -312,7 +312,7 @@ button.sidebar-button:not(:hover):not(:active) > image {
 
 spinbutton {
   background-color: @base_color;
-  border: 1px solid @selected_bg_color;
+  border: 1px solid shade(@selected_bg_color, 0.6);
   border-radius: 0px;
  }
   

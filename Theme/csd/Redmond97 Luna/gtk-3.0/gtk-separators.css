@@ -60,3 +60,7 @@ combobox separator {
 list separator, list separator:backdrop {
   background: none; }
 
+menu separator {
+  background-color: @borders;
+  min-height: 1px; }
+
