@@ -8,4 +8,3 @@ combobox {
 combobox:disabled {
    background-color: @bg_color;
    border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
-}

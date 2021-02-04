@@ -1,4 +1,5 @@
 #XfcePanelWindow {
+   color: @light_shadow;
    background-color: #3168d5;
    padding-top: 2px;
    border: 0px;
@@ -11,6 +12,12 @@
 #XfcePanelWindow button, #XfcePanelWindow button:active, #XfcePanelWindow button:hover  {
    border: none;
    box-shadow: none; }
+
+.xfce4-panel box:first-child {
+  background-color: transparent;
+  margin: 0px;
+  box-shadow: none;
+  border: none; }
 
 #XfcePanelWindow .tasklist button {
    margin: 0px;
@@ -59,12 +66,13 @@
    background-color: transparent;
    box-shadow: none;
    border-radius: 0;
-   margin-top: 2px;
+   margin-top: 1px;
+   margin-bottom: 0px;
    padding: 3px;
    margin: 0; }
 
 #XfcePanelWindow #launcher-arrow:hover {
-   margin-top: 1px;
+   margin-top: 0px;
    background-image: url("assets/task_button.png");
    background-size: 100% 100%;
    background-repeat: no-repeat;
@@ -78,48 +86,30 @@
    background-repeat: no-repeat;
    padding: 3px; }
  
+
+#applicationmenu-button image {
+  padding-left: 10px;
+}
+
 #applicationmenu-button {
-   box-shadow: none;
-   border: none; }
+   background-color: transparent;
+   color: transparent;
+   font-size: 1pt;
+   background-size: 100% 100%;
+   margin: 0px;
+   margin-top: 0px;
+   border: none;
+   border-radius: 0;
+   padding-left: 7px;
+   min-width: 105px;
+   background-image: url("assets/start1.png"); }
 
-
-#applicationmenu-button box {
-   padding: 3px; }
-
-
-#tasklist > box, #tasklist-1 > box, #tasklist-2 > box, #tasklist-3 > box, 
-#tasklist-4 > box, #tasklist-5 > box, #tasklist-6 > box, #tasklist-7 > box, 
-#tasklist-8 > box, #tasklist-9 > box, #tasklist-10 > box, #tasklist-11 > box, 
-#tasklist-12 > box, #tasklist-13 > box, #tasklist-14 > box, #tasklist-15 > box, 
-#tasklist-16 > box, #tasklist-17 > box, #tasklist-18 > box, #tasklist-19 > box,
-#tasklist-20 > box, #tasklist-21 > box, #tasklist-22 > box, #tasklist-23 > box, 
-#tasklist-24 > box {
-   border-left: 8px solid;
-   border-image: url("assets/taskhandle.png");
-   border-image-slice: 0 0 0 7;
+#applicationmenu-button:hover {
+   background-image: url("assets/start_hover1.png");
 }
 
-
-#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow {
-   border-left: 8px solid;
-   border-image: url("assets/taskhandle.png");
-   border-image-slice: 0 0 0 7;
-}
-
-#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
-   margin-left: 0px;
-   margin-right: 2px;
-}
-
-#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active image {
-   margin-left: 2px;
-   margin-right: 3px;
-}
-
-#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active {
-   margin-left: 0px;
-   box-shadow: none;
-   margin-right: -1px;
+#applicationmenu-button:checked {
+   background-image: url("assets/start_active1.png");
 }
 
 XfdesktopIconView .view {
@@ -133,6 +123,12 @@ XfdesktopIconView .view:active {
 XfdesktopIconView:active {
    color: @selected_bg_color;
    background-color: @selected_bg_color; }
+
+#XfcePanelWindow  widget > widget:nth-child(2) box {
+   border-left: 8px solid;
+   border-image: url("assets/taskhandle.png");
+   border-image-slice: 0 0 0 7;
+}
 
 #XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
    margin-left: 2px;
@@ -164,25 +160,114 @@ XfdesktopIconView:active {
    border-image-slice: 0 0 0 3;
 }
 
-#XfcePanelWindow #clock-button box {
-  box-shadow: none;
-  border: none;
+.background .xfce4-panel #showdesktop-button image {
+   margin: 3px;
 }
 
-#XfcePanelWindow #clock-button,
-#XfcePanelWindow #clock-button:hover,
-#XfcePanelWindow #clock-button:checked {
+.xfce4-panel #showdesktop-button:hover {
+   background-color: transparent;
+   border-right: none;
+   box-shadow: none;
+   background-image: url("assets/tray.png");
+   background-size: 100% 100%;
+}
+
+.xfce4-panel #showdesktop-button:checked, .xfce4-panel #showdesktop-button:active {
+   background-color: transparent;
+   border: none;
+   margin: 0px;
+   box-shadow: none;
+   background-image: url("assets/task_button-active.png");
+   background-size: 100% 100%;
+}
+
+.xfce4-panel #pulseaudio-button, .xfce4-panel #pulseaudiobutton:hover, .xfce4-panel #pulseaudiobutton:active,
+.xfce4-panel #actions-button, .xfce4-panel #actions-button:hover, .xfce4-panel #actions-button:active,
+.xfce4-panel #xfce4-power-manager-plugin, .xfce4-panel #xfce4-power-manager-plugin:hover, .xfce4-panel #xfce4-power-manager-plugin:active {
+  margin: 0px;
+  padding: 0px;
+  color: @light_shadow;
+  box-shadow: none;
+  border: none;
+  margin-left: -1px;
+  margin-right: -1px;
+  background-color: #000;
+  background-size: 100% 100%;
+  background-image: url("assets/tray.png");
+}
+
+.xfce4-panel #actions-button label {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+.xfce4-panel #panel-tasklist-arrow {
+   border: 1px solid #ff0000;
+}
+
+.xfce4-panel #clock-button,
+.xfce4-panel #clock-button:hover,
+.xfce4-panel #clock-button:checked {
    box-shadow: none;
    border: none;
-   color: #fff;
+   color: @light_shadow;
    background-size: 100% 100%;
    background-size: 100% 100%;
    margin-top: 0px;
    margin-bottom: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
+   margin-left: -8px;
+   margin-right: -8px;
    background-image: url("assets/tray.png");
    border-right: 9px solid;
    border-left: 8px solid;
    border-image: url("assets/tray.png");
    border-image-slice: 0 20 0 20; }
+
+/* Hack to draw psuedo handles. Comment out the following lines to disable. */
+
+#XfcePanelWindow  widget > widget:nth-child(2) button {
+   border-left: 8px solid;
+   border-image: url("assets/taskhandle.png");
+   border-image-slice: 0 0 0 7;
+   margin-left: 0px;
+   margin-right: 2px;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) button:checked,
+#XfcePanelWindow  widget > widget:nth-child(2) button:active {
+   border-left: 8px solid;
+   border-image: url("assets/taskhandle.png");
+   border-image-slice: 0 0 0 7;
+   margin-left: 0px;
+   margin-right: 2px;
+} 
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow image {
+   margin-left: 0px;
+   margin-right: 2px;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active image {
+   margin-left: 2px;
+   margin-right: 3px;
+}
+
+#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow:active {
+   margin-left: 0px;
+   box-shadow: none;
+   margin-right: -1px;
+}
+
+#tasklist > box, #tasklist-1 > box, #tasklist-2 > box, #tasklist-3 > box, 
+#tasklist-4 > box, #tasklist-5 > box, #tasklist-6 > box, #tasklist-7 > box, 
+#tasklist-8 > box, #tasklist-9 > box, #tasklist-10 > box, #tasklist-11 > box, 
+#tasklist-12 > box, #tasklist-13 > box, #tasklist-14 > box, #tasklist-15 > box, 
+#tasklist-16 > box, #tasklist-17 > box, #tasklist-18 > box, #tasklist-19 > box,
+#tasklist-20 > box, #tasklist-21 > box, #tasklist-22 > box, #tasklist-23 > box, 
+#tasklist-24 > box {
+   border-left: 8px solid;
+   border-image: url("assets/taskhandle.png");
+   border-image-slice: 0 0 0 7;
+}
+

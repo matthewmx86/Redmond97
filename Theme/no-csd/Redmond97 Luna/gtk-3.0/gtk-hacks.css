@@ -152,6 +152,6 @@ sidebar, .sidebar, places_sidebar {
 
 .thunar scrolledwindow:last-child {
    margin-top: 0;
-   box-shadow: 1px 0 alpha(shade(@selected_bg_color,0.8),0.8); inset;
+   box-shadow: 1px 0 alpha(shade(@selected_bg_color,0.8),0.8) inset;
    padding: 2px; }
 
