@@ -8,6 +8,10 @@ entry {
    caret-color: @text_color;
    background-color: @theme_base_color; }
 
+toolbar entry {
+   margin: 5px;
+}
+
 .linked entry {
    margin-top: 1px;
    margin-bottom: 1px;
