@@ -1,7 +1,7 @@
 /* Notebook and tabs */
 
 notebook {
-   margin-top: 2px;
+   margin-top: 0px;
    padding: 0; }
    
 notebook > header > tabs > tab button, notebook > header > tabs > tab button.flat,
@@ -54,7 +54,7 @@ notebook.frame > header.left, notebook.frame > header.right {
 notebook > stack:not(:only-child) {
    margin: 0px;
    border: 1px solid shade(@dark_shadow,0.8);
-   box-shadow: 1px 1px @dark_shadow;
+   box-shadow: 1px 1px 2px @dark_shadow;
    padding: 1px;
    background-color: shade(@bg_color, 2.0); 
    /*background-image: shade(@bg_color, 2.0),shade(@bg_color, 1.1)); }*/
@@ -69,23 +69,22 @@ notebook tab {
    border-color: transparent;
    color: @theme_fg_color;
    background-color: @bg_color;
-   background-image: linear-gradient(to bottom, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
    outline-width: 0; }
     
 notebook tab:checked {
    color: @theme_fg_color;
    border-color: @borders;
-   background-color: @notebook_bg_color; 
-   background-image: linear-gradient(to bottom, shade(@bg_color, 2.0),shade(@bg_color, 2.0));}
+   background-color: @notebook_bg_color; }
   
 
 
 /* Top tabs */
 
 notebook > header.top > tabs > tab {
-   padding: 1px;
-   padding-left: 4px;
-   padding-right: 4px;
+   background-image: linear-gradient(to bottom, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
+   padding-left: 6px;
+   padding-right: 6px;
    margin-top: 1px;
    margin-right: 1px;
    border-radius: 4px 4px 0 0;
@@ -94,11 +93,12 @@ notebook > header.top > tabs > tab {
    box-shadow: 0 -1px 2px @dark_shadow inset; }
         
 notebook > header.top > tabs > tab:checked {
+   background-image: linear-gradient(to bottom, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
    box-shadow: unset;
    box-shadow: 0 -1px #e68b2c;
    margin-top: 0px;
    border-radius: 4px 4px 0 0;
-   border-top: 3px solid #ffc83c;
+   border-top: 2px solid #ffc83c;
    border-left: 1px solid shade(@dark_shadow,0.8);
    border-right: 1px solid shade(@dark_shadow,0.8);
    border-bottom: none;
@@ -107,7 +107,10 @@ notebook > header.top > tabs > tab:checked {
 /* Bottom tabs */
 
 notebook > header.bottom > tabs > tab {
-   padding: 1px;
+   background-image: linear-gradient(to top, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
+   padding-left: 6px;
+   padding-right: 6px;
    margin-bottom: 1px;
    margin-right: 1px;
    border-radius: 0 0 4px 4px;
@@ -116,11 +119,12 @@ notebook > header.bottom > tabs > tab {
    box-shadow: 0 1px 2px @dark_shadow inset; }
         
 notebook > header.bottom > tabs > tab:checked {
+   background-image: linear-gradient(to top, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
    box-shadow: unset;
    box-shadow: 0 1px #e68b2c;
    margin-top: 0px;
    border-radius: 0 0 4px 4px;
-   border-bottom: 3px solid #ffc83c;
+   border-bottom: 2px solid #ffc83c;
    border-left: 1px solid shade(@dark_shadow,0.8);
    border-right: 1px solid shade(@dark_shadow,0.8);
    border-top: none;
@@ -129,7 +133,8 @@ notebook > header.bottom > tabs > tab:checked {
 /* Right side tabs */
 
 notebook > header.right > tabs > tab {
-   padding: 1px;
+   background-image: linear-gradient(to left, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
    margin-right: 1px;
    margin-bottom: 1px;
    border-radius: 0 4px 4px 0;
@@ -138,11 +143,12 @@ notebook > header.right > tabs > tab {
    box-shadow: 1px 0 2px @dark_shadow inset; }
 
 notebook > header.right > tabs > tab:checked {
+   background-image: linear-gradient(to left, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
    box-shadow: unset;
    box-shadow: 1px 0 #e68b2c;
    margin-right: 0px;
    border-radius: 0 4px 4px 0;
-   border-right: 3px solid #ffc83c;
+   border-right: 2px solid #ffc83c;
    border-top: 1px solid shade(@dark_shadow,0.8);
    border-bottom: 1px solid shade(@dark_shadow,0.8);
    border-left: none;
@@ -151,7 +157,8 @@ notebook > header.right > tabs > tab:checked {
 /* Left side tabs */
 
 notebook > header.left > tabs > tab {
-   padding: 1px;
+   background-image: linear-gradient(to right, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
    margin-left: 1px;
    margin-bottom: 1px;
    border-radius: 4px 0 0 4px;
@@ -160,11 +167,12 @@ notebook > header.left > tabs > tab {
    box-shadow: -1px 0 2px @dark_shadow inset; }
         
 notebook > header.left > tabs > tab:checked {
+   background-image: linear-gradient(to right, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
    box-shadow: unset;
    box-shadow: -1px 0 #e68b2c;
    margin-left: 0px;
    border-radius: 4px 0 0 4px;
-   border-left: 3px solid #ffc83c;
+   border-left: 2px solid #ffc83c;
    border-top: 1px solid shade(@dark_shadow,0.8);
    border-bottom: 1px solid shade(@dark_shadow,0.8);
    border-right: none;

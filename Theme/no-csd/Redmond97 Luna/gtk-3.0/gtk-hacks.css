@@ -2,21 +2,19 @@
    widget to match the window bg color */
 
 
-filechooser stack {
-   background-color: @theme_bg_color; }
+
 
 filechooser stack box {
-   background-color: @theme_bg_color; }
+
+   background-color: transparent; }
 
 filechooser stack button box {
-   background-color: @button_bg_color; }
-
+   background-color: transparent; }
+/*
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
+*/
 
-.nautilus-window .sidebar {
-  margin-top: 2px;
-  border-right: 1px solid @borders; }
 
 /*
 sidebar, .sidebar, places_sidebar {
@@ -78,33 +76,25 @@ sidebar, .sidebar, places_sidebar {
 
 
 /* Remove application dialog image icon */
-messagedialog image {
-   margin-left: -1000px;
-}
 
 /* caja and thunar various ui hacks */
+.caja-side-pane {
+   border: none;
+   background-color: shade(@bg_color,1.05);
+}
+
 .caja-navigation-window > grid > paned > * {
    border-top: 1px solid transparent;
 }
 
-.caja-side-pane treeview {
-   color: #000;
-   background-color: transparent;
-}
-
-.caja-side-pane scrolledwindow {
-   background-image: url("assets/treeview.png");
-   background-position: left top; 
-   background-repeat: no-repeat;
-}
-
-
-.caja-navigation-window toolbar {
+.caja-navigation-window entry {
+  margin: 2px;
+  margin-top: 1px;
 }
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
    padding: 4px;
-   padding-top: 6px;
+   padding-top: 4px;
    padding-bottom: 3px;
    margin-left: -3px;
    margin-right: -3px;
@@ -115,9 +105,10 @@ messagedialog image {
    color: @toolbar_fg_color;
    -GtkWidget-window-dragging: true;
    background-color: transparent;
-   box-shadow: 0 1px @light_shadow inset;
-   border-top: 1px solid @dark_shadow;
+   background-image: url("assets/toolbar.png");
+   background-size: 100% 100%;
 }
+
 
 .caja-navigation-window grid > paned > box > notebook widget > box {
 }

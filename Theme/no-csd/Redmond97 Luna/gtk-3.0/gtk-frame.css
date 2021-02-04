@@ -3,14 +3,11 @@
 
 /* General frames */
 
-/*
-frame > border {
-  padding: 1px;
-  border: 1px solid @dark_shadow;
-  border-bottom: 1px solid @light_shadow;
-  border-right: 1px solid @light_shadow;
-  box-shadow: 1px 1px @light_shadow inset, -1px -1px @dark_shadow inset; } 
-*/
+
+frame > border, .frame > border {
+  padding: 0px;
+  border: 1px solid @dark_shadow; } 
+
 
 /* Status bar border */
 
@@ -24,7 +21,9 @@ statusbar {
     box-shadow: 0 1px 2px @borders inset;
     border: none; }
 
-
+statusbar > frame > border{
+   border: 0px transparent;
+   box-shadow: none; }
 
 
 /* Styled frames */
@@ -59,25 +58,18 @@ frame.border-ridge > border {
    border-radius: 0; }
 
 
-/* Terminal Emulator Frames 
+/* Terminal Emulator Frames */ 
 terminal-window notebook, VteTerminal, vte-terminal {
-   padding: 1px;
-   border-color: @borders;
-   border: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+   padding: 0px;
+   border: 0px;
+   border-radius: 0px; }
 
 #xfce4-terminal-notebook {
-   padding: 1px;
-   border-color: @borders;
-   border: 1px solid @dark_shadow;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   border-radius: 0px;
-   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
-*/
+   margin-top: 0px;
+   padding: 0px;
+   border: 0px;
+   border-radius: 0px; }
+
 
 /* Hack to make all scrolled window widgets bg color match theme base bg color */
 
@@ -90,20 +82,75 @@ scrolledwindow.frame {
    Specify border for scrolled window widget directly since the scrolled window does not always
    have a frame. This forces most scrolled windows have a border. Do not reference the scrolled
    window widget directly, use references through parent widgets otherwise Libre-Office will also
-   put a border around the menu bar */
+   put a border around the menu bar 
 
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
 paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow,
 paned > stack > grid > scrolledwindow, .sidebar {
    border: 1px solid @dark_shadow; }
+*/
 
+scrolledwindow {
+  padding: 0;
+  border: 1px solid @dark_shadow;
+}
+
+notebook > scrolledwindow {
+}
 
 /* Remove border from sidebar scrolledwindow, sidebar already has a border. */
 
-.sidebar scrolledwindow {
+.sidebar .inline-toolbar, .sidebar statusbar {
+   background-color: @bg_color;
+}
+
+.sidebar, sidebar {
+   margin: 0px;
+   margin-right: -1px;
+}
+
+
+ list row box {
+   padding: 4px;
+}
+
+ list row label {
+   padding-left: 6px;
+}
+
+.sidebar-paned scrolledwindow, .gedit-side-panel-paned scrolledwindow, .sidebar scrolledwindow,
+.sidebar list, .caja-side-pane scrolledwindow {
+   color: @selected_fg_color;
+   background-image: linear-gradient(to bottom, #7aa1e6, #677cd8, #6375d6 85%);
+   background-color: #677cd8;
+   background-color: transparent;
    padding: 0;
    margin: 0;
-   border: none;
-   box-shadow: none; }
+   border-right: 1px solid @medium_shadow;
+   margin-right: 0px; }
 
+.sidebar list row label, .caja-side-pane treeview, .sidebar treeview, .gedit-side-panel-paned treeview {
+   padding-left: 6px;
+   color: @selected_fg_color;
+   text-shadow: 1px 1px 2px @borders;
+}
+
+.sidebar row:hover, .caja-side-pane treeview.view:hover, .sidebar treeview.view:hover {
+   text-decoration: underline;
+}
+
+.sidebar row:selected, .caja-side-pane treeview.view:selected, .sidebar treeview.view:selected,
+.gedit-side-panel-paned treeview.view:selected {
+   background-color: alpha(#b0caf6,0.4);
+}
+
+.caja-side-pane, .sidebar {
+   margin-right: -1px;
+}
+
+.caja-side-pane treeview, .sidebar treeview, .gedit-side-panel-paned treeview.view {
+   padding: 3px;
+   padding-left: 0px;
+   background-color: transparent;
+}
 

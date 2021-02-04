@@ -1,4 +1,6 @@
 headerbar {
+  border: none;
+  box-shadow: none;
   padding: 4px;
   background-color: transparent;
 }
@@ -8,6 +10,10 @@ headerbar:backdrop {
 }
 
 .titlebar {
+  margin: 0px;
   background-image: url("assets/toolbar.png");
   background-size: 100% 100%;
+  border: 0px solid @bg_color;
+  border-bottom: 1px solid @light_shadow;
+  box-shadow:none;
 }

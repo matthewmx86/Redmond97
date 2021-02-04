@@ -13,6 +13,7 @@
    box-shadow: none; }
 
 #XfcePanelWindow .tasklist button {
+   margin: 0px;
    border: none;
    box-shadow: none;
    color: #fff;
@@ -31,7 +32,6 @@
    margin-right: -5px; }
 
 #XfcePanelWindowWrapper {
-
    background-image: url("assets/taskbar.png");
  }
 
