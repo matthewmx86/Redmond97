@@ -81,7 +81,7 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
    background-color: transparent; }
 
 /* Linked buttons */
-
+/*
 .linked button, .linked button:hover, .linked .raised button, .primary-toolbar .linked button,
 .linked button:disabled, .linked button:disabled, .linked .raised button:disabled, .primary-toolbar .linked button:disabled {
   padding: 4px;
@@ -129,7 +129,7 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
 
 .linked button:hover, .linked button:hover, .primary-toolbar .linked button:hover, .primary-toolbar .linked button:hover {
   box-shadow: 0 0 0 2px alpha(#ffb600, 0.6) inset; }
-
+*/
 /* General flat buttons */
 
 
@@ -137,25 +137,11 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
 /* Combobox button */
 
 
-combobox button {
-color: @fg_color;
-min-width: 17px;
-padding: 4px;
-border: none;
-box-shadow: unset;
-background-color: transparent;
-}
-
-combobox button:checked {
-min-width: 17px;
-padding: 4px;
-margin-left: 2px;
-}
-
-combobox:nth-child(1) .linked button, combobox:nth-child(2) .linked button {
-  border: none;
+combobox .linked button {
   box-shadow: none;
-  padding-right: 19px;
+  border: none;
+  padding: 1px;
+  padding-right: 13px;
   background-color: transparent;
   background-image: url("assets/bottom-stepper.png");
   background-size: 17px calc(100%-5px);
@@ -163,30 +149,36 @@ combobox:nth-child(1) .linked button, combobox:nth-child(2) .linked button {
   background-repeat: no-repeat;
 }
 
-combobox:nth-child(1) .linked button:hover {
+combobox .linked button:disabled {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  padding: 1px;
+  padding-right: 13px;
+}
+
+combobox .linked button:hover {
+  box-shadow: none;
+  padding: 1px;
+  padding-right: 13px;
+  background-color: transparent;
   background-image: url("assets/bottom-stepper-hover.png");
   background-size: 17px calc(100%-5px);
   background-position: calc(100% - 2px) 2px;
   background-repeat: no-repeat;
 }
 
-combobox:nth-child(1) .linked button:checked {
-  padding-right: 19px;
+combobox .linked button:checked {
+  box-shadow: none;
+  padding: 1px;
+  padding-right: 13px;
+  background-color: transparent;
   background-image: url("assets/bottom-stepper-active.png");
   background-size: 17px calc(100%-5px);
   background-position: calc(100% - 2px) 2px;
   background-repeat: no-repeat;
 }
 
-combobox button:checked, combobox button:active {
-padding: 4px;
-margin-top: 1px;
-padding-left: 4px;
-padding-right: 4px;
-min-width: 17px; }
-
-combobox button:disabled {
-   background-color: transparent; }
 
 
 /* Circular buttons */

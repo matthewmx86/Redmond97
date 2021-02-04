@@ -5,7 +5,8 @@
 
 
 frame > border, .frame > border {
-  padding: 0px;
+  padding: 5px;
+  box-shadow: -1px -1px @light_shadow inset;
   border: 1px solid @dark_shadow; } 
 
 
@@ -18,7 +19,7 @@ statusbar {
     padding-right: 5px;
     margin-right: -11px;
     margin-left: -11px;
-    box-shadow: 0 1px 2px @borders inset;
+    box-shadow: 0 1px 2px shade(@dark_shadow,0.5) inset;
     border: none; }
 
 statusbar > frame > border{
@@ -82,21 +83,24 @@ scrolledwindow.frame {
    Specify border for scrolled window widget directly since the scrolled window does not always
    have a frame. This forces most scrolled windows have a border. Do not reference the scrolled
    window widget directly, use references through parent widgets otherwise Libre-Office will also
-   put a border around the menu bar 
-
+   put a border around the menu bar */
+/*
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
 paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow,
-paned > stack > grid > scrolledwindow, .sidebar {
-   border: 1px solid @dark_shadow; }
+paned > stack > grid > scrolledwindow, grid > scrolledwindow {
+   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
 */
 
 scrolledwindow {
-  padding: 0;
-  border: 1px solid @dark_shadow;
-}
+    border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
 
-notebook > scrolledwindow {
+window.background > grid.horizontal > grid.horizontal > scrolledwindow {
+    border: none;
 }
+/*
+notebook scrolledwindow {
+  border: none;
+}*/
 
 /* Remove border from sidebar scrolledwindow, sidebar already has a border. */
 
@@ -106,7 +110,6 @@ notebook > scrolledwindow {
 
 .sidebar, sidebar {
    margin: 0px;
-   margin-right: -1px;
 }
 
 
@@ -118,26 +121,27 @@ notebook > scrolledwindow {
    padding-left: 6px;
 }
 
-.sidebar-paned scrolledwindow, .gedit-side-panel-paned scrolledwindow, .sidebar scrolledwindow,
-.sidebar list, .caja-side-pane scrolledwindow {
+.sidebar-paned scrolledwindow:nth-child(1), .gedit-side-panel-paned scrolledwindow:nth-child(2), .sidebar scrolledwindow, scrolledwindow.sidebar,
+.sidebar list, .caja-side-pane scrolledwindow, .thunar scrolledwindow.sidebar {
    color: @selected_fg_color;
-   background-image: linear-gradient(to bottom, #7aa1e6, #677cd8, #6375d6 85%);
-   background-color: #677cd8;
-   background-color: transparent;
+   border-right: 1px solid @dark_shadow;
+   background-image: url("assets/sidebar.png");
+   background-size: 100% 100%;
+   /*background-image: linear-gradient(to bottom, #7aa1e6, #677cd8, #6375d6 85%);*/
    padding: 0;
    margin: 0;
-   border-right: 1px solid @medium_shadow;
-   margin-right: 0px; }
+   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
+   margin-right: 3px; }
 
 .sidebar list row label, .caja-side-pane treeview, .sidebar treeview, .gedit-side-panel-paned treeview {
    padding-left: 6px;
    color: @selected_fg_color;
    text-shadow: 1px 1px 2px @borders;
 }
-
+/*
 .sidebar row:hover, .caja-side-pane treeview.view:hover, .sidebar treeview.view:hover {
-   text-decoration: underline;
-}
+   background-color: transparent;
+}*/
 
 .sidebar row:selected, .caja-side-pane treeview.view:selected, .sidebar treeview.view:selected,
 .gedit-side-panel-paned treeview.view:selected {

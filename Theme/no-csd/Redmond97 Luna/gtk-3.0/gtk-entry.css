@@ -2,7 +2,7 @@
 
 entry {
    padding: 2px;
-   border: 1px solid shade(@selected_bg_color, 0.7);
+   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);;
    border-radius: 0px;
    color: @text_color;
    caret-color: @text_color;
@@ -12,6 +12,10 @@ entry {
    margin-top: 1px;
    margin-bottom: 1px;
    margin-right: -1px; }
+
+entry.flat {
+   border: transparent;
+}
 
 entry:selected, entry:selected:focus, entry selection, entry selection:focus {
    color: @theme_selected_fg_color;
@@ -34,10 +38,9 @@ entry > image.right {
 /* Combo box entry */
 
 
-combobox entry {
-   background-color: transparent;
-   padding: 5px;
+combobox entry, combobox:active entry {
    box-shadow: none;
+   background-color: transparent;
    border: none; }
 
 combobox entry:disabled {

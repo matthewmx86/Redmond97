@@ -153,8 +153,6 @@ sidebar, .sidebar, places_sidebar {
 }
 
 /* Fix thunar scrolled window borders */
-.thunar scrolledwindow:first-child {
-   margin-top: 2px; }
 
 .thunar scrolledwindow:last-child {
    margin-top: 0;
