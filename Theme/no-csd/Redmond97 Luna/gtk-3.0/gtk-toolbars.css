@@ -14,7 +14,7 @@ toolbar {
    padding: 4px;
    padding-top: 1px;
    padding-bottom: 3px;
-   margin: 0;
+   margin-bottom: 0px;
    color: @toolbar_fg_color;
    background-color: transparent; 
    box-shadow: none;
@@ -42,6 +42,7 @@ toolbar:disabled {
 .inline-toolbar {
    padding: 5px;
    margin: 0;
+   box-shadow: 0 1px @light_shadow inset;
    background-color: transparent;
 }
 
@@ -75,6 +76,25 @@ toolbar:disabled {
    border-top-right-radius: 0px;
    border-bottom-right-radius: 0px; }
 
+/* Notebook toolbar */
+.meld-notebook-toolbar {
+   background-image: none;
+   background-color: #000;
+}
+
+
+
+/* Header */
+.header-box {
+    padding: 2px;
+    border: none;
+    box-shadow: -1px -2px @bg_color, 1px 0 @light_shadow inset;
+    border-top: 1px solid @bg_color;
+    border-bottom: 1px solid shade(@dark_shadow,0.7);
+    border-right: 1px solid @dark_shadow;
+    border-left: 1px solid @dark_shadow;
+    border-radius: 0;
+    background-image: linear-gradient(to bottom, @bg_color, @bg_color 90%, @dark_shadow); }
 
 /* Overlay bar */
 

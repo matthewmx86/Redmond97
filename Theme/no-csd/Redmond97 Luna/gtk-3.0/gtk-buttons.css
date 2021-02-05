@@ -141,11 +141,11 @@ combobox .linked button {
   box-shadow: none;
   border: none;
   padding: 1px;
-  padding-right: 13px;
+  padding-right: 17px;
   background-color: transparent;
   background-image: url("assets/bottom-stepper.png");
-  background-size: 17px calc(100%-5px);
-  background-position: calc(100% - 2px) 2px;
+  background-size: 17px calc(100%-4px);
+  background-position: calc(100% - 1px) 2px;
   background-repeat: no-repeat;
 }
 
@@ -154,28 +154,28 @@ combobox .linked button:disabled {
   border: none;
   background-color: transparent;
   padding: 1px;
-  padding-right: 13px;
+  padding-right: 17px;
 }
 
 combobox .linked button:hover {
   box-shadow: none;
   padding: 1px;
-  padding-right: 13px;
+  padding-right: 17px;
   background-color: transparent;
   background-image: url("assets/bottom-stepper-hover.png");
-  background-size: 17px calc(100%-5px);
-  background-position: calc(100% - 2px) 2px;
+  background-size: 17px calc(100%-4px);
+  background-position: calc(100% - 1px) 2px;
   background-repeat: no-repeat;
 }
 
 combobox .linked button:checked {
   box-shadow: none;
   padding: 1px;
-  padding-right: 13px;
+  padding-right: 17px;
   background-color: transparent;
   background-image: url("assets/bottom-stepper-active.png");
-  background-size: 17px calc(100%-5px);
-  background-position: calc(100% - 2px) 2px;
+  background-size: 17px calc(100%-4px);
+  background-position: calc(100% - 1px) 2px;
   background-repeat: no-repeat;
 }
 
@@ -270,8 +270,7 @@ notebook tab:checked button:backdrop {
 
 /* Tree view headers */
 
-
-treeview header button {
+treeview header button, treeview header button:backdrop {
     padding: 3px 8px;
     border: none;
     box-shadow: -1px -2px @bg_color, 1px 0 @light_shadow inset;

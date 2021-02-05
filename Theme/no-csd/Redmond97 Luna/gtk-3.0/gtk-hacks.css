@@ -20,14 +20,10 @@ filechooser stack button box {
 /* Fix meld scrolled window appearance */
 
 
-.meld-notebook scrolledwindow {
-   margin: 0; }
-
-
 /* Remove bottom black border from header boxes 
    since the toolbars already have a border */
 
-
+/*
 .header-box {
    margin-top: 0px;
    border-top: 1px solid;
@@ -36,7 +32,7 @@ filechooser stack button box {
    border: none;
    box-shadow: 0 1px @light_shadow inset;
    border-top: 1px solid @dark_shadow;}
-
+*/
 
 /* caja and thunar various ui hacks */
 .caja-side-pane {
@@ -74,10 +70,8 @@ filechooser stack button box {
 .caja-navigation-window grid > paned > box > notebook widget > box {
 }
 
+.caja
+
 /* Fix thunar scrolled window borders */
 
-.thunar scrolledwindow:last-child {
-   margin-top: 0;
-   box-shadow: 1px 0 alpha(shade(@selected_bg_color,0.8),0.8) inset;
-   padding: 2px; }
 

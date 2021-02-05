@@ -4,28 +4,28 @@
 
 
 frame > border, .frame > border {
-  padding: 5px;
-  box-shadow: 1px 1px @light_shadow inset, -1px -1px @dark_shadow inset;
-  border: 1px solid @dark_shadow;
-  border-bottom: 1px solid @light_shadow;
-  border-right: 1px solid @light_shadow; } 
-
+  padding: 0px;
+  box-shadow: none; } 
 
 /* Status bar border */
 
-
 statusbar {
-    padding: 0;
+    margin-top: 0px;
+    padding: 1px;
     padding-left: 5px;
     padding-right: 5px;
     margin-right: -11px;
     margin-left: -11px;
-    box-shadow: 0 1px 2px shade(@dark_shadow,0.5) inset;
+    box-shadow: 1px 1px 2px shade(@dark_shadow,0.5) inset, -1px 0px 2px shade(@dark_shadow,0.5) inset;
     border: none; }
 
-statusbar > frame > border {
+statusbar > frame > border{
    border: 0px transparent;
    box-shadow: none; }
+
+.sidebar .inline-toolbar, .sidebar statusbar {
+   background-color: @bg_color;
+}
 
 
 /* Styled frames */
@@ -72,18 +72,24 @@ terminal-window notebook, VteTerminal, vte-terminal {
    border: 0px;
    border-radius: 0px; }
 
-
 /* Hack to make all scrolled window widgets bg color match theme base bg color */
 
 
-scrolledwindow.frame {
- border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
-  background-color: @theme_base_color; }
-
-frame > box > scrolledwindow, frame > box > stack > scrolledwindow {
-  border: 1px solid #000;
+grid > paned > box > scrolledwindow:not(:first-child) {
+  border-left: 1px solid @dark_shadow;
 }
 
+scrolledwindow.frame, scrolledwindow > frame {
+   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
+   background-color: @theme_base_color; }
+
+frame > box > scrolledwindow, frame > box > stack > scrolledwindow {
+   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
+}
+
+notebook scrolledwindow {
+   background-color: @theme_base_color; 
+}
 
 /* Hack for scrolled windows and sidebars to always have borders:
    Specify border for scrolled window widget directly since the scrolled window does not always
@@ -104,11 +110,6 @@ notebook scrolledwindow {
   border: none;
 }*/
 
-/* Remove border from sidebar scrolledwindow, sidebar already has a border. */
-
-.sidebar .inline-toolbar, .sidebar statusbar {
-   background-color: @bg_color;
-}
 
 .sidebar, sidebar {
    margin: 0px;
@@ -126,14 +127,13 @@ notebook scrolledwindow {
 .sidebar-paned scrolledwindow:nth-child(1), .gedit-side-panel-paned scrolledwindow:nth-child(2), .sidebar scrolledwindow, scrolledwindow.sidebar,
 .sidebar list, .caja-side-pane scrolledwindow, .thunar scrolledwindow.sidebar {
    color: @selected_fg_color;
-   border-right: 1px solid @dark_shadow;
    background-image: url("assets/sidebar.png");
    background-size: 100% 100%;
    /*background-image: linear-gradient(to bottom, #7aa1e6, #677cd8, #6375d6 85%);*/
    padding: 0;
    margin: 0;
    border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
-   margin-right: 3px; }
+   border: none; }
 
 .sidebar list row label, .caja-side-pane treeview, .sidebar treeview, .gedit-side-panel-paned treeview {
    padding-left: 6px;
@@ -159,4 +159,3 @@ notebook scrolledwindow {
    padding-left: 0px;
    background-color: transparent;
 }
-
