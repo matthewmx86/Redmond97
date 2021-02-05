@@ -1,13 +1,14 @@
 /* Frames and borders, frame and border hacks */
 
-
 /* General frames */
 
 
 frame > border, .frame > border {
   padding: 5px;
-  box-shadow: -1px -1px @light_shadow inset;
-  border: 1px solid @dark_shadow; } 
+  box-shadow: 1px 1px @light_shadow inset, -1px -1px @dark_shadow inset;
+  border: 1px solid @dark_shadow;
+  border-bottom: 1px solid @light_shadow;
+  border-right: 1px solid @light_shadow; } 
 
 
 /* Status bar border */
@@ -22,7 +23,7 @@ statusbar {
     box-shadow: 0 1px 2px shade(@dark_shadow,0.5) inset;
     border: none; }
 
-statusbar > frame > border{
+statusbar > frame > border {
    border: 0px transparent;
    box-shadow: none; }
 
@@ -76,7 +77,12 @@ terminal-window notebook, VteTerminal, vte-terminal {
 
 
 scrolledwindow.frame {
+ border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
   background-color: @theme_base_color; }
+
+frame > box > scrolledwindow, frame > box > stack > scrolledwindow {
+  border: 1px solid #000;
+}
 
 
 /* Hack for scrolled windows and sidebars to always have borders:
@@ -91,12 +97,8 @@ paned > stack > grid > scrolledwindow, grid > scrolledwindow {
    border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
 */
 
-scrolledwindow {
-    border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
 
-window.background > grid.horizontal > grid.horizontal > scrolledwindow {
-    border: none;
-}
+
 /*
 notebook scrolledwindow {
   border: none;

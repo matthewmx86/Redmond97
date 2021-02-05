@@ -11,10 +11,9 @@ separator, separator:backdrop {
  }
 
 paned > separator {
-  border: none;
+  border-top: 2px transparent;
+  border: @bg_color;
   color: transparent;
-  margin-right: -4px;
-  margin-left: -4px;
   padding: 0;
   background-color: transparent; }
 
