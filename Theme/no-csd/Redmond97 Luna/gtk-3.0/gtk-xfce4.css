@@ -185,6 +185,7 @@ XfdesktopIconView:active {
 .xfce4-panel #actions-button, .xfce4-panel #actions-button:hover, .xfce4-panel #actions-button:active,
 .xfce4-panel #xfce4-power-manager-plugin, .xfce4-panel #xfce4-power-manager-plugin:hover, .xfce4-panel #xfce4-power-manager-plugin:active {
   margin: 0px;
+  border-radius: 0px;
   padding: 0px;
   color: @light_shadow;
   box-shadow: none;

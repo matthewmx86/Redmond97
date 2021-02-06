@@ -47,7 +47,7 @@ button:disabled {
 
 /* Flat buttons / toolbar buttons */
 
-button.flat, toolbar button, toolbar button.flat, .primary-toolbar button, .raised button {
+button.flat, toolbar button, toolbar button.flat, .primary-toolbar button {
    border-radius: 3px;
    padding: 4px;
    margin: 1px;
@@ -57,19 +57,23 @@ button.flat, toolbar button, toolbar button.flat, .primary-toolbar button, .rais
    box-shadow: none;
    background-color: transparent; }
 
-button.flat:hover, .primary-toolbar:hover, toolbar button:hover, toolbar button.flat:hover {
+button.flat:hover, .primary-toolbar button:hover, toolbar button:hover, toolbar button.flat:hover {
    color: @button_fg_color;
-   border: 1px solid @dark_shadow;
-   box-shadow: 1px 1px 1px @medium_shadow, 0px -2px 2px @medium_shadow inset;
-   background-color: shade(@bg_color, 1.0);
-   background-image: linear-gradient(to bottom, alpha(@light_shadow,0.7), alpha(@light_shadow,0.5) 40%, alpha(@light_shadow,0.5) 80%, alpha(@light_shadow, 0.2)) ;}
+   border: 1px solid @medium_shadow;
+   border-right: 1px solid @dark_shadow;
+   border-bottom: 1px solid @dark_shadow;
+   box-shadow: 2px 2px 4px @light_shadow inset, 0px -1px 2px @medium_shadow inset;
+   background-color: transparent; }
 
-button.flat:active, button.flat:checked, .raised button:checked, .raised button:active,
+button.flat:active, button.flat:checked, .raised button:checked, .raised button:active, toolbar button.flat:active,
 .primary-toolbar button:active, .primary-toolbar .raised button:active, .primary-toolbar button:checked, 
-.primary-toolbar .raised button:checked, toolbar button:checked, toolbar button:active, toolbar button.flat:checked, 
-toolbar button.flat:active {
+.primary-toolbar .raised button:checked, toolbar button:checked, toolbar button:active, toolbar button.flat:checked,
+.titlebar button:checked, .titlebar button:active, .headerbar button:checked, .headerbar button:active, button.raised:active,
+button.raised:checked {
+   box-shadow: unset;
    box-shadow: 1px 1px 2px @dark_shadow inset;
-   border: 1px solid shade(@dark_shadow, 0.9);
+   border: 1px solid shade(@medium_shadow, 0.9);
+   background-image: none;
    background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
 
 button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
@@ -79,59 +83,123 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
    color: @disabled_fg_color;
    box-shadow: none;
    background-color: transparent; }
+   
+   
+/* Raised buttons and linked buttons */   
 
-/* Linked buttons */
+button.raised, .titlebar button, .headerbar button,
+button.raised:disabled, .titlebar button:disabled, .headerbar button:disabled {
+   padding: 4px;
+   padding-right: 5px;
+   color: @button_fg_color;
+   border: 1px solid @medium_shadow;
+   border-right: 1px solid @dark_shadow;
+   border-bottom: 1px solid @dark_shadow;
+   box-shadow: 2px 2px 4px @light_shadow inset, 0px -1px 2px @medium_shadow inset;
+   background-color: transparent; }
+  
+button.raised:not(:checked):not(:active):hover, .titlebar button:not(:checked):not(:active):hover, .headerbar button:not(:checked):not(:active):hover { 
+   background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)); }
+
+button.raised:checked, .titlebar button:checked, .headerbar button:checked { 
+   box-shadow: 1px 1px 2px @dark_shadow inset;
+   border: 1px solid shade(@medium_shadow, 0.9);
+   background-image: none;
+   background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
+
+.horizontal.linked button:not(:only-child):not(:first-child):not(:last-child).raised,
+.titlebar .linked button:not(:only-child):not(:first-child):not(:last-child),
+.headerbar .linked button:not(:only-child):not(:first-child):not(:last-child) {
+   margin-left: 0px;
+   margin-right: 0px;
+   border-left: none;
+   border-radius: 0;
+}
+
+.horizontal.linked button:not(:only-child):first-child.raised, .titlebar .linked button:not(:only-child):first-child,
+.headerbar .linked button:not(:only-child):first-child {
+   margin-right: 0px;
+   border-radius: 5px 0 0 5px; }
+   
+.horizontal.linked button:not(:only-child):last-child.raised, .titlebar .linked button:not(:only-child):last-child,
+.headerbar .linked button:not(:only-child):last-child { 
+   margin-left: 0px;
+   border-left: none;
+   border-radius: 0 5px 5px 0; }
+   
+   
+   
+/* Pathbar buttons */
+
+#pathbarbox .linked button {
+   padding: 4px;
+   padding-right: 5px;
+   color: @button_fg_color;
+   border: 1px solid @medium_shadow;
+   border-right: 1px solid @dark_shadow;
+   border-bottom: 1px solid @dark_shadow;
+   box-shadow: 2px 2px 4px @light_shadow inset, 0px -1px 2px @medium_shadow inset;
+   background-color: transparent; }
+   
+#pathbarbox .linked button:checked, #pathbarbox .linked button:active { 
+   box-shadow: 1px 1px 2px @dark_shadow inset;
+   border: 1px solid shade(@medium_shadow, 0.9);
+   background-image: none;
+   background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
+  
+#pathbarbox .linked button:not(:first-child):not(:last-child):not(:checked):not(:active):hover { 
+   background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)); }
+
+#pathbarbox .linked button:not(:first-child):not(:last-child) {
+   margin-left: 0px;
+   margin-right: 0px;
+   border-left: none;
+   border-radius: 0;
+}
+
+#pathbarbox .linked button:not(:only-child):first-child {
+   margin-right: 0px;
+   border-radius: 5px 0 0 5px; }
+   
+#pathbarbox .linked button:not(:only-child):last-child { 
+   margin-left: 0px;
+   border-left: none;
+   border-radius: 0 5px 5px 0; }
+
+
 /*
-.linked button, .linked button:hover, .linked .raised button, .primary-toolbar .linked button,
-.linked button:disabled, .linked button:disabled, .linked .raised button:disabled, .primary-toolbar .linked button:disabled {
-  padding: 4px;
-  margin-right: 0;
-  margin-left: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border: 1px solid shade(@selected_bg_color, 0.7);
-  background-color: shade(@bg_color,1.18); 
-  box-shadow: 0px 1px shade(@bg_color,1.4), 
-    0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
-  border-radius: 0;
-  border-right: none; }
-
-.linked button:first-child, .linked .raised button:first-child, .primary-toolbar .linked button:first-child {
-  border-radius: 3px 0 0 3px;
-  margin-left: 0px;
-  margin-right: 0px; }
-
-.linked button:last-child, .linked .raised button:last-child, .primary-toolbar .linked button:last-child {
-  border-radius: 0 3px 3px 0;
-  margin-left: 0px;
-  margin-right: 0px;
-  border: 1px solid shade(@selected_bg_color, 0.7);
-  box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
-	0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset; }
-
-.linked button:only-child, .linked .raised button:only-child, .primary-toolbar .linked button:only-child {
-  border-radius: 3px;
+#pathbarbox .linked button:not(:first-child):not(:last-child) {
+   border-radius: 0;
+   border-left: none;
+   margin-left: 0;
+   margin-right: 0;
+   box-shadow: 0px 1px shade(@bg_color,1.2),  
+	0 -1px shade(@bg_color,0.85),
+	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset;
 }
 
-.linked button:checked, .linked button:active, .primary-toolbar .linked button:checked, .primary-toolbar .linked button:active {
-  margin-left: 0px;
-  margin-right: -1px;
-  background-color: shade(@bg_color,1.05);
-  box-shadow: unset;
-  box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4), 0 -1px shade(@bg_color,0.85);
-  border: 1px solid shade(@selected_bg_color, 0.7);
+#pathbarbox .linked button:not(:only-child):first-child {
+   box-shadow: 0px 1px shade(@bg_color,1.2),  
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset;
+   border-radius: 3px 0 0 3px;
 }
 
-.linked button:last-child:checked, .linked button:last-child:active, .primary-toolbar .linked button:last-child:checked,
-.primary-toolbar .linked button:last-child:active {
-  margin-right: 0px;
-}
-
-.linked button:hover, .linked button:hover, .primary-toolbar .linked button:hover, .primary-toolbar .linked button:hover {
-  box-shadow: 0 0 0 2px alpha(#ffb600, 0.6) inset; }
+#pathbarbox .linked button:not(:only-child):last-child {
+   border-radius: 0 3px 3px 0;
+   border-left: none;
+   box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	0 -1px shade(@bg_color,0.85),
+	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset; }
+	
+#pathbarbox .linked button:not(:first-child):not(:last-child):active,
+#pathbarbox .linked button:not(:first-child):not(:last-child):checked {
+   background-image: none;
+   box-shadow: unset;
+   background-color: shade(@bg_color,1.05);
+   box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),
+	0 -1px shade(@bg_color,0.85); }
 */
-/* General flat buttons */
-
 
 
 /* Combobox button */
