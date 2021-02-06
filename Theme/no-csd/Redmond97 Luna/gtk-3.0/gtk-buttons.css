@@ -87,7 +87,7 @@ button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
    
 /* Raised buttons and linked buttons */   
 
-button.raised, .titlebar button, .headerbar button,
+button.raised:not(combobox), .titlebar button, .headerbar button,
 button.raised:disabled, .titlebar button:disabled, .headerbar button:disabled {
    padding: 4px;
    padding-right: 5px;
@@ -98,7 +98,7 @@ button.raised:disabled, .titlebar button:disabled, .headerbar button:disabled {
    box-shadow: 2px 2px 4px @light_shadow inset, 0px -1px 2px @medium_shadow inset;
    background-color: transparent; }
   
-button.raised:not(:checked):not(:active):hover, .titlebar button:not(:checked):not(:active):hover, .headerbar button:not(:checked):not(:active):hover { 
+button.raised:not(combobox):not(:checked):not(:active):hover, .headerbar button:not(:checked):not(:active):hover { 
    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)); }
 
 button.raised:checked, .titlebar button:checked, .headerbar button:checked { 

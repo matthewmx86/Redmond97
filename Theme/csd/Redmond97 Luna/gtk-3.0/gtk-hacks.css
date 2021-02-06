@@ -1,51 +1,12 @@
 /* File chooser hack to make the location bar 
    widget to match the window bg color */
 
-
-filechooser stack {
-   background-color: @theme_bg_color; }
-
 filechooser stack box {
-   background-color: @theme_bg_color; }
-
-filechooser stack button box {
-   background-color: @button_bg_color; }
-
-.horizontal.dialog-actionbox {
-   background-color: @theme_bg_color; }
-
-.nautilus-window .sidebar {
-  margin-top: 2px;
-  border-right: 1px solid @borders; }
-
-/*
-sidebar, .sidebar, places_sidebar {
-  background-color: #ff0000;
-  background-image: linear-gradient(45deg, #cde7ff, #ebf2fc); }
-*/
-/* 
- hacks:
-   Add padding below toolbar, hide separators since the 
-   scrolled window frames act as separators, menu items must
-   be reapplied after making separators transparent */
-
-/*
-.nemo-window sidebar separator {
    background-color: transparent; }
 
-.nemo-window menu separator {
-   box-shadow: 0 1px @light_shadow;
-   background-color: @dark_shadow; }
+filechooser stack button box {
+   background-color: transparent; }
 
-.nemo-window menuitem separator {
-   color: @borders;
-   border-style: none;
-   border-width: 0px; }
-
-.nemo-window toolbar button {
-  padding: 4px;
-}
-*/
 
 /* Nemo colors must be specified or drag and drop items 
    have black text on a black background */
@@ -59,14 +20,10 @@ sidebar, .sidebar, places_sidebar {
 /* Fix meld scrolled window appearance */
 
 
-.meld-notebook scrolledwindow {
-   margin: 0; }
-
-
 /* Remove bottom black border from header boxes 
    since the toolbars already have a border */
 
-
+/*
 .header-box {
    margin-top: 0px;
    border-top: 1px solid;
@@ -75,36 +32,26 @@ sidebar, .sidebar, places_sidebar {
    border: none;
    box-shadow: 0 1px @light_shadow inset;
    border-top: 1px solid @dark_shadow;}
-
-
-/* Remove application dialog image icon */
-messagedialog image {
-   margin-left: -1000px;
-}
+*/
 
 /* caja and thunar various ui hacks */
+.caja-side-pane {
+   border: none;
+   background-color: shade(@bg_color,1.05);
+}
+
 .caja-navigation-window > grid > paned > * {
    border-top: 1px solid transparent;
 }
 
-.caja-side-pane treeview {
-   color: #000;
-   background-color: transparent;
-}
-
-.caja-side-pane scrolledwindow {
-   background-image: url("assets/treeview.png");
-   background-position: left top; 
-   background-repeat: no-repeat;
-}
-
-
-.caja-navigation-window toolbar {
+.caja-navigation-window entry {
+  margin: 2px;
+  margin-top: 1px;
 }
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
    padding: 4px;
-   padding-top: 6px;
+   padding-top: 4px;
    padding-bottom: 3px;
    margin-left: -3px;
    margin-right: -3px;
@@ -115,86 +62,14 @@ messagedialog image {
    color: @toolbar_fg_color;
    -GtkWidget-window-dragging: true;
    background-color: transparent;
-   box-shadow: 0 1px @light_shadow inset;
-   border-top: 1px solid @dark_shadow;
+   background-image: url("assets/toolbar.png");
+   background-size: 100% 100%;
 }
+
 
 .caja-navigation-window grid > paned > box > notebook widget > box {
 }
 
-/*
-.caja-navigation-window statusbar,
-.thunar statusbar {
-   border: 1px solid @dark_shadow;
-   border-right: 1px solid @light_shadow;
-   border-bottom: 1px solid @light_shadow;
-   padding: 0;
-   margin: 0;
-   margin-top: 2px;
-   margin-right: -10px;
-   margin-left: -10px;
-}
-
-.caja-navigation-window statusbar > frame,
-.thunar statusbar > frame {
-   margin: -3px;
-   margin-left: 0px;
-}
-
-.thunar toolbar {
-   padding: 2px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 2px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 0px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
-*/
-
-.thunar entry {
-   margin: 4px;
-}
-
 /* Fix thunar scrolled window borders */
-.thunar scrolledwindow:first-child {
-   margin-top: 2px; }
 
-.thunar scrolledwindow:last-child {
-   margin-top: 0;
-   padding: 2px; }
 
-#GeanyMenubar {
-   padding: 0px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 0px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 2px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }
-
-#GeanyToolbar {
-   padding: 2px;
-   margin-top: 0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 0px;
-   color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
-   border-top: 0px solid;
-   border-bottom: 2px solid;
-   border-right: 2px solid;
-   border-left: 7px solid;
-   border-image: url("assets/fm_toolbar.png");
-   border-image-slice: 2 2 2 7; }

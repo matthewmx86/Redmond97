@@ -1,8 +1,8 @@
 /* Menu borders and colors */
 
-.menu, menu, .csd menu {
+menu, menu:backdrop, .menu, .menu:backdrop {
     border: unset;
-    padding: 2px;
+    padding: 1px;
     border: 1px solid @borders;
     box-shadow: none;
     background-image: unset;
@@ -14,6 +14,22 @@ combobox menu, combox .menu {
     box-shadow: none;
     background-color: @base_color;
     padding: 0px; }
+/*
+.popup menu, .popup menu:backdrop {
+    border: unset;
+    padding: 0px;
+    border-radius: 4px;
+    border: 1px solid @borders;
+    box-shadow: none;
+    background-image: unset;
+    background-color: #ffffc3;
+    color: @fg_color;
+    opacity: 0.95;
+}*/
+
+.menu menuitem {
+    margin: 0px;
+}
 
 
 /* Force initial font instead of repsecting parent widget font */
@@ -65,8 +81,8 @@ menubar, .menubar {
    background-color: @toolbar_bg_color; 
    background-image: url("assets/toolbar.png");
    background-size: 100% 100%;
-   box-shadow: none;
-   border: none; }
+   border-bottom: 1px solid @light_shadow;
+   box-shadow: 0 -1px @medium_shadow inset; }
 
 menubar > menuitem, .menubar > menuitem {
    margin: 0px;

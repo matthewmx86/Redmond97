@@ -23,8 +23,9 @@
 .background {
   color: @theme_fg_color;/*
   background-image: url("assets/toolbar.png");
-  background-size: 100% 100%;*/
-  background-image: linear-gradient(to right, #ebe8dc, #d5d0b9);
+  background-size: 100% 100%;
+  background-image: linear-gradient(to right, #f0f1f0, #edead3);*/
+  border: none;
   background-color: @theme_bg_color; }
 
 .background:backdrop {
@@ -119,13 +120,14 @@ calendar.highlight {
 /* Scrolled window padding and colors. Don't reference directly otherwise the
    Libre-Office menu bar will also follow the border and color settings for scrolled windows */
 
-
+/*
 paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
 paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow {
    padding: 1px;
    margin: 0px;
    background-color: @theme_base_color;
 }
+*/
 
 
 /* Tree view */

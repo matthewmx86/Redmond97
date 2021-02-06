@@ -1,5 +1,39 @@
+decoration {
+  margin: 0px;
+  padding: 0px;
+  border: 5px solid transparent;
+  border-image: url("assets/border.png");
+  border-image-slice: 5 5 5 5; }
+
+decoration:backdrop {
+  margin: 0px;
+  padding: 0px;
+  border: 5px solid transparent;
+  border-image: url("assets/border-inactive.png");
+  border-image-slice: 5 5 5 5; }
+
+.titlebar {
+  border-radius: 0;
+  color: @selected_fg_color;
+  margin: 0px;
+  margin-top: -1px;
+  padding: 1px;
+  padding-bottom: 3px;
+  font-weight: bold;
+  background-image: url("assets/title-active.xpm");
+  background-size: 19px 100%;
+  border: none;
+  border-bottom: none;
+  box-shadow:none; }
+
+.titlebar:backdrop {
+  background-image: url("assets/title-inactive.xpm");
+  background-size: 19px 100%; }
+
 headerbar {
-  padding: 4px;
+  border: none;
+  box-shadow: none;
+  padding: 2px;
   background-color: transparent;
 }
 
@@ -7,7 +41,180 @@ headerbar:backdrop {
   background-color: transparent;
 }
 
-.titlebar {
-  background-image: url("assets/toolbar.png");
-  background-size: 100% 100%;
+
+.titlebar button, .titlebar .linked button {
+  padding: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  box-shadow: unset;
+  padding: 4px;
+  padding-right: 5px;
+  color: @light_shadow;
+  border: 1px solid shade(#0055e4,0.8);
+  border-right: 1px solid shade(#0055e4,0.7);
+  border-bottom: 1px solidshade(#0055e4,0.7);
+  box-shadow: 2px 2px 4px shade(#0055e4,1.3) inset, 0px -1px 2px shade(#0055e4,0.7) inset;
+  background-color: alpha(shade(#0055e4,1.4),0.2); }
+
+.titlebar button:backdrop, .titlebar .linked button:backdrop {
+  box-shadow: unset; 
+  border: 1px solid alpha(shade(#0055e4,0.6),0.5);
+  box-shadow: 2px 2px 4px alpha(shade(#0055e4,1.3),0.2) inset, 0px -1px 2px alpha(shade(#0055e4,0.7),0.5) inset;
+  background-color: alpha(shade(#0055e4,1.5),0.2) }
+
+.titlebar button:hover, .titlebar .linked button:hover {
+  box-shadow: unset;
+  padding-right: 5px;
+  border: 1px solid shade(#0055e4,1.2);
+  border-right: 1px solid shade(#0055e4,0.7);
+  border-bottom: 1px solidshade(#0055e4,0.7);
+  box-shadow: 2px 2px 4px shade(#0055e4,1.8) inset, 0px -1px 2px shade(#0055e4,0.7) inset;
+  background-color: alpha(shade(#0055e4,2.8),0.3); }
+
+.titlebar button:active, .titlebar .linked button:active,
+.titlebar button:checked, .titlebar .linked button:checked {
+  background-image: none;
+  background-color: unset;
+  box-shadow: unset;
+  color: @fg_color;
+  border: 1px solid shade(#0055e4,0.7);
+  border-right: 1px solid shade(#0055e4,0.9);
+  border-bottom: 1px solidshade(#0055e4,0.9);
+  box-shadow: 1px 1px 2px shade(#0055e4,0.2) inset, 0px -1px 2px shade(#0055e4,0.8) inset;
+  background-color: alpha(@light_shadow, 0.7); }
+
+.titlebar separator, .titlebar separator:backdrop {
+   background-color: transparent;
 }
+
+.minimize.titlebutton, .minimize.titlebutton:hover {
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  background-image: url("assets/hide-active.xpm");
+  border: none;
+  box-shadow: none;
+  background-size: 100% 100%; }
+
+.minimize.titlebutton:backdrop {
+  margin-right: -4px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/hide-inactive.xpm");
+  background-size: 100% 100%; }
+
+.minimize.titlebutton:hover {
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  background-image: url("assets/hide-prelight.xpm");
+  border: none;
+  box-shadow: none;
+  background-size: 100% 100%; }
+
+.minimize.titlebutton:active {
+  background-image: url("assets/hide-pressed.xpm");
+  margin-right: 0px;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-size: 100% 100%; }
+
+.maximize.titlebutton {
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-active.xpm");
+  background-size: 100% 100%; }
+
+.maximize.titlebutton:backdrop {
+  margin-right: -4px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-inactive.xpm");
+  background-size: 100% 100%; }
+
+.maximize.titlebutton:hover {
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-prelight.xpm");
+  background-size: 100% 100%; }
+
+.maximize.titlebutton:active {
+  margin-right: 0px;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-pressed.xpm");
+  background-size: 100% 100%; }
+
+.restore.titlebutton, .restore.titlebutton:hover, .restore.titlebutton:backdrop {
+  margin-right: -4px;
+  border: none;
+  box-shadow: none;
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-active.xpm");
+  background-size: 100% 100%; }
+
+.close.titlebutton {
+  margin-right: 0px;
+  padding: 0;
+  color: transparent;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/close-active.xpm");
+  background-size: 100% 100%; }
+
+.close.titlebutton:backdrop {
+  margin-right: 0px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/close-inactive.xpm");
+  background-size: 100% 100%; } 
+
+.close.titlebutton:hover {
+  margin-right: 0px;
+  padding: 0;
+  color: transparent;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: unset;
+  background-image: url("assets/close-prelight.xpm");
+  background-size: 100% 100%; }
+
+.close.titlebutton:active {
+  margin-right: 0px;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/close-pressed.xpm");
+  background-size: 100% 100%; }

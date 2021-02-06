@@ -27,7 +27,7 @@
    margin: 0px;
    border: none;
    border-radius: 0;
-   min-width: 100px;
+   min-width: 105px;
    background-image: url("assets/start.png"); }
 
 #whiskermenu-button:hover {
@@ -37,7 +37,7 @@
    border: none;
    box-shadow: none;
    border-radius: 0;
-   min-width: 100px;
+   min-width: 105px;
    background-image: url("assets/start_hover.png"); }
 
 
@@ -49,7 +49,7 @@
    border: none;
    box-shadow: none;
    border-radius: 0;
-   min-width: 100px;
+   min-width: 105px;
    background-image: url("assets/start_active.png"); }
 
 #whiskermenu-button box > image {

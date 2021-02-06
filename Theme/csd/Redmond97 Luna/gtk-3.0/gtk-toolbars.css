@@ -13,19 +13,12 @@ padding: 5px; }
 toolbar {
    padding: 4px;
    padding-top: 1px;
-   padding-bottom: 1px;
-   margin: 0;
+   padding-bottom: 3px;
+   margin-bottom: 0px;
    color: @toolbar_fg_color;
-   background-color: @toolbar_bg_color; 
+   background-color: transparent; 
    box-shadow: none;
-   border: none;/*
-   background-image: linear-gradient(to right, rgba(255,255,255, 0.4), rgba(255,255,255,0.0)),
-	linear-gradient(to bottom, @bg_color, @medium_shadow);
-*/
-   background-image: url("assets/toolbar.png");
-   background-size: 100% 100%;
-   box-shadow: 0 1px @light_shadow inset;
-   border-top: 1px solid @dark_shadow; }
+   border: none;}
 
 toolbar:disabled {
    color: @theme_disabled_fg_color;
@@ -34,26 +27,31 @@ toolbar:disabled {
 .primary-toolbar {
    padding: 4px;
    padding-top: 1px;
-   padding-bottom: 1px;
+   padding-bottom: 3px;
    margin: 0;
    border: none;
    box-shadow: none;
    color: @toolbar_fg_color;
-   -GtkWidget-window-dragging: true;/*
-   background-image: linear-gradient(to right, rgba(255,255,255, 0.4), rgba(255,255,255,0.0)),
-	linear-gradient(to bottom, @bg_color, @medium_shadow);*/
+   -GtkWidget-window-dragging: true;
    background-image: url("assets/toolbar.png");
    background-size: 100% 100%;
-   box-shadow: 0 1px @light_shadow inset;
-   border-top: 1px solid @dark_shadow; }
+   background-color: transparent;
+   border-bottom: 1px solid @light_shadow;
+   box-shadow: 0 -1px @medium_shadow inset; }
 
+.inline-toolbar {
+   padding: 5px;
+   margin: 0;
+   box-shadow: 0 1px @light_shadow inset;
+   background-color: transparent;
+}
 
 /* Floating bar */
 
 .floating-bar {
    border-width: 1px;
    border-style: solid;
-   border-color: @borders;
+   border-color: transparent;
    border-radius: 0px;
    background-color: @theme_bg_color;
    color: @theme_fg_color; }
@@ -78,6 +76,25 @@ toolbar:disabled {
    border-top-right-radius: 0px;
    border-bottom-right-radius: 0px; }
 
+/* Notebook toolbar */
+.meld-notebook-toolbar {
+   background-image: none;
+   background-color: #000;
+}
+
+
+
+/* Header */
+.header-box {
+    padding: 2px;
+    border: none;
+    box-shadow: -1px -2px @bg_color, 1px 0 @light_shadow inset;
+    border-top: 1px solid @bg_color;
+    border-bottom: 1px solid shade(@dark_shadow,0.7);
+    border-right: 1px solid @dark_shadow;
+    border-left: 1px solid @dark_shadow;
+    border-radius: 0;
+    background-image: linear-gradient(to bottom, @bg_color, @bg_color 90%, @dark_shadow); }
 
 /* Overlay bar */
 
